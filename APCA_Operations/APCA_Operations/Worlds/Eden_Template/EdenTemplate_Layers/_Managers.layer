@@ -1,0 +1,177 @@
+GenericWorldPPEffect : "{07AA686C2FD66522}Prefabs/World/DefaultWorld/APCA_Generic_PP.et" {
+ coords 7114.591 74.361 6404.718
+ Postprocesses {
+  SSREffect "{62E68881064A55F2}" {
+  }
+ }
+ {
+  GenericWorldPPEffect {
+   ID "62E688810A85F805"
+   Postprocesses {
+    GodRaysEffect "{62E68881FEB66C56}" {
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A85F804"
+   Postprocesses {
+    HBAOEffect "{62E688816C3DC977}" {
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A848974"
+   Postprocesses {
+    HDREffect "{62E688817CC7253C}" {
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A848973"
+   Postprocesses {
+    HeightmapAOEffect "{62E688817FFBEDBD}" {
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A8411A5"
+   Postprocesses {
+    RainEffect "{62E688817AF11462}" {
+     RainDensity 1
+     RainVisibility 1
+     FogginessDistCoef 2.15
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A855AB9"
+   Postprocesses {
+    SSDOEffect "{62E688816F69EC80}" {
+    }
+   }
+  }
+  GenericWorldPPEffect {
+   ID "62E688810A85F806"
+   Postprocesses {
+    UnderWaterEffect "{62E68881F1C60088}" {
+    }
+   }
+  }
+ }
+}
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 7114.527 74.682 6403.375
+}
+GenericWorldFogEntity FogHaze_Default : "{78D9BBF0F423FEB4}Prefabs/World/DefaultWorld/FogHaze_Default.et" {
+ coords 7114.537 72.894 6411
+ HeightDensity 1
+ DistanceDensity 0.493
+ HazeDensity 0.163
+ NearFog 1
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "FogHaze_Default: "\
+   "Fog Controller"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 7114.537 75.004 6402
+}
+ScriptedChatEntity CampaignMPChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign/CampaignMPChatEntity.et" {
+ coords 7114.537 74.066 6406
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "CampaignMPChatEntity: "\
+   "Chat"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+APCA_GameModeCoop APCA_GameMode_Lobby : "{5677F55606CF7253}Prefabs/MP/Modes/APCA_GameMode_Lobby.et" {
+ coords 7114.537 75.238 6401
+}
+TimeAndWeatherManagerEntity TimeAndWeatherManager : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
+ coords 7114.537 73.129 6410
+ WeatherStateMachine "{A1B00CB2CCAACC94}Terrains/Common/WeatherPresets/StateMachine/APCA_WeatherStates.conf"
+ "Initial Day Time" 14
+ "Initial State" 0
+ "Month of the Year" 6
+ "Day of the Month" 19
+ Latitude 0.175
+ Longitude -0.35
+ "Internal variant transition" 0
+ "Internal subvariant 0" 0
+ "Internal subvariant 1" 0
+ "Initial Wetness" 0
+ "Initial Water Accumulation Cracks" 0
+ "Initial Water Accumulation Puddles" 0
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "TimeAndWeatherManager: "\
+   "Time and Weather Controller"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_LoadoutManager LoadoutManager_APCA : "{25B8CD39D9DAC28C}Prefabs/MP/Managers/Loadouts/LoadoutManager_APCA.et" {
+ coords 7114.537 73.363 6409
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "LoadoutManager_APCA: "\
+   "APCA Loadout Manager. Not used but stops some errors."
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+SCR_MPDestructionManager MPDestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
+ coords 7114.537 73.832 6407
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "MPDestructionManager: "\
+   "Enables MP Destruction Sync"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}
+EnvironmentProbeEntity EnvProbe_Default : "{B6B6A21399C5571B}Prefabs/World/DefaultWorld/EnvProbe_Default.et" {
+ coords 7114.537 73.598 6408
+ {
+  CommentEntity {
+   coords 0 1 0
+   m_Comment "EnvProbe_Default: "\
+   "Not sure. Environment reflections? Need it anyway"
+   m_Color 0 0 0
+   m_FaceCamera 1
+   m_TextBackground 1
+   m_BackgroundColor 1 0.6 0
+   m_BackgroundTransparency 0
+  }
+ }
+}

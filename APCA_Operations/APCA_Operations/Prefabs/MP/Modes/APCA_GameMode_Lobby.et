@@ -1,23 +1,6 @@
 APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
  ID "56B2B479C6B96951"
  components {
-  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
-   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
-  }
-  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
-   m_iKillFeedType DISABLED
-   m_iReceiveKillFeedType ALL
-  }
-  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
-   Enabled 0
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{62E0D8448706FBC7}" {
-   }
-  }
-  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
-   Enabled 0
-  }
   SignalsManagerComponent "{62E0D8448706FB76}" {
   }
   SCR_CommunicationSoundComponent "{62E0D8448706FB08}" {
@@ -70,9 +53,24 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    m_bDynamicDespawn 1
   }
   SCR_InitWeatherComponent "{62E0D8448706FB31}" {
+   Enabled 0
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+   m_iReceiveKillFeedType ALL
   }
   SCR_PreGameGameModeStateComponent "{62E0D8448706FBCB}" {
    m_fDuration 0
+  }
+  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
+   Enabled 0
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{62E0D8448706FBC7}" {
+   }
   }
   SCR_RestoreEditorModesComponent "{62E0D8448706FBC4}" {
   }
@@ -89,6 +87,14 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    Enabled 0
    m_iStartingHours 6
    m_iStartingMinutes 20
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{62E6889EA320C793}" {
+     m_sWeatherPresetName "Rainy"
+    }
+   }
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
   }
  }
  coords 7695.74 12.969 8108.813

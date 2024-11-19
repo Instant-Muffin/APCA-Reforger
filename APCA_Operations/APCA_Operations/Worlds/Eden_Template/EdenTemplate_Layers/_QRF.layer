@@ -1,0 +1,74 @@
+GenericEntity : "{D31D0F615378FA6B}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_US_03.et" {
+ coords 5232.066 40.483 10476.896
+ angleX -3.057
+ angleY -37.733
+ angleZ -1.027
+ {
+  GenericEntity {
+   ID "57068189B49C4AC1"
+   coords -1.287 -0.089 -0.757
+  }
+  GenericEntity {
+   ID "57068189B49C4AC7"
+   coords 1.064 0.717 -0.849
+  }
+  GenericEntity {
+   ID "57068189B49C4AC2"
+   coords 0.024 0.685 -0.823
+  }
+  GenericEntity {
+   ID "57068189B49C4AC3"
+   coords 0.079 -0.088 -0.83
+  }
+  GenericEntity {
+   ID "57068189B49C4ACC"
+   coords 1.065 -0.088 -0.88
+  }
+  GenericEntity {
+   ID "57068189B49C4AC4"
+   coords 0.03 -0.188 1.205
+  }
+  GenericEntity {
+   ID "57068189B49C4AC5"
+   coords 0.035 -0.189 -0.018
+  }
+  GenericEntity {
+   ID "57068189B49C4AC6"
+   coords 0.024 -0.188 -1.243
+  }
+  StaticModelEntity {
+   ID "57068189B49C4AC0"
+   coords -0.892 -0.088 -0.329
+  }
+  StaticModelEntity {
+   ID "57068189B49C4ACF"
+   coords -0.946 -0.088 -1.361
+  }
+  SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+   coords 0 0.021 0.928
+  }
+  GenericEntity QRF_Marker : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+   coords 0.114 -0.179 2.126
+   angleX 0.894
+   angleY 37.803
+   {
+    GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+     coords 0 0 0
+     {
+      GenericEntity SlotMarker6 : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+       components {
+        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{62E688847D84E57D}" {
+          m_sMapMarkerText "QRF"
+          m_eMapMarkerDimension INSTALLATION
+         }
+        }
+       }
+       coords 0.034 0 0.018
+      }
+     }
+    }
+   }
+  }
+ }
+}

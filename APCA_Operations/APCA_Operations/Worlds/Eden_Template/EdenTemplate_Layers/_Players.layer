@@ -1,0 +1,12 @@
+SCR_AIGroup : "{0800C48F951354FA}Prefabs/Groups/BLUFOR/Group_APCA_Bravo.et" {
+ coords 5494.208 44.415 10545.337
+ angleY -100.334
+}
+SCR_AIGroup : "{D91C605DB763BA36}Prefabs/Groups/BLUFOR/Group_APCA_Alpha.et" {
+ coords 5407.289 45.235 10494.793
+ angleY 32.711
+}
+SCR_AIGroup : "{E8D5C701D924861B}Prefabs/Groups/BLUFOR/Group_APCA_Command.et" {
+ coords 5407.466 43.261 10572.943
+ angleY 164.462
+}

@@ -1,0 +1,57 @@
+GenericWorldPPEffect {
+ ID "62E688810A855AB8"
+ coords 139.745 1.001 129.524
+ Priority 0
+ Profile 4
+ {
+  $grp GenericWorldPPEffect {
+   RainEffect {
+    ID "62E688810A8411A5"
+    coords 2522.945 78.034 1718.33
+    Priority 4
+    Profile 7
+    Material "{FA4DE95A7276143D}Common/Postprocess/rain.emat"
+    Postprocesses {
+     RainEffect "{62E688817AF11462}" {
+      RainDensity 0
+     }
+    }
+   }
+   HeightmapAO {
+    ID "62E688810A848973"
+    Priority 1
+    Material "{A71F44A2FFA0FEA7}Common/Postprocess/HeightmapAO.emat"
+   }
+   HDR {
+    ID "62E688810A848974"
+    Priority 16
+    Profile 2
+   }
+   PPAA {
+    ID "62E688810A84B338"
+    Priority 17
+    Profile 6
+   }
+   SSDO {
+    ID "62E688810A855AB9"
+    Priority 14
+    Profile 3
+   }
+   HBAO {
+    ID "62E688810A85F804"
+    Priority 15
+    Profile 0
+   }
+   GodRays {
+    ID "62E688810A85F805"
+    Priority 2
+    Profile 1
+   }
+   UnderWater {
+    ID "62E688810A85F806"
+    Priority 3
+    Profile 5
+   }
+  }
+ }
+}

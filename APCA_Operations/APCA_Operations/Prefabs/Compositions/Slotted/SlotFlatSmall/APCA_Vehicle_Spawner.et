@@ -262,37 +262,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   GenericEntity : "{CA3B72D3341FEE40}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_US_01.et" {
    ID "62E2B587B14657A0"
    coords 0.093 0 -5.051
-   {
-    GenericEntity {
-     ID "5D45393A70285E70"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 5000
-         m_fResourceValueMax 5000
-         m_fResourceGain 5000
-        }
-       }
-      }
-     }
-    }
-    GenericEntity {
-     ID "5D45393A70285E7C"
-     components {
-      SCR_ResourceComponent "{5D247A59598D71AE}" {
-       m_aContainers {
-        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-         m_fResourceValueCurrent 1500
-         m_fResourceValueMax 1500
-         m_bEnableResourceGain 1
-         m_fResourceGain 1500
-        }
-       }
-      }
-     }
-    }
-   }
   }
   GenericEntity : "{CC66836BF4E211F9}Prefabs/Props/Military/Camps/Duckboard_01.et" {
    ID "62E2B587B14657AC"
