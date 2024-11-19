@@ -1,0 +1,125 @@
+APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+   m_iReceiveKillFeedType ALL
+  }
+  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
+   Enabled 0
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{62E0D8448706FBC7}" {
+   }
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
+  }
+  SignalsManagerComponent "{62E0D8448706FB76}" {
+  }
+  SCR_CommunicationSoundComponent "{62E0D8448706FB08}" {
+  }
+  PS_CutsceneManager "{62E0D8448706FB04}" {
+  }
+  PS_MissionDataManager "{62E0D8448706FB03}" {
+  }
+  PS_MissionDescriptionManager "{62E0D8448706FB02}" {
+  }
+  PS_ObjectiveManager "{62E0D8448706FB01}" {
+   m_aObjectiveLavels {
+    PS_ObjectiveLevel "{62E0D8448706FB1B}" {
+     m_iScore 0
+     m_sName "#PS-ObjectiveLevel_MajorLoss"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB18}" {
+     m_iScore 25
+     m_sName "#PS-ObjectiveLevel_MinorLoss"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB17}" {
+     m_iScore 50
+     m_sName "#PS-ObjectiveLevel_Draw"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB16}" {
+     m_iScore 75
+     m_sName "#PS-ObjectiveLevel_MinorVictory"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB15}" {
+     m_iScore 100
+     m_sName "#PS-ObjectiveLevel_MajorVictory"
+    }
+   }
+  }
+  PS_PlayableManager "{62E0D8448706FB12}" {
+  }
+  PS_VoNRoomsManager "{62E0D8448706FB11}" {
+  }
+  SCR_CampaignBuildingManagerComponent "{62E0D8448706FB3E}" {
+   m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+   m_iCompositionRefundPercentage 100
+   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" {
+   }
+   m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
+  }
+  SCR_CommandingManagerComponent "{62E0D8448706FB36}" {
+  }
+  SCR_GameModeSFManager "{62E0D8448706FB34}" {
+   m_bDynamicDespawn 1
+  }
+  SCR_InitWeatherComponent "{62E0D8448706FB31}" {
+  }
+  SCR_PreGameGameModeStateComponent "{62E0D8448706FBCB}" {
+   m_fDuration 0
+  }
+  SCR_RestoreEditorModesComponent "{62E0D8448706FBC4}" {
+  }
+  SCR_SaveLoadComponent "{62E0D8448706FBC3}" {
+   m_Struct SCR_MissionStruct "{62E0D8448706FBC2}" {
+    m_Struct0 SCR_EditorStruct "{62E0D8448706FBC0}" {
+     m_AttributeList SCR_EditorAttributeList "{590C7881C296FA7D}" {
+     }
+    }
+   }
+   m_iAutosavePeriod 600
+  }
+  SCR_TimeAndWeatherHandlerComponent "{62E0D8448706FBDB}" {
+   Enabled 0
+   m_iStartingHours 6
+   m_iStartingMinutes 20
+  }
+ }
+ coords 7695.74 12.969 8108.813
+ PlayerControllerPrefab "{4E5DAC62A374950F}Prefabs/Characters/Core/DefaultPlayerControllerMP_Coop.et"
+ m_bAutoPlayerRespawn 0
+ m_bAllowFactionChange 0
+ m_bTeamSwitch 1
+ m_iFreezeTime 0
+ m_aFactionRespawnCount {
+  PS_FactionRespawnCount "{62E0D8448706FBEA}" {
+   m_sFactionKey "US"
+   m_iCount 999
+   m_iTime 8000
+  }
+ }
+ {
+  SCR_FactionManager "5EA8C932C68D400F" : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+   ID "62E0D844870653E8"
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "62E0D844870653EC"
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "62E0D844870653EF"
+  }
+  SCR_EditorSettingsEntity {
+   ID "62E0D8448706E4E8"
+   m_bIsUnlimitedEditorLegal 1
+  }
+  ItemPreviewManagerEntity "5E7AE0AB2109F297" : "{AB5D049A3AB43FC0}Prefabs/World/Game/ItemPreviewManager_PS.et" {
+   ID "62E0D8448706E4E6"
+  }
+ }
+}

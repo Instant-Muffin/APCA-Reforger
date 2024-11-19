@@ -1,0 +1,20 @@
+GenericEntity : "{0FC1D6E9B592F75D}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_US.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_ArsenalComponent "{589F01C9C8D4A475}" {
+   m_eSupportedArsenalItemTypes 917246
+  }
+  ActionsManagerComponent "{5476B36C403D4CC0}" {
+   additionalActions {
+    Bacon_GunBuilderOpenAction "{62E2E88EEB679445}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{62E2E88EE8F993CB}" {
+      Name "Loadout Editor"
+     }
+    }
+   }
+  }
+ }
+}

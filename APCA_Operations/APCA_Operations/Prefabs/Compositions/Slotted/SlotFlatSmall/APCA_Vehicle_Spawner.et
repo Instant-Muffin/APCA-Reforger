@@ -1,0 +1,330 @@
+GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  FactionAffiliationComponent "{62E2B587B146FDF4}" {
+   "faction affiliation" "US"
+  }
+  RigidBody "{5E96A067A67C5029}" {
+   Geometries {
+    PhysicsBoxGeometry UserAction {
+     Extents 12 0.5 12
+    }
+   }
+  }
+  SCR_CampaignBuildingCompositionComponent "{5E96A067C097D570}" {
+   m_AudioSourceConfigurationSpawn SCR_AudioSourceConfiguration "{5E96A067C355978C}" {
+    m_sSoundEventName "SOUND_BUILD_VEHICLE_DEPOT"
+   }
+  }
+  SCR_CampaignBuildingObstructionExceptionComponent "{62E2B587B146FDD0}" {
+  }
+  Hierarchy "{62E2B587B146FDD6}" {
+   Enabled 1
+  }
+ }
+ coords 0 0 0
+ {
+  GenericEntity : "{0958E6B949501D00}Prefabs/Props/Military/Generators/GeneratorPortable_US_01.et" {
+   ID "62E2B587B14769F3"
+   components {
+    Hierarchy "{62E2B587B146FDDC}" {
+     Enabled 1
+    }
+   }
+   coords 1.023 0 -2.037
+   angleY 16.63
+  }
+  GenericEntity : "{31833DA2630D6E52}Prefabs/Compositions/Misc/SubCompositions/Utility/Tire_Stack_Sign_US_01.et" {
+   ID "62E2B587B1476982"
+   coords 0.04 0 -1.089
+   angleY -157.305
+   {
+    GenericEntity {
+     ID "5CB0D997FDF1F07F"
+     coords -0.132 0 -0.094
+     {
+      GenericEntity {
+       ID "551ED4204EBD40E4"
+       coords 0.166 0.645 -0.047
+      }
+      GenericEntity {
+       ID "551ED4204EBD40E6"
+       coords 0.166 0.432 -0.047
+      }
+      GenericEntity {
+       ID "551ED4204EBD40E7"
+       coords 0.166 0.199 -0.047
+      }
+      GenericEntity {
+       ID "551ED4204EBD40F8"
+       coords 0.166 -0.027 -0.047
+      }
+     }
+    }
+    GenericEntity {
+     ID "5E3303B37C4BDC5D"
+     coords 0.007 0.397 -0.035
+    }
+   }
+  }
+  $grp GenericEntity : "{3D9998855187A405}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Small.et" {
+   {
+    ID "62E2B587B1476998"
+    components {
+     Hierarchy "{62E2B587B146FDC8}" {
+      Enabled 1
+     }
+    }
+    coords -3.067 0.1 2.559
+    angleY 1.213
+   }
+   {
+    ID "62E2B587B147B477"
+    components {
+     Hierarchy "{62E2B587B146FDCC}" {
+      Enabled 1
+     }
+    }
+    coords 3.504 0.1 1.905
+    angleY -2.887
+   }
+  }
+  GenericEntity : "{44C65662117C2FB6}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_VehicleGadget_US.et" {
+   ID "62E2B587B147B474"
+   components {
+    Hierarchy "{62E2B587B146FDB5}" {
+    }
+   }
+   coords 3.446 0 -2.349
+   angleY -160.654
+  }
+  GenericEntity : "{50A752B7D5E679A2}Prefabs/Props/Industrial/Repair/GasWelder_01.et" {
+   ID "62E2B587B147B471"
+   components {
+    Hierarchy "{62E2B587B146FDB8}" {
+     Enabled 1
+    }
+   }
+   coords 3.555 0 -1.719
+   angleY 29.841
+  }
+  GenericEntity : "{5753634EAFFBA2F6}Prefabs/Props/Military/Compositions/US/VehicleService_US.et" {
+   ID "62E2C7FA2CE52DB9"
+   components {
+    SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+     m_fBuildingRadius 50
+     m_aBudgetsToEvaluate {
+      SCR_CampaignBuildingCooldownWithRankBudgetToEvaluateData "{5EE71CAB5BFCF9A3}" {
+       m_aCustomCooldownData {
+        SCR_CooldownData "{5EEEF52515996867}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF5250BF881BF}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF5250BBA697C}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF5250B54777E}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF5250B763DE5}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF52574D7AC41}" {
+         m_fDefaultTimeMultiplier 0
+        }
+        SCR_CooldownData "{5EEEF5255ABE05CA}" {
+         m_fDefaultTimeMultiplier 0
+        }
+       }
+      }
+     }
+     m_aAvailableTraits + {
+      51 52 53 54 55
+     }
+    }
+    SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
+     m_aConsumers {
+      SCR_ResourceConsumer "{5DB899358AF453B9}" {
+       m_fBuyMultiplier 0.001
+      }
+     }
+     m_aGenerators {
+      SCR_ResourceGenerator "{5DB89935F419B998}" {
+       m_fResourceMultiplier 1
+      }
+     }
+    }
+    ActionsManagerComponent "{5CB6952C9693C41C}" {
+     additionalActions {
+      SCR_CampaignBuildingStartUserAction "{5ED5534E4E40397F}" {
+       VisibilityRange 20
+       Duration 1
+      }
+     }
+    }
+   }
+   coords 0.072 -0.016 -1.956
+   angleY -180
+  }
+  GenericEntity : "{5D31850B326BA246}Prefabs/Props/Industrial/AirCompressor_01/AirCompressor_01.et" {
+   ID "62E2B587B147B47F"
+   components {
+    Hierarchy "{62E2B587B146FDBE}" {
+     Enabled 1
+    }
+   }
+   coords -1.004 0 -1.106
+   angleY 32.357
+  }
+  $grp GenericEntity : "{6204943E9EC70EC2}Prefabs/Structures/Military/Camps/Canvas_Covers/US/CanvasCover_Medium_US.et" {
+   {
+    ID "62E2B587B1461705"
+    components {
+     Hierarchy "{62E2B587B146FDA9}" {
+      Enabled 1
+     }
+    }
+    coords -1.645 0.1 -3.756
+   }
+   {
+    ID "62E2B587B147B47C"
+    components {
+     Hierarchy "{62E2B587B146FDA4}" {
+      Enabled 1
+     }
+    }
+    coords 1.651 0.1 -3.756
+   }
+  }
+  StaticModelEntity : "{785F322AC3DFD4B9}Prefabs/Compositions/Misc/SubCompositions/Furniture/Chair_Light_US_01.et" {
+   ID "62E2B587B146173F"
+   coords -0.834 0 -2.276
+   angleY 31.847
+  }
+  $grp GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
+   {
+    ID "62E2B587B1461736"
+    coords -3.209 0 2.382
+    angleY 84.629
+   }
+   {
+    ID "62E2B587B1461739"
+    coords 3.29 0 2.521
+    angleY -89.952
+   }
+  }
+  $grp GenericEntity : "{894A1AFDCB71CD0D}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_02.et" {
+   {
+    ID "62E2B587B1461734"
+    coords 1.939 0 -3.615
+    angleY -30.526
+   }
+   {
+    ID "62E2B587B1461737"
+    coords -1.684 0 -3.704
+    angleY 119.892
+   }
+  }
+  GenericEntity : "{90A74133C1DC6226}Prefabs/Props/Industrial/Repair/EngineCrane_01.et" {
+   ID "62E2B587B1461732"
+   components {
+    Hierarchy "{62E2B587B146FD90}" {
+     Enabled 1
+    }
+   }
+   coords -3.779 0 -1.543
+   angleY -7.194
+  }
+  GenericEntity : "{B557358F8F64AE31}Prefabs/Props/Industrial/Repair/HydraulicCarJack_01.et" {
+   ID "62E2B587B14657A7"
+   components {
+    Hierarchy "{62E2B587B146FD99}" {
+     Enabled 1
+    }
+   }
+   coords -3.031 0 -1.595
+   angleY 22.044
+  }
+  $grp GenericEntity : "{C599195C442D7125}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_CigarButts_01.et" {
+   {
+    ID "62E2B587B14657A2"
+    coords -1.145 0 -1.755
+    angleY -123.462
+   }
+   {
+    ID "62E2B587B14657A5"
+    coords 1.049 0 -2.358
+    angleY -45.992
+   }
+  }
+  GenericEntity : "{CA3B72D3341FEE40}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_US_01.et" {
+   ID "62E2B587B14657A0"
+   coords 0.093 0 -5.051
+   {
+    GenericEntity {
+     ID "5D45393A70285E70"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 5000
+         m_fResourceValueMax 5000
+         m_fResourceGain 5000
+        }
+       }
+      }
+     }
+    }
+    GenericEntity {
+     ID "5D45393A70285E7C"
+     components {
+      SCR_ResourceComponent "{5D247A59598D71AE}" {
+       m_aContainers {
+        SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+         m_fResourceValueCurrent 1500
+         m_fResourceValueMax 1500
+         m_bEnableResourceGain 1
+         m_fResourceGain 1500
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  GenericEntity : "{CC66836BF4E211F9}Prefabs/Props/Military/Camps/Duckboard_01.et" {
+   ID "62E2B587B14657AC"
+   components {
+    Hierarchy "{62E2B587B146FD81}" {
+     Enabled 1
+    }
+   }
+   coords -0.073 0 -3.298
+   angleY -90.506
+  }
+  $grp GenericEntity : "{F76BD5785C7FE191}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_ObservationPoint.et" {
+   {
+    ID "62E2B587B1466E63"
+    components {
+     Hierarchy "{62E2B587B146FD84}" {
+      Enabled 1
+     }
+    }
+    coords 4.664 0 -2.187
+    angleY -77.457
+   }
+   {
+    ID "62E2B587B146FE0F"
+    components {
+     Hierarchy "{62E2B587B146FD8A}" {
+      Enabled 1
+     }
+    }
+    coords -4.292 0 -4.971
+    angleY -171.709
+   }
+  }
+ }
+}

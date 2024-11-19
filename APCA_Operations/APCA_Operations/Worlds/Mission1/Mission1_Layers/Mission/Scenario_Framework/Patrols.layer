@@ -1,0 +1,273 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Area2 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 600
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 5452.521 47.676 8120.55
+  {
+   $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+    SlotAI25 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords -252.597 62.713 -247.389
+     angleY 44.648
+    }
+    SlotAI26 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords -306.389 80.962 -384.874
+     angleY 44.648
+    }
+    SlotAI27 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords -211.127 14.424 17.105
+     angleY 44.648
+    }
+   }
+  }
+ }
+ Area12 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 450
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 4886.996 170.844 7047.026
+  {
+   $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+    SlotAI28 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords 45.771 1.587 -17.079
+     angleY 44.648
+    }
+    SlotAI29 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords -79.583 -3.245 -65.466
+     angleY 44.648
+    }
+    SlotAI30 {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sFactionKey "FIA"
+       m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+       m_aIncludedEditableEntityLabels {
+       }
+       m_aExcludedEditableEntityLabels {
+       }
+       m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+       m_eAIGroupFormation StaggeredColumn
+      }
+     }
+     coords 37.87 -0.915 66.402
+     angleY 44.648
+    }
+   }
+  }
+ }
+ Area11 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 500
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 7005.705 83.35 8281.932
+  {
+   GenericEntity Layer14 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI55 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{8515E8BD26A5D5F8}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Randomized.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+          46 48 42 44 43
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 92.35 -2.576 21.005
+       angleY 111.475
+      }
+      SlotAI56 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{8515E8BD26A5D5F8}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Randomized.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+          46 48 42 44 43
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 99.069 4.207 36.567
+       angleY 156.117
+      }
+      SlotAI57 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{8515E8BD26A5D5F8}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Randomized.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+          46 48 42 44 43
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 102.211 -3.035 25.454
+       angleY 133.938
+      }
+      SlotAI58 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_aExcludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+         m_eAIGroupFormation StaggeredColumn
+        }
+       }
+       coords 115.479 0.45 54.627
+       angleY 44.648
+      }
+      SlotAI59 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_aExcludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+         m_eAIGroupFormation StaggeredColumn
+        }
+       }
+       coords 66.058 12.011 99.008
+       angleY 44.648
+      }
+      SlotAI60 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_aExcludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+         m_eAIGroupFormation StaggeredColumn
+        }
+       }
+       coords -9.9 -2.134 -34.03
+       angleY 44.648
+      }
+      SlotAI61 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_aExcludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+         m_eAIGroupFormation StaggeredColumn
+        }
+       }
+       coords 32.557 14.656 94.855
+       angleY 44.648
+      }
+      SlotAI62 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "FIA"
+         m_sObjectToSpawn "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_aExcludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+         m_eAIGroupFormation StaggeredColumn
+        }
+       }
+       coords -252.327 35.568 -219.345
+       angleY 44.648
+      }
+     }
+    }
+   }
+  }
+ }
+}

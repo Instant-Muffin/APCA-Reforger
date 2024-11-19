@@ -1,0 +1,65 @@
+GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/SignRectangle_01_140x100_base.et" {
+ ID "50D67C36F4200F97"
+ components {
+  MeshObject "{54969A6AAAADA251}" {
+   Materials {
+    MaterialAssignClass "{62E2E886FD820022}" {
+     SourceMaterial "SignRectangle_01_140x100"
+     AssignedMaterial "{569A6011C9A2D572}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01.emat"
+    }
+    MaterialAssignClass "{62E2E886FD820035}" {
+     SourceMaterial "SignRectangle_01_140x100_MLOD"
+     AssignedMaterial "{B41E12664BB7B57F}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01_MLOD.emat"
+    }
+   }
+  }
+  RigidBody "{54969A6AA8773997}" {
+   ResponseIndex "TinyDestructible"
+  }
+  SCR_DestructionMultiPhaseComponent "{5496C1EF00137501}" {
+   Enabled 0
+   m_fBaseHealth 100000
+   m_DestroySpawnObjects {
+    SCR_DebrisSpawnable "{58D4C8DAFF1CE2A0}" {
+     m_ModelPrefabs {
+      "{7D5E704E04714F96}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Dst/SignRectangle_01_140x100_dst_02_US_warzone.et" "{34567B212E3EAD9C}Assets/Structures/Signs/Military/Dst/SignRectangle_01_140x100_dst_03.xob"
+     }
+    }
+   }
+   m_bDeleteAfterFinalPhase 0
+  }
+  ActionsManagerComponent "{62E2E886CC9E1F76}" {
+   ActionContexts {
+    UserActionContext "{62E2E886C3E2782D}" {
+     ContextName "default"
+     Position PointInfo "{62E2E886C6EE5593}" {
+      Offset 0 1.1814 0
+     }
+     Radius 5
+    }
+   }
+   additionalActions {
+    APCA_CrashRecoverUserAction "{62E2E88902FF029B}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{62E2E889076E9A31}" {
+      Name "Crash Recover"
+     }
+     Duration 2
+     "Sort Priority" 10
+    }
+    APCA_QRFTeleportUserAction "{62E2E88C97ED4D09}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{62E2E88C8A6BAC1E}" {
+      Name "Join QRF"
+     }
+     Duration 2
+     "Sort Priority" 9
+    }
+   }
+  }
+ }
+}

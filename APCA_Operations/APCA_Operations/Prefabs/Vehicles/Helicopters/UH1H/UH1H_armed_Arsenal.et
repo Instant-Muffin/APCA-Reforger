@@ -1,0 +1,21 @@
+Vehicle : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ ID "5DB688595BAB2FD7"
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    SCR_OpenStorageAction "{62DCB96000CE9F97}" {
+    }
+    SCR_SaveArsenalLoadout "{62DCB96029FC214C}" {
+     m_eShownInVehicleState NOT_IN_VEHICLE
+    }
+   }
+  }
+  SCR_ArsenalComponent "{62DCB96167AA5A67}" {
+   m_eSupportedArsenalItemTypes 65730
+   m_eSupportedArsenalItemModes 254
+   m_eEditableAttributeGroups 28
+   m_eArsenalSaveType FACTION_ITEMS_ONLY
+   m_eArsenalTypes VEHICLES
+  }
+ }
+}

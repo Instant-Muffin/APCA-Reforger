@@ -1,0 +1,29 @@
+$grp GenericEntity : "{11E588E215EBCF23}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_Vehicle.et" {
+ {
+  coords 7693.497 12.969 8108.004
+  angleY -77.831
+ }
+ {
+  coords 7693.478 13.283 8108.019
+  angleY -77.831
+ }
+ {
+  coords 7692.912 12.969 8107.294
+  angleY -44.694
+ }
+ {
+  coords 7692.838 13.28 8107.307
+  angleY -52.848
+ }
+}
+GenericEntity : "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et" {
+ coords 6877.277 67.876 8650.856
+ angleX 61.074
+ angleY -133.092
+ angleZ -93.136
+}
+GenericEntity : "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et" {
+ coords 6877.714 67.723 8649.354
+ angleY -69.615
+ angleZ -90
+}

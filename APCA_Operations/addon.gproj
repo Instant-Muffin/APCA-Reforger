@@ -1,0 +1,8 @@
+GameProject {
+ ID "APCAOperations"
+ GUID "62DAF65820BF9857"
+ TITLE "APCA_Operations"
+ Dependencies {
+  "5EAF2B0473DB5A99" "5EE9238E61637E47" "58D0FB3206B6F859"
+ }
+}
