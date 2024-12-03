@@ -1,0 +1,17 @@
+GenericEntity {
+ ID "6306730FA0542517"
+ components {
+  SCR_ScenarioFrameworkArea "{6306730FA0542590}" {
+   m_eActivationType ON_INIT
+  }
+  Hierarchy "{6306730FA05425A4}" {
+  }
+ }
+ coords 1356.473 38.019 2885.369
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   ID "6306796B13A6D3D4"
+   coords 0 0 0
+  }
+ }
+}

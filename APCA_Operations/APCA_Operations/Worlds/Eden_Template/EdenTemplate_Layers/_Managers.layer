@@ -101,10 +101,15 @@ ScriptedChatEntity CampaignMPChatEntity : "{536D80EB494DDC43}Prefabs/MP/Campaign
 }
 APCA_GameModeCoop APCA_GameMode_Lobby : "{5677F55606CF7253}Prefabs/MP/Modes/APCA_GameMode_Lobby.et" {
  coords 7114.537 75.238 6401
+ m_aFactionRespawnCount {
+  PS_FactionRespawnCount "{62E0D8448706FBEA}" {
+   m_iTime 480000
+  }
+ }
 }
 TimeAndWeatherManagerEntity TimeAndWeatherManager : "{A3BAF78F6F03315B}Prefabs/World/Game/TimeAndWeatherManager.et" {
  coords 7114.537 73.129 6410
- WeatherStateMachine "{A1B00CB2CCAACC94}Terrains/Common/WeatherPresets/StateMachine/APCA_WeatherStates.conf"
+ WeatherStateMachine "{800ECE307FEF7BE5}Terrains/Common/WeatherPresets/StateMachine/APCA_WeatherStatesRainy.conf"
  "Initial Day Time" 14
  "Initial State" 0
  "Month of the Year" 6
@@ -114,9 +119,9 @@ TimeAndWeatherManagerEntity TimeAndWeatherManager : "{A3BAF78F6F03315B}Prefabs/W
  "Internal variant transition" 0
  "Internal subvariant 0" 0
  "Internal subvariant 1" 0
- "Initial Wetness" 0
- "Initial Water Accumulation Cracks" 0
- "Initial Water Accumulation Puddles" 0
+ "Initial Wetness" 1
+ "Initial Water Accumulation Cracks" 1
+ "Initial Water Accumulation Puddles" 1
  {
   CommentEntity {
    coords 0 1 0

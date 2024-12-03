@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{591E80FA822D93E1}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed_Arsenal.et"
+ Name "{7A9A9504F23D2129}Prefabs/ScenarioFramework/Components/Marker.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
