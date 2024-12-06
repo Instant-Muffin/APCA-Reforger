@@ -203,18 +203,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
    coords -0.834 0 -2.276
    angleY 31.847
   }
-  $grp GenericEntity : "{7B6EDBC3E88ECD97}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Tracks_03.et" {
-   {
-    ID "62E2B587B1461736"
-    coords -3.209 0 2.382
-    angleY 84.629
-   }
-   {
-    ID "62E2B587B1461739"
-    coords 3.29 0 2.521
-    angleY -89.952
-   }
-  }
   $grp GenericEntity : "{894A1AFDCB71CD0D}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_02.et" {
    {
     ID "62E2B587B1461734"
@@ -258,10 +246,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
     coords 1.049 0 -2.358
     angleY -45.992
    }
-  }
-  GenericEntity : "{CA3B72D3341FEE40}Prefabs/Compositions/Misc/SubCompositions/Storage/Slotted/Storage_Supplies_US_01.et" {
-   ID "62E2B587B14657A0"
-   coords 0.093 0 -5.051
   }
   GenericEntity : "{CC66836BF4E211F9}Prefabs/Props/Military/Camps/Duckboard_01.et" {
    ID "62E2B587B14657AC"

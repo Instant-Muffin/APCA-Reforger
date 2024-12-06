@@ -4,7 +4,8 @@ class APCA_CrashRecoverUserAction : ScriptedUserAction
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
 	{
 		vector transform[4];
-		SCR_AIGroup player_group = SCR_AIGroup.Cast(pUserEntity);
+		AIGroup player_group = SCR_AIGroup.Cast(pUserEntity);
+		
 		array<AIAgent> agents = {};	
 		
 		IEntity tele_target = player_group.GetLeaderAgent();

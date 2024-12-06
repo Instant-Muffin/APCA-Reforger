@@ -1,17 +1,22 @@
-GenericEntity {
- ID "6306730FA0542517"
- components {
-  SCR_ScenarioFrameworkArea "{6306730FA0542590}" {
-   m_eActivationType ON_INIT
-  }
-  Hierarchy "{6306730FA05425A4}" {
-  }
- }
- coords 1356.473 38.019 2885.369
+GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ ID "59E8CDC4819B4FE1"
+ coords 5468.771 129.406 6934.221
  {
   GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
-   ID "6306796B13A6D3D4"
+   ID "630686459DADE4AD"
    coords 0 0 0
+   {
+    GenericEntity SlotMarker1 : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     ID "630686459DADE4AE"
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
   }
  }
 }

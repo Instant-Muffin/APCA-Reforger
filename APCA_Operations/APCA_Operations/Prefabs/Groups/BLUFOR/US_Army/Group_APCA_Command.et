@@ -13,7 +13,7 @@ SCR_AIGroup : "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" {
   }
  }
  m_aUnitPrefabSlots {
-  "{94BAA74D8A18D272}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_PL.et" "{FF7A5F1CD1F716F7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Pilot.et" "{FF7A5F1CD1F716F7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Pilot.et" "{D085445CD9D219C7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Unarmed.et"
+  "{94BAA74D8A18D272}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_PL.et" "{FF7A5F1CD1F716F7}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Pilot.et" "{FF7A5F1CD1F716F7}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Pilot.et" "{D085445CD9D219C7}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Unarmed.et"
  }
  m_sCustomNameSet "Command"
  m_bSetPlayable 1

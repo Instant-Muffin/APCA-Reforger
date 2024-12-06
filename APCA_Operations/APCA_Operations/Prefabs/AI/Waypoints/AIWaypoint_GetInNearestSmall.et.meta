@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{0CC0D60A87468A6A}Prefabs/Marker.et"
+ Name "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

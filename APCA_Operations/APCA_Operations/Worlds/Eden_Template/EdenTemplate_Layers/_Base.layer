@@ -76,7 +76,7 @@ $grp GenericEntity : "{3FD3F403025BBDF5}Prefabs/Props/Military/SupplyBox/SupplyS
   scale 1.111
  }
 }
-$grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_APCA.et" {
+$grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Base Objects/AmmoBoxArsenal_Equipment_APCA.et" {
  {
   coords 5420.84 43.229 10581.489
   angleY 72.4
@@ -125,7 +125,7 @@ $grp GenericEntity : "{7B04AB6CD4AA3C6D}Prefabs/Compositions/Misc/SubComposition
   angleY -61.537
   angleZ 1.939
   {
-   $grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_APCA.et" {
+   $grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Base Objects/AmmoBoxArsenal_Equipment_APCA.et" {
     {
      coords 1.357 0.044 2.381
      angleX -1.661
@@ -147,7 +147,7 @@ $grp GenericEntity : "{7B04AB6CD4AA3C6D}Prefabs/Compositions/Misc/SubComposition
   angleY -12.603
   angleZ 1.294
   {
-   $grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/AmmoBoxArsenal_Equipment_APCA.et" {
+   $grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Base Objects/AmmoBoxArsenal_Equipment_APCA.et" {
     {
      coords 1.498 0.052 -2.099
      angleX -1.911
@@ -164,7 +164,7 @@ $grp GenericEntity : "{7B04AB6CD4AA3C6D}Prefabs/Compositions/Misc/SubComposition
   }
  }
 }
-$grp GenericEntity : "{7DE54A7A529EDFE0}Prefabs/Structures/Signs/APCA_Ops_Sign.et" {
+$grp GenericEntity : "{7DE54A7A529EDFE0}Prefabs/Base Objects/APCA_Ops_Sign.et" {
  {
   coords 5399.146 43.414 10567.975
   angleY 165.299
@@ -316,13 +316,35 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords 65.682 -0.529 119.307
        angleY 29.118
       }
+      SlotAI6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "US"
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -92.693 -5.883 9.145
+       angleY 170.448
+      }
+      SlotAI7 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sFactionKey "US"
+         m_sObjectToSpawn "{41B18E01845655C8}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer_HVT.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -119.423 -7.255 49.092
+       angleY 170.448
+      }
      }
     }
    }
   }
  }
 }
-GenericEntity : "{E16B35EC09881DAC}Prefabs/Compositions/Slotted/SlotFlatSmall/APCA_Vehicle_Spawner.et" {
+GenericEntity : "{E16B35EC09881DAC}Prefabs/Base Objects/APCA_Vehicle_Spawner.et" {
  coords 5344.061 43.42 10533.456
  angleY -17.522
  {
@@ -337,7 +359,6 @@ GenericEntity : "{E16B35EC09881DAC}Prefabs/Compositions/Slotted/SlotFlatSmall/AP
    }
   }
   GenericEntity {
-   ID "62E2B587B14657A0"
   }
  }
 }
