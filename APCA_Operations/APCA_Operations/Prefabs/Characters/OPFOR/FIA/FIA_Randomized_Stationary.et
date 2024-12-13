@@ -1,0 +1,15 @@
+GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+ ID "5A26E3FA239786D5"
+ components {
+  SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+   m_sObjectToSpawn "{8515E8BD26A5D5F8}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Randomized.et"
+   m_eEntityCatalogType CHARACTER
+   m_aIncludedEditableEntityLabels {
+    46 40 41 43 48
+   }
+   m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+  }
+ }
+ coords 9362.372 0.999 5119.664
+ angleY 14.161
+}

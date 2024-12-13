@@ -6,11 +6,11 @@ GenericEntity : "{0FC1D6E9B592F75D}Prefabs/Props/Military/Arsenal/AmmoBoxes/US/A
   }
   ActionsManagerComponent "{5476B36C403D4CC0}" {
    additionalActions {
-    Bacon_GunBuilderOpenAction "{62E2E88EEB679445}" {
+    Bacon_GunBuilderOpenAction "{631299F8427A482B}" {
      ParentContextList {
       "default"
      }
-     UIInfo UIInfo "{62E2E88EE8F993CB}" {
+     UIInfo UIInfo "{606B12192038245D}" {
       Name "Loadout Editor"
      }
     }

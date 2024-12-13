@@ -44,7 +44,7 @@ GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectang
       "default"
      }
      UIInfo UIInfo "{62E2E889076E9A31}" {
-      Name "Crash Recover"
+      Name "Teleport yourself into the fucking ocean"
      }
      Duration 2
      "Sort Priority" 10

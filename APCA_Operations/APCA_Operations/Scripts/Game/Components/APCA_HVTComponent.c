@@ -24,6 +24,7 @@ class APCA_HVTComponent : ScriptComponent
 	
 	protected override void OnPostInit(IEntity owner)
 	{
+		super.OnPostInit(owner);
 		//Enables EOnFrame 
 		SetEventMask(owner, EntityEvent.FRAME);
 	}

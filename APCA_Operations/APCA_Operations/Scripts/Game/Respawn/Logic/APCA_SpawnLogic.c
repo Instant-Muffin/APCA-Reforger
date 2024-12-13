@@ -21,8 +21,15 @@ class APCA_SpawnLogic: SCR_SpawnLogic
 			Type().ToString(), requestComponent.GetPlayerId(), typename.EnumToString(SCR_ESpawnResult, response));
 		#endif
 		
-		m_playerLoadout = GetPlayerLoadoutComponent_S(requestComponent.GetPlayerId()).GetLoadout();
-		m_playerInitialLoadout = m_playerLoadout;
+		if(m_playerLoadout) 
+		{
+			GetPlayerLoadoutComponent_S(requestComponent.GetPlayerId()).GetLoadout() = m_playerLoadout;
+		}else 
+		{
+			m_playerLoadout = GetPlayerLoadoutComponent_S(requestComponent.GetPlayerId()).GetLoadout();
+			m_playerInitialLoadout = m_playerLoadout;
+		}
+		
 
 		if (response != SCR_ESpawnResult.OK)
 		{

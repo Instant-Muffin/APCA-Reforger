@@ -1,0 +1,57 @@
+GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+ ID "59F0B4850F342318"
+ coords 235.477 3.102 -199.563
+ {
+  GenericEntity SlotAI_Crew : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+   ID "6314831107983851"
+   components {
+    SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+     m_sObjectToSpawn "{DF9E6585D2362610}Prefabs/Groups/INDFOR/Group_FIA_3x_Crew.et"
+     m_eEntityCatalogType GROUP
+     m_aIncludedEditableEntityLabels {
+     }
+     m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{631483162E0BA792}" {
+      m_aLayerName {
+       "SlotWaypoint1" "SlotWaypoint2"
+      }
+     }
+     m_sWPToSpawn "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+    }
+   }
+   coords 3.063 0.02 -4.187
+   angleY -87.531
+  }
+  GenericEntity Slot_BTR : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+   ID "6314831107983850"
+   components {
+    SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+     m_sObjectToSpawn "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+    }
+   }
+   coords 0.9 -0.08 -4.896
+  }
+  $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+   SlotWaypoint1 {
+    ID "6314831107983853"
+    components {
+     SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+      m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{63148310F5D01B5F}" {
+       m_fCompletionRadius 10
+      }
+     }
+    }
+    coords 0 0 0
+   }
+   SlotWaypoint2 {
+    ID "631483110798F4B8"
+    components {
+     SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+      m_Waypoint SCR_ScenarioFrameworkWaypointMove "{6314831124B09423}" {
+      }
+     }
+    }
+    coords 0 0 0
+   }
+  }
+ }
+}

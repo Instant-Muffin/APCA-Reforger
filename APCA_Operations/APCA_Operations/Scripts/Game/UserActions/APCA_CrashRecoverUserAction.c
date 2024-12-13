@@ -2,26 +2,37 @@ class APCA_CrashRecoverUserAction : ScriptedUserAction
 {
 	//------------------------------------------------------------------------------------------------
 	override void PerformAction(IEntity pOwnerEntity, IEntity pUserEntity)
-	{
-		vector transform[4];
-		AIGroup player_group = SCR_AIGroup.Cast(pUserEntity);
+	{		
+		ChimeraAIControlComponent PlayerComponent = ChimeraAIControlComponent.Cast(pUserEntity.FindComponent(ChimeraAIControlComponent));
+		AIAgent Player_Agent = PlayerComponent.GetAIAgent();
+		AIGroup Player_Group = Player_Agent.GetParentGroup();
+		if (Player_Group)
+		{
+			Print("There is a group");
 		
-		array<AIAgent> agents = {};	
-		
-		IEntity tele_target = player_group.GetLeaderAgent();
-		
-		tele_target.GetTransform(transform);
+			IEntity tele_target = Player_Group.GetLeaderAgent();
+			
+			vector destination[4];
+			vector transform[4]; 
+			tele_target.GetWorldTransform(destination);
+			pUserEntity.GetWorldTransform(transform);
+			transform[3] = destination[3];
 	
 		
-		BaseGameEntity baseGameEntity = BaseGameEntity.Cast(pUserEntity);
-		if (baseGameEntity && !BaseVehicle.Cast(baseGameEntity))
-		{
-			baseGameEntity.Teleport(transform);
-		}
+			BaseGameEntity baseGameEntity = BaseGameEntity.Cast(pUserEntity);
+			if (baseGameEntity && !BaseVehicle.Cast(baseGameEntity))
+			{
+				baseGameEntity.Teleport(transform);
+			}
+			else
+			{
+				pUserEntity.SetWorldTransform(transform);
+			}
+		}	
 		else
 		{
-			pUserEntity.SetWorldTransform(transform);
-		}
+			Print("There is no group...");
+		}	
 	}
 	
 	//------------------------------------------------------------------------------------------------

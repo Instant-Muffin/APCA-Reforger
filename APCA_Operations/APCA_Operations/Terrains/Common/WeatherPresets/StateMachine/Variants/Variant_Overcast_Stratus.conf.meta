@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{8AF60CE2298735CF}Terrains/Common/WeatherPresets/StateMachine/Variants/Variant_Overcast_Stratus.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

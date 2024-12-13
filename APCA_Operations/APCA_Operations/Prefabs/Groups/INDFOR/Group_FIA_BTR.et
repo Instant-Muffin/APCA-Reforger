@@ -1,0 +1,26 @@
+GenericEntity : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+ ID "5A22E1D64BC88E05"
+ components {
+  SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+   m_sObjectToSpawn "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+  }
+ }
+ coords 720.115 -3.61 -206.463
+ {
+  GenericEntity SlotAI69 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+   ID "63148314A6027B62"
+   components {
+    SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+     m_sObjectToSpawn "{DF9E6585D2362610}Prefabs/Groups/INDFOR/Group_FIA_3x_Crew.et"
+     m_eEntityCatalogType CHARACTER
+     m_aIncludedEditableEntityLabels {
+     }
+     m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+     m_eAIGroupFormation Line
+    }
+   }
+   coords 3.005 -0.026 1.83
+   angleY 2.469
+  }
+ }
+}

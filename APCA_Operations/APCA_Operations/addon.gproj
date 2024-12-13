@@ -3,6 +3,20 @@ GameProject {
  GUID "62DAF65820BF9857"
  TITLE "APCA_Operations"
  Dependencies {
-  "5EAF2B0473DB5A99" "5EE9238E61637E47" "58D0FB3206B6F859"
+  "5EAF2B0473DB5A99" "5EE9238E61637E47" "58D0FB3206B6F859" "5DBD560C5148E1DA" "606B100247F5C709" "5B0D1E4380971EBD"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
  }
 }

@@ -112,7 +112,9 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
    ID "62E2C7FA2CE52DB9"
    components {
     SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+     m_bRegisterAtBase 0
      m_fBuildingRadius 50
+     m_iRank INVALID
      m_aBudgetsToEvaluate {
       SCR_CampaignBuildingCooldownWithRankBudgetToEvaluateData "{5EE71CAB5BFCF9A3}" {
        m_aCustomCooldownData {
@@ -139,10 +141,37 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
         }
        }
       }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{5EF07CF4F67DF8CE}" {
+       m_eBudget RANK_PRIVATE
+      }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{5EF07CF4EBDEB7E3}" {
+       m_eBudget RANK_CORPORAL
+      }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{60EC916CEBC3C55B}" {
+       m_eBudget RANK_SERGEANT
+      }
+      SCR_CampaignBuildingCooldownBudgetToEvaluateData "{60E4C8BB029BE544}" {
+       m_eBudget RANK_LIEUTENANT
+      }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{60EC916CE2EE6793}" {
+       m_eBudget RANK_CAPTAIN
+      }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{60EC916CDCB0E4C1}" {
+       m_eBudget RANK_MAJOR
+      }
+      SCR_CampaignBuildingRankBudgetToEvaluateData "{60EC916CD6CA8F4B}" {
+       m_eBudget RANK_COLONEL
+      }
      }
      m_aAvailableTraits + {
-      51 52 53 54 55
+      52 53 54 55
      }
+    }
+    SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+     m_iVehicleLockedDuration 2
+    }
+    SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+     Enabled 1
     }
     SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
      m_aConsumers {

@@ -44,9 +44,6 @@ GenericEntity : "{D31D0F615378FA6B}Prefabs/Compositions/Misc/SubCompositions/Can
    ID "57068189B49C4ACF"
    coords -0.946 -0.088 -1.361
   }
-  SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
-   coords 0 0.021 0.928
-  }
   GenericEntity QRF_Marker : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
    coords 0.114 -0.179 2.126
    angleX 0.894
