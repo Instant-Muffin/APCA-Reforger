@@ -1,0 +1,27 @@
+Vehicle M923A1_transport_covered_MERDC1 : "{04BDACC0BB83284E}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_MERDC.et" {
+ components {
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 10
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   EnableDamage 0
+  }
+ }
+ coords 5345.697 43.552 10546.98
+ angleX 1.141
+ angleY -109.359
+ angleZ 0.548
+}
+Vehicle M923A1_transport_MERDC2 : "{3F2AA823B6C65E1E}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_MERDC.et" {
+ components {
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   EnableDamage 0
+  }
+ }
+ coords 5355.688 43.5 10536.157
+ angleY -42.018
+}
+Vehicle M1025_M2HB_MERDC_QRF1 : "{FBEE483B07735E2B}Prefabs/Vehicles/Wheeled/M998/M1025_M2HB_MERDC_QRF.et" {
+ coords 5336.489 43.5 10543.49
+ angleY -104.852
+}

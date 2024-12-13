@@ -1,0 +1,166 @@
+Vehicle UAZ469_PKM1 : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
+ coords 5859.118 78.315 4252.891
+ angleX 6.242
+}
+GenericEntity : "{1666078C5157E508}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_02.et" {
+ coords 5870.998 78.646 4270.555
+ angleY 25.654
+}
+Vehicle UAZ2 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 5870.404 78.17 4236.024
+ angleX -3.215
+ angleY -150.749
+ angleZ 0.25
+}
+Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
+ coords 5849.01 78.437 4251.003
+ angleY -73.708
+}
+Vehicle Ural4320_tanker2 : "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" {
+ coords 5378.652 6.875 4552.097
+ angleY -94.865
+}
+GenericEntity : "{4EF68238FE2FC26B}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_04.et" {
+ coords 5855.205 78.437 4254.739
+ angleY 115.941
+}
+GenericEntity : "{7A32336CED936A26}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_USSR_01.et" {
+ coords 5868.065 78.354 4238.918
+ angleY 12.442
+}
+Vehicle Mi8MT_armed2 : "{7BD282AF716ED639}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_armed.et" {
+ coords 5389.167 7.206 4543.792
+ angleY -54.87
+}
+GenericEntity : "{7C20041DA3207191}Prefabs/Compositions/Slotted/SlotFlatSmall/AmmoStorage_S_USSR_01.et" {
+ coords 5901.107 78.523 4250.545
+ angleY -49.477
+}
+StaticModelEntity : "{7D8F17E319CB4C04}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Bunker_Cluttered_US_01.et" {
+ coords 5867.904 78.47 4306.975
+}
+GenericEntity : "{92BE346D5E0BD792}Prefabs/Props/Military/Fuel/MobileWaterTank_USSR_01_fuel.et" {
+ coords 5398.557 6.792 4598.419
+ angleY 135.409
+}
+SCR_DestructibleBuildingEntity : "{A2AA324A95883FB2}Prefabs/Structures/Military/Bunkers/ReinforcedFueltank_E_01/ReinforcedFueltank_E_01_camo.et" {
+ coords 5369.325 0.797 4620.417
+ angleY 116.665
+}
+GenericEntity : "{A2D4DAC9EDE8BD6E}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_MG_USSR_01_NSV.et" {
+ coords 5879.145 78.237 4241.335
+ angleY 21.175
+}
+$grp StaticModelEntity : "{A984D376401A88ED}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Utility/E_Helipad_Lights_USSR_01.et" {
+ {
+  coords 5406.628 0 4567.453
+  angleY 33.87
+ }
+ {
+  coords 5423.402 0 4592.443
+  angleY 33.87
+ }
+ {
+  coords 5389.97 0 4542.634
+  angleY 33.87
+ }
+}
+StaticModelEntity : "{B6D61E3EC914119E}Prefabs/Compositions/Misc/SubCompositions/Tent_Barrack_Camo_Cluttered_USSR_01.et" {
+ coords 5903.691 78.337 4278.342
+ angleY 120.74
+}
+GenericEntity : "{C0E7BC298C1EEBE9}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Sandbag_Ammo_01.et" {
+ coords 5869.104 78.371 4241.261
+ angleY 14.098
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ MarkerCastle {
+  coords 5878.053 78.438 4262.771
+  {
+   GenericEntity Layer10 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity SlotMarker3 : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{63068640915B5AC8}" {
+         m_sMapMarkerText "Anti-Air"
+         m_eMapMarkerIcon OBJECTIVE_MARKER
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Area4 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 320
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 5876.295 79.068 4258.199
+  {
+   GenericEntity Layer14 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+        }
+       }
+       coords -30.277 31.871 46.551
+       angleY -54.727
+      }
+      SlotAI8 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+        }
+       }
+       coords 2.067 -0.815 -19.299
+       angleY 27.136
+      }
+     }
+    }
+   }
+  }
+ }
+ Area3 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 800
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 5405.493 6.874 4661.011
+ }
+}
+GenericEntity : "{D2299274C13B1169}PrefabsEditable/Auto/Props/Military/Sandbags/E_Sandbag_01_wall_solid_burlap.et" {
+ coords 5865.74 78.437 4225.504
+ angleY 19.146
+}
+Vehicle Ural4320_transport_covered3 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ coords 5877.858 78.438 4289.772
+ angleY -150.583
+}
+GenericEntity : "{DC82213D62A2F621}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Supply_Large_USSR_01.et" {
+ coords 5402.783 6.856 4603.332
+ angleX 0
+ angleY 28.111
+ angleZ 0
+}

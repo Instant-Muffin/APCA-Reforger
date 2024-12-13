@@ -1,0 +1,71 @@
+Vehicle UAZ1 : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ coords 6841.732 138.732 2476.683
+ angleY 57.541
+}
+GenericEntity : "{9751583B234C4202}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_USSR_02_PKM.et" {
+ coords 6854.117 138.41 2471.316
+ angleY 88.338
+ {
+  GenericEntity {
+   ID "5C5AC612652E574F"
+   {
+    GameEntity {
+     ID "59A297CB53D15C0E"
+    }
+   }
+  }
+ }
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ MarkerSilo {
+  coords 6853.906 138.546 2480.39
+  {
+   GenericEntity Layer9 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity SlotMarker2 : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{63068640915B5AC8}" {
+         m_sMapMarkerText "Objective 1"
+         m_eMapMarkerIcon OBJECTIVE_MARKER
+         m_eMapMarkerColor RED
+        }
+       }
+      }
+      coords 0 0 0
+     }
+    }
+   }
+  }
+ }
+ Area2 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 500
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 6851.725 138.546 2484.041
+  {
+   GenericEntity Layer8 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     GenericEntity SlotAI1 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+        m_aIncludedEditableEntityLabels {
+        }
+        m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+       }
+      }
+      coords 0.925 -0.233 -12.728
+      angleY 93.688
+     }
+    }
+   }
+  }
+ }
+}

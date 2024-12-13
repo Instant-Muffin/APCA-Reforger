@@ -1,0 +1,41 @@
+Vehicle M151A1 : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ components {
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 1230.027 3 5065.413
+ angleY 10.585
+ {
+  SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+   coords -0.027 -0.008 -3.886
+   {
+    GenericEntity Marker6 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
+     coords 0 0 0
+     {
+      GenericEntity Layer7 {
+       ID "630686459DADE4AD"
+       {
+        GenericEntity {
+         ID "630686459DADE4AE"
+         components {
+          SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+           m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
+            m_sMapMarkerText "QRF"
+            m_eMapMarkerFactionIcon INDFOR
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,474 @@
+GenericEntity Marker4 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
+ coords 4764.267 169.225 6993.014
+ {
+  GenericEntity Layer12 {
+   ID "630686459DADE4AD"
+   {
+    GenericEntity {
+     ID "630686459DADE4AE"
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
+        m_sMapMarkerText "Church"
+        m_eMapMarkerIcon OBJECTIVE_MARKER
+        m_eMapMarkerColor RED
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+Vehicle Ural4320_transport_CIV_forest1 : "{1449105FD658EDFB}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_forest.et" {
+ components {
+  SCR_AIVehicleUsageComponent "{60E4E37C467714E8}" {
+   Enabled 0
+  }
+ }
+ coords 4791.904 169.264 6982.347
+ angleX -0.032
+ angleY -106.044
+ angleZ 0.061
+}
+$grp GenericEntity : "{44DCCCB56D42C43B}PrefabsEditable/Mines/E_Mine_TM62M.et" {
+ {
+  coords 4782.989 170.295 6988.091
+ }
+ {
+  coords 4783.163 170.295 6987.796
+ }
+}
+GenericEntity : "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et" {
+ coords 4782.33 170.295 6989.162
+ angleY 178.492
+}
+GenericEntity : "{7030822F7A54F479}Prefabs/Props/Crates/CrateWooden_01_base.et" {
+ coords 4796.095 169.209 6983.461
+}
+GenericEntity : "{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et" {
+ coords 4782.709 170.358 6988.67
+ angleX -2.225
+ angleZ -90
+}
+GenericEntity : "{881558ACD5FC31C0}Prefabs/Props/Crates/CrateWooden_02/CrateWooden_02_1x1x2.et" {
+ coords 4780.263 165.309 6988.154
+ angleY -14.769
+}
+$grp GameEntity : "{A76E82E2A746C3D3}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_01/LightPrefabs/LampStreet_E_01_glass.et" {
+ {
+  coords 4784.542 178.493 6993.577
+ }
+ {
+  coords 4772.358 178.557 6990.17
+ }
+ {
+  coords 4785.826 174.062 7003.803
+  angleX -6.55
+  angleY -7.747
+  angleZ 45.452
+ }
+ {
+  coords 4783.042 184.83 6992.976
+ }
+}
+GenericEntity : "{B9003EF716A534D4}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_02/LampStreet_E_02_single.et" {
+ coords 4750.598 1.992 6992.678
+ angleY 75.526
+}
+GenericEntity : "{BFC48B664ED362EE}Prefabs/Structures/Military/Camps/Canvas_Covers/CanvasCover_Medium_Base.et" {
+ coords 4757.473 169.226 6992.792
+ angleY 77.99
+}
+GenericEntity Area4 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_bDynamicDespawn 1
+   m_iDynamicDespawnRange 800
+  }
+ }
+ coords 4758.599 169.216 6986.524
+ {
+  GenericEntity Layer11 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     SlotAI27 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+       }
+      }
+      coords 20.592 -3.907 4.785
+      angleY 66.938
+     }
+     SlotAI28 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 29.511 -3.907 7.181
+      angleY -84.238
+     }
+     SlotAI29 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 19.02 -3.907 7.642
+      angleY 131.062
+     }
+     SlotAI30 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 28.195 0.463 4.307
+      angleY -84.238
+     }
+     SlotAI31 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 26.844 0.463 9.499
+      angleY -84.238
+     }
+     SlotAI32 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 18.328 3.683 8.68
+      angleY -84.238
+     }
+     SlotAI33 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 14.156 3.683 7.176
+      angleY -84.238
+     }
+     SlotAI34 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 32.582 0.463 10.614
+      angleY -84.238
+     }
+     SlotAI35 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 20.708 0.243 1.104
+      angleY -84.238
+     }
+     SlotAI36 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 20.296 0.243 2.8
+      angleY -84.238
+     }
+     SlotAI37 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 22.054 0.093 15.307
+      angleY -84.238
+     }
+     SlotAI38 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 26.777 10.479 4.735
+      angleY -84.238
+     }
+     SlotAI39 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 26.057 10.497 7.969
+      angleY -84.238
+     }
+     SlotAI40 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 30.106 10.247 8.711
+      angleY -84.238
+     }
+     SlotAI42 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 8.669 14.911 1.329
+      angleY -84.238
+     }
+     SlotAI41 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 37.767 0.005 -1.583
+      angleY 22.115
+     }
+     SlotAI43 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords -2.161 0.005 6.053
+      angleY 80.037
+     }
+     SlotAI44 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords -0.593 0.014 6.421
+      angleY -84.238
+     }
+     SlotAI45 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 17.302 3.683 -0.22
+      angleY -84.238
+     }
+     SlotAI46 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+       }
+      }
+      coords 21.453 3.143 16.003
+      angleY -84.238
+     }
+     SlotAI47 {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{1BB20A4B3A53D0F5}Prefabs/Groups/INDFOR/Group_FIA_LightFireTeam.et"
+        m_bRandomizePerFaction 1
+        m_eEntityCatalogType CHARACTER
+        m_aIncludedEditableEntityLabels +{
+        }
+        m_sWPToSpawn "{531EC45063C1F57B}Prefabs/AI/Waypoints/AIWaypoint_Wait.et"
+       }
+      }
+      coords 436.864 2.415 15.774
+      angleY -138.423
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{CFFEB23FBEA00322}Prefabs/Props/Military/Sandbags/Sandbag_01_short_burlap.et" {
+ coords 4780.557 165.309 6991.606
+ angleY 159.631
+ {
+  Turret : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+   components {
+    SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+     CompartmentSlots {
+      TurretCompartmentSlot TurretCompartment {
+      }
+     }
+    }
+   }
+   coords 0.214 0.719 -0.065
+   angleY -88.711
+  }
+ }
+}
+$grp GenericEntity : "{E4416C4C6938BEEE}Prefabs/Props/Crates/CrateWooden_02/CrateWooden_02_1x1x1.et" {
+ {
+  coords 4779.259 165.309 6987.851
+  angleY -13.548
+ }
+ {
+  coords 4778.501 165.309 6995.532
+  angleY -14.184
+ }
+ {
+  coords 4777.239 165.309 6995.265
+  angleY -14.705
+ }
+ {
+  coords 4788.07 165.309 6994.756
+  angleY -14.683
+ }
+ {
+  coords 4788.161 166.295 6994.764
+  angleY -7.048
+ }
+ {
+  coords 4792.364 169.679 6994.645
+  angleY -14.683
+ }
+ {
+  coords 4792.066 169.679 6995.826
+  angleY -14.683
+ }
+ {
+  coords 4792.216 170.654 6995.388
+  angleY -14.683
+ }
+ {
+  coords 4782.927 169.309 6987.923
+  angleY -14.683
+ }
+ {
+  coords 4782.615 169.309 6989.022
+  angleY -104.683
+ }
+ {
+  coords 4784.02 169.309 6988.448
+  angleY 60.317
+ }
+}
+Vehicle UAZ469_UK59_FIA1 : "{E72D78E7F45532EC}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_UK59_FIA.et" {
+ components {
+  SCR_AIVehicleUsageComponent "{60E4E37C467714E8}" {
+   Enabled 0
+  }
+ }
+ coords 4743.35 163.157 7000.98
+ angleX 1.786
+ angleY -0.084
+ angleZ -2.685
+}
+GenericEntity : "{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et" {
+ coords 4783.874 170.332 6988.585
+ angleY 87.454
+ angleZ 90
+}

@@ -1,0 +1,170 @@
+Vehicle M923A1_transport_covered_MERDC1 : "{04BDACC0BB83284E}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_MERDC.et" {
+ coords 1308.981 2.75 5010.968
+ angleY 179.951
+}
+GenericEntity : "{060E70051177F302}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Barracks_US_02.et" {
+ coords 1225.083 3 5069.093
+ angleY -146.629
+}
+SCR_AIGroup : "{0800C48F951354FA}Prefabs/Groups/BLUFOR/US_Army/Group_APCA_Bravo.et" {
+ coords 1112.992 3 5142.865
+ angleY 121.647
+}
+SCR_AIGroup : "{170F43927D56B316}Prefabs/Groups/BLUFOR/US_Army/Group_APCA_Charlie.et" {
+ coords 1033.786 3 5061.636
+ angleY -0.161
+}
+Vehicle M923A1_tanker_MERDC1 : "{26013123314183EA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker_MERDC.et" {
+ coords 1201.797 3 5068.795
+ angleY -58.425
+}
+$grp GenericEntity : "{4757ED104D5989CE}Prefabs/Props/Military/SupplyBox/SupplyStack/SupplyStack_01/SupplyStack_01_V3.et" {
+ {
+  components {
+   SCR_ResourceComponent "{5D247A59598D71AE}" {
+    m_aContainers {
+     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+      m_fResourceValueCurrent 100000
+      m_fResourceValueMax 100000
+      m_bEnableResourceGain 1
+      m_fResourceGain 100000
+      m_eOnEmptyBehavior NONE
+     }
+    }
+   }
+  }
+  coords 1236.232 2.75 5031.65
+  angleY -49.981
+ }
+ {
+  components {
+   SCR_ResourceComponent "{5D247A59598D71AE}" {
+    m_aContainers {
+     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+      m_fResourceValueCurrent 100000
+      m_fResourceValueMax 100000
+      m_bEnableResourceGain 1
+      m_fResourceGain 100000
+      m_eOnEmptyBehavior NONE
+     }
+    }
+   }
+  }
+  coords 1235.095 2.769 5030.316
+  angleY 131.404
+ }
+ {
+  components {
+   SCR_ResourceComponent "{5D247A59598D71AE}" {
+    m_aContainers {
+     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+      m_fResourceValueCurrent 100000
+      m_fResourceValueMax 100000
+      m_bEnableResourceGain 1
+      m_fResourceGain 100000
+      m_eOnEmptyBehavior NONE
+     }
+    }
+   }
+  }
+  coords 1263.823 2.75 5041.057
+  angleY 40.057
+ }
+ {
+  components {
+   SCR_ResourceComponent "{5D247A59598D71AE}" {
+    m_aContainers {
+     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
+      m_fResourceValueCurrent 100000
+      m_fResourceValueMax 100000
+      m_bEnableResourceGain 1
+      m_fResourceGain 100000
+      m_eOnEmptyBehavior NONE
+     }
+    }
+   }
+  }
+  coords 1261.975 2.75 5042.855
+  angleY -132.966
+ }
+}
+$grp GenericEntity : "{50B1BE2D332DDF18}Prefabs/Base Objects/AmmoBoxArsenal_Equipment_APCA.et" {
+ {
+  coords 1147.437 3 5068.252
+  angleY 38.08
+ }
+ {
+  coords 1143.718 3 5070.673
+  angleY 38.08
+ }
+ {
+  coords 1120.387 3 5139.823
+  angleY -58.013
+ }
+ {
+  coords 1121.745 3 5143.855
+  angleY -57.122
+ }
+ {
+  coords 1035.55 3 5058.661
+  angleY 8.262
+ }
+ {
+  coords 1028.917 3 5058.561
+  angleY -4.021
+ }
+ {
+  coords 1245.202 2.75 5011.48
+  angleY 124.403
+ }
+}
+GenericEntity : "{7B04AB6CD4AA3C6D}Prefabs/Compositions/Misc/SubCompositions/CanvasCover_Cluttered_US_02.et" {
+ coords 1161.067 3 5118.381
+ angleY -58.257
+}
+$grp GenericEntity : "{7DE54A7A529EDFE0}Prefabs/Base Objects/APCA_Ops_Sign.et" {
+ {
+  coords 1242.798 2.75 5008.207
+  angleY 126.028
+ }
+ {
+  coords 1236.176 2.822 5034.998
+  angleY 45.242
+ }
+}
+SCR_AIGroup : "{D91C605DB763BA36}Prefabs/Groups/BLUFOR/US_Army/Group_APCA_Alpha.et" {
+ coords 1152.068 3 5077.085
+ angleY -146.135
+}
+$grp Vehicle : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ UH1H_armed1 {
+  coords 1211.07 3.52 5030.916
+  angleY 125.482
+ }
+ UH1H_armed2 {
+  coords 1194.377 3.488 5060.43
+  angleY 123.373
+ }
+}
+$grp GenericEntity : "{E16B35EC09881DAC}Prefabs/Base Objects/APCA_Vehicle_Spawner.et" {
+ {
+  coords 1266.79 2.75 5046.237
+  angleY 42
+ }
+ {
+  coords 1231.365 2.978 5034.558
+  angleY -49.981
+ }
+}
+SCR_AIGroup : "{E8D5C701D924861B}Prefabs/Groups/BLUFOR/US_Army/Group_APCA_Command.et" {
+ coords 1256.206 2.75 4996.557
+ angleY 35.321
+}
+StaticModelEntity : "{F1C5F8E2EF1105F9}Prefabs/Compositions/Misc/SubCompositions/Tent_HQ_Camo_Cluttered_US_01.et" {
+ coords 1240.002 2.75 5012.362
+ angleY -56.294
+}
+GenericEntity : "{FA9066DE33E8E67D}Prefabs/Structures/Military/Camps/Canvas_Covers/US/CanvasCover_Large_US.et" {
+ coords 1145.296 3 5069.031
+ angleY 122.839
+}
