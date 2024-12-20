@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{DC9524C1053BA9A8}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_VICTOR.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

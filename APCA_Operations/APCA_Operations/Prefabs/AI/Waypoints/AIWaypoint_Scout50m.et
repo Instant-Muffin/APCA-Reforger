@@ -1,0 +1,13 @@
+SCR_TimedWaypoint {
+ ID "631A65553BF7B1FB"
+ coords 2687.019 389.014 5186.562
+ Type "Scout"
+ Title "Scout waypoint"
+ AIBehaviorTree "{B3B5C3DEED39F11D}AI/BehaviorTrees/Waypoints/WP_Scout.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 50
+ Autocomplete 0
+ m_TimedWaypointParameters SCR_AITimedWaypointParameters "{631A65553BF7B1AE}" {
+  m_holdingTime 600
+ }
+}

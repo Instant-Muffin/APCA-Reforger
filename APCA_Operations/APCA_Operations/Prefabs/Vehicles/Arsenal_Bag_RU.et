@@ -1,0 +1,24 @@
+GenericEntity : "{DDB6B1CC44ADB505}Prefabs/Vehicles/Arsenal_Bag.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  MeshObject "{56F2C6D1431AD85A}" {
+   Object "{79E09D2DFCA471A5}Assets/Items/Equipment/Backpacks/Backpack_Veshmeshok/Backpack_Veshmeshok_item.xob"
+  }
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "USSR"
+  }
+  ActionsManagerComponent "{56F2C6D1431ADB12}" {
+   ActionContexts {
+    UserActionContext "{56F2C6D1431ADB6E}" {
+     Position PointInfo "{56F2C6D1431ADB9D}" {
+      Offset -0.0002 0.1341 0.0615
+     }
+    }
+   }
+  }
+ }
+ coords -0.364 0.991 -1.713
+ angleX -90
+ angleY 0
+ angleZ -180
+}

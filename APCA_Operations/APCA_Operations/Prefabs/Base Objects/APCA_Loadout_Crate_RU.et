@@ -1,0 +1,18 @@
+GenericEntity : "{81F5036CEB26F399}Prefabs/Base Objects/APCA_Loadout_Crate.et" {
+ ID "63247BE3052AB7E4"
+ components {
+  MeshObject "{63247BE06818C9A2}" {
+   Object "{468DC8CD41213919}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01_USSR_general.xob"
+  }
+  SCR_FactionAffiliationComponent "{6324810C70414AA5}" {
+   "faction affiliation" "USSR"
+  }
+  ActionsManagerComponent "{63247BE0C50EAD1B}" {
+   ActionContexts {
+    UserActionContext "{63247BE337A71B5E}" {
+     "Display UI At Reference Point" 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A79D9715867507AF}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_XRAY.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

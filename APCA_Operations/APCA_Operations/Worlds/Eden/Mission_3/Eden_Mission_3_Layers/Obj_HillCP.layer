@@ -1,0 +1,26 @@
+GenericEntity Marker2 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
+ coords 5772.715 229.656 7246.292
+ angleX 0.881
+ angleY -0.11
+ angleZ -7.126
+ {
+  GenericEntity Layer2 {
+   ID "630686459DADE4AD"
+   {
+    GenericEntity {
+     ID "630686459DADE4AE"
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
+        m_sMapMarkerText "Command Post"
+        m_eMapMarkerDimension INSTALLATION
+        m_eMapMarkerType1Modifier MOBILEHQ
+       }
+      }
+     }
+     coords 11.079 -0.093 1.636
+    }
+   }
+  }
+ }
+}

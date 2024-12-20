@@ -1,0 +1,45 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F9E52831}" {
+     NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A297F3B4EE8A}" {
+     NavmeshFile "{AD5F99CD7C59D5E0}worlds/GameMaster/Navmeshes/GM_Eden.nmn"
+    }
+   }
+  }
+ }
+ coords 2056.547 3.802 7358.671
+}
+APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Modes/APCA_GameMode_Lobby.et" {
+ coords 2055.934 3.982 7360.317
+ {
+  SCR_FactionManager FactionManager_APCA1 : "{AFCB5AA09CEA909A}Prefabs/GameMode/Managers/Factions/FactionManager_APCA.et" {
+   coords 0 0 0
+  }
+ }
+}
+SCR_AIGroup : "{702533E6E9DC6F0F}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_Alpha.et" {
+ coords 2286.942 18.477 7513.178
+ angleY -41.208
+}
+SCR_AIGroup : "{A5492C39A8B7B40F}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_Bravo.et" {
+ coords 2298.418 17.633 7533.534
+ angleY -129.28
+}
+SCR_AIGroup : "{DB78870FB996E960}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_Command.et" {
+ coords 2241.804 18.707 7502.125
+ angleY 78.567
+}
+SCR_AIGroup : "{DC9524C1053BA9A8}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_VICTOR.et" {
+ coords 2260.142 17.495 7550.176
+ angleX 2.392
+ angleY -154.034
+ angleZ -0.825
+}

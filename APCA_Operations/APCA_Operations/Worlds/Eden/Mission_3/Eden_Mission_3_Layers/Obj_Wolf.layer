@@ -1,0 +1,100 @@
+$grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
+ Marker9 {
+  coords 3851.288 163.805 4330.78
+  angleX 0.881
+  angleY -0.11
+  angleZ -7.126
+  {
+   GenericEntity Layer9 {
+    ID "630686459DADE4AD"
+    {
+     GenericEntity {
+      ID "630686459DADE4AE"
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
+        }
+       }
+      }
+      coords 11.079 -0.093 1.636
+     }
+    }
+   }
+  }
+ }
+ Marker10 {
+  coords 3508.496 113.478 5398.674
+  angleX 0.881
+  angleY -0.11
+  angleZ -7.126
+  {
+   GenericEntity Layer10 {
+    ID "630686459DADE4AD"
+    {
+     GenericEntity {
+      ID "630686459DADE4AE"
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
+         m_eMapMarkerIcon POINT_OF_INTEREST
+         m_eMapMarkerColor BLUFOR
+        }
+       }
+      }
+      coords 11.079 -0.093 1.636
+     }
+    }
+   }
+  }
+ }
+ Marker11 {
+  coords 4234.552 116.791 5393.609
+  angleX 0.881
+  angleY -0.11
+  angleZ -7.126
+  {
+   GenericEntity Layer11 {
+    ID "630686459DADE4AD"
+    {
+     GenericEntity {
+      ID "630686459DADE4AE"
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
+         m_eMapMarkerIcon POINT_OF_INTEREST
+         m_eMapMarkerColor BLUFOR
+        }
+       }
+      }
+      coords 11.079 -0.093 1.636
+     }
+    }
+   }
+  }
+ }
+ Marker12 {
+  coords 2608.688 91.106 5368.466
+  angleX 0.881
+  angleY -0.11
+  angleZ -7.126
+  {
+   GenericEntity Layer12 {
+    ID "630686459DADE4AD"
+    {
+     GenericEntity {
+      ID "630686459DADE4AE"
+      components {
+       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
+         m_eMapMarkerIcon POINT_OF_INTEREST
+         m_eMapMarkerColor BLUFOR
+        }
+       }
+      }
+      coords 11.079 -0.093 1.636
+     }
+    }
+   }
+  }
+ }
+}

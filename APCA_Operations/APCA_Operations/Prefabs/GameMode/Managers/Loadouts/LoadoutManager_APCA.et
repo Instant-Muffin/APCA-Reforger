@@ -4,27 +4,27 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{62DA91BF04A4B758}" {
    m_sLoadoutName "Squad Leader"
-   m_sLoadoutResource "{0DA41ED497FFE3E2}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_SL.et"
+   m_sLoadoutResource "{0DA41ED497FFE3E2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_SL.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B750}" {
    m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{FA0F54F4DAC4C22F}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Rifleman.et"
+   m_sLoadoutResource "{FA0F54F4DAC4C22F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Rifleman.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B753}" {
    m_sLoadoutName "CFA"
-   m_sLoadoutResource "{B9F6C1D8E894FAE5}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Medic.et"
+   m_sLoadoutResource "{B9F6C1D8E894FAE5}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Medic.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_PlayerArsenalLoadout "{62DA91BF04A4B755}" {
    m_sLoadoutName "Fireteam Leader"
-   m_sLoadoutResource "{0A63E485F1795921}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_FTL.et"
+   m_sLoadoutResource "{0A63E485F1795921}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_FTL.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_PlayerArsenalLoadout "{62DA91BF04A4B756}" {
    m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{FA0F54F4DAC4C22F}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Rifleman.et"
+   m_sLoadoutResource "{FA0F54F4DAC4C22F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Rifleman.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_PlayerArsenalLoadout "{62DA91BF04A4B768}" {
@@ -34,22 +34,22 @@ SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutMana
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B769}" {
    m_sLoadoutName "Light Machine Gunner"
-   m_sLoadoutResource "{602CEFCBA57B41F1}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_MG.et"
+   m_sLoadoutResource "{602CEFCBA57B41F1}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_MG.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B76E}" {
    m_sLoadoutName "Anti Tank"
-   m_sLoadoutResource "{ECACE611956CB327}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_AT.et"
+   m_sLoadoutResource "{ECACE611956CB327}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_AT.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B761}" {
    m_sLoadoutName "Commander"
-   m_sLoadoutResource "{94BAA74D8A18D272}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_PL.et"
+   m_sLoadoutResource "{94BAA74D8A18D272}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_PL.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_FactionPlayerLoadout "{62DA91BF04A4B763}" {
    m_sLoadoutName "Pilot"
-   m_sLoadoutResource "{FF7A5F1CD1F716F7}Prefabs/Characters/BLUFOR/US_Army/Character_APCA_Pilot.et"
+   m_sLoadoutResource "{FF7A5F1CD1F716F7}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_APCA_Pilot.et"
    m_sAffiliatedFaction "APCA"
   }
   SCR_PlayerArsenalLoadout "{62DA91BF04A4B778}" {

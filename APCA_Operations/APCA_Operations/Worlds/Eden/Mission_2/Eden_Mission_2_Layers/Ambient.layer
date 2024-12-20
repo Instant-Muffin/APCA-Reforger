@@ -1,0 +1,107 @@
+$grp SCR_AIGroup : "{5E427ECA02A8360E}Prefabs/Groups/CIV/Group_CIV_Car_Driver.et" {
+ {
+  coords 5295.896 26.368 10212.021
+  {
+   Vehicle S105_beige1 : "{54C3CC22DEBD57BE}Prefabs/Vehicles/Wheeled/S105/S105_beige.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords -0.014 0.049 1.425
+    angleY -90.361
+   }
+  }
+ }
+ {
+  coords 4609.083 18.241 10641.088
+  angleY -90
+  {
+   Vehicle S105_darkblue1 : "{9C3269FB43F989A3}Prefabs/Vehicles/Wheeled/S105/S105_darkblue.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 1.684 0.031 0.46
+   }
+  }
+ }
+ {
+  coords 4702.977 130.448 7762.927
+  angleY -90
+  {
+   Vehicle S105_rally1 : "{5555DCAFADB8CE2A}Prefabs/Vehicles/Wheeled/S105/S105_rally.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 1.893 -0.163 0
+   }
+  }
+ }
+ {
+  coords 5937.376 209.187 7035.286
+  angleY 165
+  {
+   Vehicle UAZ469_covered_CIV_PTS1 : "{BDFB2377B6B4ABBB}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_PTS.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 1.615 0 0
+   }
+  }
+ }
+ {
+  coords 6868.013 75.638 4773.503
+  angleY -120
+  {
+   Vehicle UAZ469_covered_CIV_brown1 : "{D7C51A961BF675B2}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_brown.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 1.885 0 0
+   }
+  }
+ }
+ {
+  coords 6978.661 109.748 5883.315
+  angleY 30
+  {
+   Vehicle Ural4320_transport_covered_CIV_blue1 : "{F66EAD0D2016B6BA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_blue.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 2.694 -0.111 -0.001
+   }
+  }
+ }
+ {
+  coords 4909.916 28.93 10622.03
+  angleY 5.797
+  {
+   Vehicle Ural4320_transport_covered_CIV_blue2 : "{F66EAD0D2016B6BA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_blue.et" {
+    components {
+     SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+      m_fFuelConsumption 0.1
+      m_fFuelConsumptionIdle 0.05
+     }
+    }
+    coords 2.694 0.128 -0.002
+   }
+  }
+ }
+}

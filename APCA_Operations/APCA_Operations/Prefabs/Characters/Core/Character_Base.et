@@ -1,0 +1,10 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  APCA_BaseComponent "{632880C032EB7377}" {
+  }
+  APCA_HVTComponent "{632880C03665FBD3}" {
+   Enabled 0
+  }
+ }
+}

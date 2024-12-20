@@ -1,0 +1,22 @@
+SCR_AIGroup : "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+  PS_GroupCallsignAssigner "{6324A6E161CE92A5}" {
+   m_iPlatoonCallsign 1
+   m_iSquadCallsign 1
+  }
+  SCR_AIGroupMovementComponent "{6126A0E02097C7FF}" {
+   DefaultFormation "Line"
+  }
+ }
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et" "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et" "{9FFEF10757E742EB}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Crew.et"
+ }
+ m_iGroupRadioFrequency 45000
+ m_sCustomNameSet "Victor"
+ m_bSetPlayable 1
+}

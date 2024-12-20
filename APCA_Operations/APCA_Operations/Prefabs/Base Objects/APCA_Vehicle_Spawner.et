@@ -67,6 +67,10 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
     }
    }
   }
+  GenericEntity : "{3282CF3ABA80168A}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair_Medium.et" {
+   ID "6326EC60E357880B"
+   coords 0 0 0
+  }
   $grp GenericEntity : "{3D9998855187A405}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Small.et" {
    {
     ID "62E2B587B1476998"
@@ -285,6 +289,11 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
    }
    coords -0.073 0 -3.298
    angleY -90.506
+  }
+  GenericEntity : "{D07C2D4844753F76}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_storage.et" {
+   ID "6326EC672456A978"
+   coords -1.368 0.096 -1.891
+   angleY 38.878
   }
   $grp GenericEntity : "{F76BD5785C7FE191}Prefabs/Systems/Compositions/PatrolPoint/PatrolPoint_ObservationPoint.et" {
    {

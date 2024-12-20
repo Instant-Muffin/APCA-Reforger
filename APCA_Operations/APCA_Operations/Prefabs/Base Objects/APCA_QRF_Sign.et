@@ -2,14 +2,23 @@ GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectang
  ID "50D67C36F4200F97"
  components {
   MeshObject "{54969A6AAAADA251}" {
+   Object "{CD7A4E79304AA054}Assets/Structures/Signs/Military/SignRectangle_01_75x45.xob"
    Materials {
-    MaterialAssignClass "{62E2E886FD820022}" {
+    MaterialAssignClass "{632880FA0DB5F474}" {
      SourceMaterial "SignRectangle_01_140x100"
      AssignedMaterial "{569A6011C9A2D572}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01.emat"
     }
-    MaterialAssignClass "{62E2E886FD820035}" {
+    MaterialAssignClass "{632880FA0DB5F40D}" {
      SourceMaterial "SignRectangle_01_140x100_MLOD"
      AssignedMaterial "{B41E12664BB7B57F}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01_MLOD.emat"
+    }
+    MaterialAssignClass "{632880FAB9F93806}" {
+     SourceMaterial "SignRectangle_01_75x45"
+     AssignedMaterial "{8B1EA272E37DC0C3}Assets/Structures/Signs/Military/Data/Sign_CommandPost_US_01_BCR.emat"
+    }
+    MaterialAssignClass "{632880FAB9F93826}" {
+     SourceMaterial "SignRectangle_01_75x45_MLOD"
+     AssignedMaterial "{3B9D01D91BD959DF}Assets/Structures/Signs/Military/Data/Sign_CommandPost_US_01_MLOD.emat"
     }
    }
   }
@@ -28,26 +37,26 @@ GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectang
    }
    m_bDeleteAfterFinalPhase 0
   }
-  ActionsManagerComponent "{62E2E886CC9E1F76}" {
+  ActionsManagerComponent "{632880FA0DB5F41C}" {
    ActionContexts {
-    UserActionContext "{62E2E886C3E2782D}" {
+    UserActionContext "{632880FA0DB5F41F}" {
      ContextName "default"
-     Position PointInfo "{62E2E886C6EE5593}" {
-      Offset 0 1.1814 0
+     Position PointInfo "{632880FA0DB5F412}" {
+      Offset 0 1.2853 0
      }
      Radius 5
     }
    }
    additionalActions {
-    APCA_QRFTeleportUserAction "{62E2E88C97ED4D09}" {
+    APCA_RespawnAllUserAction "{632880FA0DB5F416}" {
      ParentContextList {
       "default"
      }
-     UIInfo UIInfo "{62E2E88C8A6BAC1E}" {
-      Name "Join QRF"
+     UIInfo UIInfo "{632880FA0DB5F428}" {
+      Name "Respawn All Dead Players"
      }
-     Duration 2
-     "Sort Priority" 9
+     Duration 5
+     "Sort Priority" 99
     }
    }
   }

@@ -1,0 +1,22 @@
+SCR_AIGroup : "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+  PS_GroupCallsignAssigner "{6324900C11F95A3D}" {
+   m_iPlatoonCallsign 1
+   m_iSquadCallsign 1
+  }
+  SCR_AIGroupMovementComponent "{6126A0E02097C7FF}" {
+   DefaultFormation "Line"
+  }
+ }
+ m_faction "USSR"
+ m_aUnitPrefabSlots {
+  "{3E37D579EEEEF8E2}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_CMD.et" "{29786A5DBA2EC48A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+ }
+ m_iGroupRadioFrequency 40000
+ m_sCustomNameSet "Command"
+ m_bSetPlayable 1
+}

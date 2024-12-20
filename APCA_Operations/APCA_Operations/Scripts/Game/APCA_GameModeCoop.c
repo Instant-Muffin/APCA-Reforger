@@ -7,12 +7,15 @@ class APCA_GameModeCoopClass: PS_GameModeCoopClass
 
 
 class APCA_GameModeCoop : PS_GameModeCoop
-{
+{	
 	// ------------------------------------------ Events ------------------------------------------
 	
 	protected override bool HandlePlayerKilled(int playerId, IEntity playerEntity, IEntity killerEntity, notnull Instigator killer)
 	{
 		m_OnHandlePlayerKilled.Invoke(playerId, playerEntity, killerEntity, killer);
+		APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(playerEntity.FindComponent(APCA_BaseComponent));
+		APCA_Data.SetPlayerID(playerId);
+		
 		
 		return super.HandlePlayerKilled(playerId, playerEntity, killerEntity, killer);
 	}
@@ -20,17 +23,17 @@ class APCA_GameModeCoop : PS_GameModeCoop
 	
 	override void TryRespawn(RplId playableId, int playerId)
 	{
-		Print("Trying Spectator");
+		// Get the players current inventory
+		array<IEntity> playerItems = GetInventory(playableId);
 		
 		// Go to spectator
 		SwitchToInitialEntity(playerId);
 		
-		
 		// Wait for respawn time and respawn
 		int respawnTime = 0;
-		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
 		if (playableId != RplId.Invalid())
 		{
+			PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
 			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
 			if (!playableComponent)
 				return;
@@ -39,20 +42,112 @@ class APCA_GameModeCoop : PS_GameModeCoop
 			FactionKey factionKey = faction.GetFactionKey();
 			PS_FactionRespawnCount factionRespawns = GetFactionRespawnCount(factionKey);
 			respawnTime = factionRespawns.m_iTime;
+			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
+			if (character)
+			{	
+				IEntity entity = IEntity.Cast(character);
+				APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
+				APCA_Data.SetRespawning(true);
+			}
+	
+			// Respawn = respawn time - 60 second waves
 			if (factionRespawns.m_bWaveMode)
-					respawnTime = factionRespawns.m_iTime - Math.Mod(GetGame().GetWorld().GetWorldTime(), respawnTime); 
+			{
+				respawnTime = respawnTime - Math.Mod(GetGame().GetWorld().GetWorldTime(), 60000);
+			}
+			 
 		}
-		GetGame().GetCallqueue().CallLater(TryRespawnAfterSpectator, respawnTime, false, playableId, playerId);
+		GetGame().GetCallqueue().CallLater(TryRespawnAfterSpectator, respawnTime, false, playableId, playerId, playerItems);
 	}
 	
-	void TryRespawnAfterSpectator(RplId playableId, int playerId)
+	void ForceRespawn()
 	{
-		Print("Trying Post Spawn");
+		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+		array<PS_PlayableComponent> allPlayers = playableManager.GetPlayablesSorted();
+		for(int i = 0; i < allPlayers.Count(); i++)
+		{
+			ChimeraCharacter character = allPlayers[i].GetOwnerCharacter();
+			IEntity entity = IEntity.Cast(character);
+			if (character)
+			{			
+				// Check they're waiting to respawn		
+				APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
+				if(APCA_Data.GetRespawning())
+				{
+					// Get their current inventory
+					array<IEntity> playerItems = GetInventory(allPlayers[i].GetId());
+					
+					// Respawn them
+					TryRespawnAfterSpectator(allPlayers[i].GetId(), APCA_Data.GetPlayerID(), playerItems);
+				}
+			}
+			
+		}
+	}
+	
+	array<IEntity> GetInventory(RplId playableId)
+	{
+		// Save players inventory
+		array<IEntity> playerItems = {};
+		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+		
+		if (playableId != RplId.Invalid())
+		{
+			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
+			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
+			IEntity entity = IEntity.Cast(character);
+			if (character)
+			{	
+				SCR_CharacterControllerComponent m_CharacterController = SCR_CharacterControllerComponent.Cast(character.GetCharacterController());
+				if (m_CharacterController)
+				{
+					SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(m_CharacterController.GetInventoryStorageManager());		
+					if (m_InventoryManager)
+					{
+						
+						array<IEntity> tempItems = {};
+						//Get the current items from all storages
+						m_InventoryManager.GetItems( tempItems );
+						
+						//Remove dupes (Caused by gadget slots like flashlight on vest)
+						for(int i = 0; i < tempItems.Count(); i++)
+						{
+							
+							bool isUnique = true;
+							for(int j = 0; j < playerItems.Count(); j++)
+							{
+								if(playerItems[j] == tempItems[i])
+									isUnique = false;
+							}
+							if(isUnique) 
+								playerItems.Insert(tempItems[i]);
+						}
+						
+						// Now add whatever it was they dropped. Not needed if unconcious players do not drop their weapons
+						/*SCR_CharacterDamageManagerComponent newDamageManagerComponent = SCR_CharacterDamageManagerComponent.Cast(playerEntity.FindComponent(SCR_CharacterDamageManagerComponent));
+						IEntity droppedWeapon = newDamageManagerComponent.GetDroppedItem();
+						playerItems.Insert(droppedWeapon);*/
+					}
+				}
+			}
+		}
+		
+		return playerItems;
+	}
+	
+	void TryRespawnAfterSpectator(RplId playableId, int playerId, array<IEntity> playerItems)
+	{
 		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
 		if (playableId != RplId.Invalid())
 		{
 			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
 			if (!playableComponent)
+				return;
+			
+			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
+			IEntity entity = IEntity.Cast(character);
+			APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
+			if(!APCA_Data.GetRespawning())
 				return;
 			
 			FactionAffiliationComponent factionAffiliationComponent = playableComponent.GetFactionAffiliationComponent();
@@ -73,11 +168,30 @@ class APCA_GameModeCoop : PS_GameModeCoop
 					playableComponent.OpenRespawnMenu(time);
 				
 				PS_RespawnData respawnData = new PS_RespawnData(playableComponent, prefabToSpawn);
-				GetGame().GetCallqueue().CallLater(Respawn, time, false, playerId, respawnData);
+				APCA_Data.SetRespawning(false);
+				GetGame().GetCallqueue().CallLater(RespawnWithItems, time, false, playerId, respawnData, playerItems);
 				return;
 			}
 		}
 		return;
+	}
+	
+	void RespawnWithItems(int playerId, PS_RespawnData respawnData, array<IEntity> playerItems)
+	{
+		Resource resource = Resource.Load(respawnData.m_sPrefabName);
+		EntitySpawnParams params = new EntitySpawnParams();
+		Math3D.MatrixCopy(respawnData.m_aSpawnTransform, params.Transform);
+		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
+		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_iId);
+		SCR_AIGroup playabelGroup = aiGroup.GetSlave();
+		playabelGroup.AddAIEntityToGroup(entity);
+		
+		PS_PlayableComponent playableComponentNew = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+		playableComponentNew.SetPlayable(true);
+		ChimeraCharacter character = playableComponentNew.GetOwnerCharacter();
+		
+		SwapInventory(entity, playerItems);
+		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, 4);
 	}
 	
 	override void Respawn(int playerId, PS_RespawnData respawnData)
@@ -119,6 +233,46 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		TeleportToSpawn(entity);
 	}
 	
+	void SwapInventory(IEntity entity, array<IEntity> playerItems)
+	{
+		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+		ChimeraCharacter character = playableComponent.GetOwnerCharacter();
+		
+		// Clear and readd inventory
+		if (character)
+		{	
+			SCR_CharacterControllerComponent m_CharacterController = SCR_CharacterControllerComponent.Cast(character.GetCharacterController());
+			if (m_CharacterController)
+			{
+				SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(m_CharacterController.GetInventoryStorageManager());		
+				if (m_InventoryManager)
+				{
+					// Clear current items
+					array<IEntity> currentItems = {};
+					m_InventoryManager.GetItems( currentItems );
+					PrintFormat("APCA - Clearing Items: %1", currentItems);
+					for(int i = 0; i < currentItems.Count(); i++)
+					{
+						m_InventoryManager.TryDeleteItem(currentItems[i]);
+					}
+					
+					// Add old items
+					PrintFormat("Test - Adding Items: %1", playerItems);
+					for(int i = 0; i < playerItems.Count(); i++)
+					{
+				
+						EntitySpawnParams params = new EntitySpawnParams;
+						params.TransformMode = ETransformMode.WORLD;
+						params.Transform[3] = entity.GetOrigin();
+						IEntity newItem = GetGame().SpawnEntityPrefabEx(playerItems[i].GetPrefabData().GetPrefabName(), false, GetGame().GetWorld(), params);
+						
+						m_InventoryManager.InsertItem(newItem);
+					}
+				}
+			}
+		}
+	}
+	
 	void TeleportToSpawn(IEntity entity)
 	{
 		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
@@ -129,6 +283,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		vector rot;
 		vector transform[4]; 
 		point.GetPositionAndRotation(destination, rot);
+		destination[0] = destination[0] + Math.RandomFloat(-2, 2);
+		destination[1] = destination[1] + Math.RandomFloat(-2, 2);
 		entity.GetWorldTransform(transform);
 		transform[3] = destination;
 		

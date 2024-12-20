@@ -1,0 +1,18 @@
+Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
+ ID "BBCBA43A9778AE21"
+ coords 2240.933 19.165 7520.597
+ angleY 164.794
+ {
+  SCR_SpawnPoint : "{4FEA25583D0975F7}Prefabs/MP/Spawning/SpawnPoint_USSR.et" {
+   ID "6326EC7D7AA03CC9"
+   coords 0 0 -3.36
+  }
+  GenericEntity : "{AD694D84C326899D}Prefabs/Vehicles/Arsenal_Bag_RU.et" {
+   ID "6326EC7D02A8E364"
+   coords -0.364 0.991 -1.713
+   angleX -90
+   angleY 180
+   angleZ 0
+  }
+ }
+}

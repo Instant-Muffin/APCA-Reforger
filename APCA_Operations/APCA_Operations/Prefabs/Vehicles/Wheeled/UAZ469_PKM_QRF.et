@@ -1,0 +1,5 @@
+Vehicle : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
+ ID "BBCBA43A9778AE21"
+ coords 2244.108 19.046 7513.48
+ angleY 167.135
+}
