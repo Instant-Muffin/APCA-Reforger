@@ -10,6 +10,7 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   PS_MissionDataManager "{62E0D8448706FB03}" {
   }
   PS_MissionDescriptionManager "{62E0D8448706FB02}" {
+   Enabled 1
   }
   PS_ObjectiveManager "{62E0D8448706FB01}" {
    m_aObjectiveLavels {

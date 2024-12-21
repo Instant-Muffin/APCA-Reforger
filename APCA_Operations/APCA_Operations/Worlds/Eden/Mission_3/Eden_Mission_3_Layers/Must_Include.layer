@@ -20,8 +20,22 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Modes/APCA_GameMode_Lobby.et" {
  coords 2055.934 3.982 7360.317
  {
-  SCR_FactionManager FactionManager_APCA1 : "{AFCB5AA09CEA909A}Prefabs/GameMode/Managers/Factions/FactionManager_APCA.et" {
+  SCR_FactionManager FactionManager_Editor1 : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
    coords 0 0 0
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     m_bIsPlayable 1
+    }
+    SCR_Faction "{607AA5C7A94496DA}" {
+     m_bIsPlayable 1
+    }
+   }
   }
  }
 }
