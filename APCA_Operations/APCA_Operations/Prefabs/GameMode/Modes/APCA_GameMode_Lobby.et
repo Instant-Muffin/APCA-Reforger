@@ -130,19 +130,19 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   PS_FactionRespawnCount "{62E0D8448706FBEA}" {
    m_sFactionKey "US"
    m_iCount 999
-   m_iTime 300000
+   m_iTime 360000
    m_bWaveMode 1
   }
   PS_FactionRespawnCount "{631653F79A064F2A}" {
    m_sFactionKey "USSR"
    m_iCount 999
-   m_iTime 300000
+   m_iTime 360000
    m_bWaveMode 1
   }
   PS_FactionRespawnCount "{631653F79DEEE8C9}" {
    m_sFactionKey "FIA"
    m_iCount 999
-   m_iTime 300000
+   m_iTime 360000
    m_bWaveMode 1
   }
  }

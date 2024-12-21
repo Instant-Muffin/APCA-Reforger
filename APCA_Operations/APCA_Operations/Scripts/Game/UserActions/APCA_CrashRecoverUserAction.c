@@ -12,11 +12,10 @@ class APCA_CrashRecoverUserAction : ScriptedUserAction
 		
 			IEntity tele_target = Player_Group.GetLeaderAgent();
 			
-			vector destination[4];
 			vector transform[4]; 
-			tele_target.GetWorldTransform(destination);
+			vector destination = tele_target.GetOrigin();
 			pUserEntity.GetWorldTransform(transform);
-			transform[3] = destination[3];
+			transform[3] = destination;
 	
 		
 			BaseGameEntity baseGameEntity = BaseGameEntity.Cast(pUserEntity);

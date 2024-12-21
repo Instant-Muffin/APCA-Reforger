@@ -1716,20 +1716,6 @@ $grp GenericEntity : "{7DE54A7A529EDFE0}Prefabs/Base Objects/APCA_Ops_Sign.et" {
   angleY 78.964
  }
  {
-  components {
-   MeshObject "{54969A6AAAADA251}" {
-    Materials {
-     MaterialAssignClass "{632880FC8E563884}" {
-      SourceMaterial "SignRectangle_01_75x45"
-      AssignedMaterial "{3B1D0FE199A1F0D0}Assets/Structures/Signs/Military/Data/Sign_Warzone_USSR_01.emat"
-     }
-     MaterialAssignClass "{632880FC8E5638A8}" {
-      SourceMaterial "SignRectangle_01_75x45_MLOD"
-      AssignedMaterial "{70A74F76423EC7F7}Assets/Structures/Signs/Military/Data/Sign_Warzone_USSR_01_MLOD.emat"
-     }
-    }
-   }
-  }
   coords 2272.284 17.672 7538.208
   angleY -171.889
  }

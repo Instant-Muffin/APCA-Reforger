@@ -11,6 +11,14 @@ GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectang
      SourceMaterial "SignRectangle_01_140x100_MLOD"
      AssignedMaterial "{B41E12664BB7B57F}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01_MLOD.emat"
     }
+    MaterialAssignClass "{632880FC8E563884}" {
+     SourceMaterial "SignRectangle_01_75x45"
+     AssignedMaterial "{3B1D0FE199A1F0D0}Assets/Structures/Signs/Military/Data/Sign_Warzone_USSR_01.emat"
+    }
+    MaterialAssignClass "{632880FC8E5638A8}" {
+     SourceMaterial "SignRectangle_01_75x45_MLOD"
+     AssignedMaterial "{70A74F76423EC7F7}Assets/Structures/Signs/Military/Data/Sign_Warzone_USSR_01_MLOD.emat"
+    }
    }
   }
   RigidBody "{54969A6AA8773997}" {
@@ -47,7 +55,17 @@ GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectang
       Name "Join QRF"
      }
      Duration 2
-     "Sort Priority" 9
+     "Sort Priority" 1
+    }
+    APCA_CrashRecoverUserAction "{632B1A309FD976BF}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{632B1A30930740A3}" {
+      Name "Crash Recover (Probably broken)"
+     }
+     Duration 2
+     "Sort Priority" 2
     }
    }
   }
