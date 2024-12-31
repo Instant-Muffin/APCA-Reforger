@@ -23,8 +23,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 	
 	override void TryRespawn(RplId playableId, int playerId)
 	{
-		// Get the players current inventory
-		array<IEntity> playerItems = GetInventory(playableId);
+		
 		
 		// Go to spectator
 		SwitchToInitialEntity(playerId);
@@ -50,14 +49,18 @@ class APCA_GameModeCoop : PS_GameModeCoop
 				APCA_Data.SetRespawning(true);
 			}
 	
+			// Get the players current inventory
+			array<IEntity> playerItems = GetInventory(playableId);
+			
 			// Respawn = respawn time - 60 second waves
 			if (factionRespawns.m_bWaveMode)
 			{
 				respawnTime = respawnTime - Math.Mod(GetGame().GetWorld().GetWorldTime(), 60000);
 			}
-			 
+			
+			GetGame().GetCallqueue().CallLater(TryRespawnAfterSpectator, respawnTime, false, playableId, playerId, playerItems);
 		}
-		GetGame().GetCallqueue().CallLater(TryRespawnAfterSpectator, respawnTime, false, playableId, playerId, playerItems);
+		
 	}
 	
 	void ForceRespawn()
@@ -108,7 +111,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 						array<IEntity> tempItems = {};
 						//Get the current items from all storages
 						m_InventoryManager.GetItems( tempItems );
-						
+				
 						//Remove dupes (Caused by gadget slots like flashlight on vest)
 						for(int i = 0; i < tempItems.Count(); i++)
 						{
@@ -244,20 +247,48 @@ class APCA_GameModeCoop : PS_GameModeCoop
 			SCR_CharacterControllerComponent m_CharacterController = SCR_CharacterControllerComponent.Cast(character.GetCharacterController());
 			if (m_CharacterController)
 			{
-				SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(m_CharacterController.GetInventoryStorageManager());		
+				SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(m_CharacterController.GetInventoryStorageManager());	
+				
 				if (m_InventoryManager)
 				{
 					// Clear current items
 					array<IEntity> currentItems = {};
+					array<BaseInventoryStorageComponent> storages = {};
+					
 					m_InventoryManager.GetItems( currentItems );
-					PrintFormat("APCA - Clearing Items: %1", currentItems);
-					for(int i = 0; i < currentItems.Count(); i++)
+					
+					m_InventoryManager.GetStorages( storages );
+					PrintFormat("APCA - storages: %1", storages);
+					foreach(BaseInventoryStorageComponent storage : storages)
 					{
-						m_InventoryManager.TryDeleteItem(currentItems[i]);
+						int numSlots = storage.GetSlotsCount();
+						for(int i = 0; i < numSlots; i++)
+						{
+							InventoryStorageSlot slot = storage.GetSlot(i);
+							IEntity attachedEntity = slot.GetAttachedEntity();
+							if(attachedEntity)
+							{
+								//PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+								currentItems.Insert(attachedEntity);
+							}
+						}
 					}
 					
+					PrintFormat("APCA - Clearing Items: %1", currentItems);
+					
+					//for(int i = 0; i < currentItems.Count(); i++)
+					for(int i = currentItems.Count() - 1; i >= 0; i--)
+					{
+						if(currentItems[i])
+						{
+							//m_InventoryManager.TryDeleteItem(currentItems[i]);
+							SCR_EntityHelper.DeleteEntityAndChildren(currentItems[i]);
+						}
+					}
+					
+					
 					// Add old items
-					PrintFormat("Test - Adding Items: %1", playerItems);
+					PrintFormat("APCA - Adding Items: %1", playerItems);
 					for(int i = 0; i < playerItems.Count(); i++)
 					{
 				
@@ -266,7 +297,14 @@ class APCA_GameModeCoop : PS_GameModeCoop
 						params.Transform[3] = entity.GetOrigin();
 						IEntity newItem = GetGame().SpawnEntityPrefabEx(playerItems[i].GetPrefabData().GetPrefabName(), false, GetGame().GetWorld(), params);
 						
-						m_InventoryManager.InsertItem(newItem);
+						if(m_InventoryManager.CanInsertItem(newItem))
+						{
+							m_InventoryManager.InsertItem(newItem);
+						}
+						else
+						{
+							SCR_EntityHelper.DeleteEntityAndChildren(newItem);
+						}
 					}
 				}
 			}
@@ -283,13 +321,10 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		vector rot;
 		vector transform[4]; 
 		point.GetPositionAndRotation(destination, rot);
-		destination[0] = destination[0] + Math.RandomFloat(-2, 2);
-		destination[1] = destination[1] + Math.RandomFloat(-2, 2);
+		destination[0] = destination[0] + Math.RandomFloat(-0.5, 0.5);
+		destination[2] = destination[2] + Math.RandomFloat(-0.5, 0.5);
 		entity.GetWorldTransform(transform);
 		transform[3] = destination;
-		
-		Print("Teleport?");
-		PrintFormat("transform - %1", transform);
 		
 		BaseGameEntity baseGameEntity = BaseGameEntity.Cast(entity);
 		if (baseGameEntity && !BaseVehicle.Cast(baseGameEntity))

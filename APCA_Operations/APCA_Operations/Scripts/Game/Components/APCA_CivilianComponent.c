@@ -13,7 +13,6 @@ class APCA_CivilianComponent : ScriptComponent
 	//---------------------------------------------------------------------------------------------------	
 	override void OnPostInit(IEntity owner)
 	{
-		Print("APCA CIV - Init");
 		groupEntity = owner;
 		group = SCR_AIGroup.Cast(groupEntity);
 		
@@ -69,20 +68,17 @@ class APCA_CivilianComponent : ScriptComponent
 			CollectMapDescriptors();
 			//world.GetActiveEntities(worldEntities);
 			//world.QueryEntitiesBySphere(groupEntity.GetOrigin(), 5000000, QueryCallback);
-			PrintFormat("APCA CIV - Locations: %1", locationMapComponents.Count());
 		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
 	void AddWaypoints()
 	{
-		Print("APCA CIV - Getting Group");
 		if(group) 
 		{
 			ArmaReforgerScripted game = GetGame();
 			if(!game.InPlayMode())
 			{
-				Print("APCA CIV - Is workbench");
 				return;
 			}
 			
@@ -95,7 +91,6 @@ class APCA_CivilianComponent : ScriptComponent
 			}*/
 			
 			
-			Print("APCA CIV - Adding Get In");
 			//Add Get In Waypoint
 			vector origin = groupEntity.GetOrigin();
 			EntitySpawnParams SpawnParams = new EntitySpawnParams();
@@ -110,7 +105,6 @@ class APCA_CivilianComponent : ScriptComponent
 					SpawnParams
 				);*/
 			
-			Print("APCA CIV - Getting Locations");
 			//Add Random Movement to Locations
 			GetLocationList();
 			array<AIWaypoint> cycleWaypoints  = {};
@@ -118,7 +112,6 @@ class APCA_CivilianComponent : ScriptComponent
 			{
 				for(int i = 0; i < 5; i++)
 				{
-					Print("APCA CIV - Adding Move");
 					SpawnParams.Transform[3] = IEntity.Cast(locationMapComponents.GetRandomElement().Item().Entity()).GetOrigin();
 					Resource moveWPPrefab = Resource.Load("{62DAF65820BF9857}Prefabs/AI/Waypoints/AIWaypoint_Move_CIV_Car.et");
 					cycleWaypoints.Insert(SCR_AIWaypoint.Cast(GetGame().SpawnEntityPrefabLocal(moveWPPrefab, null, SpawnParams)));
@@ -127,7 +120,6 @@ class APCA_CivilianComponent : ScriptComponent
 				}
 			}
 			
-			Print("APCA CIV - Adding Cycle");
 			//Add Cycle Waypoint
 			SpawnParams.Transform[3] = origin; 			
 			Resource cycleWPPrefab = Resource.Load("{62DAF65820BF9857}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et");
@@ -135,8 +127,6 @@ class APCA_CivilianComponent : ScriptComponent
 			
 			if (!waypointCycle)
 				return;	
-			
-			PrintFormat("APCA CIV - Waypoints Number: %1", cycleWaypoints.Count());
 			
 			waypointCycle.SetWaypoints(cycleWaypoints);
 			group.AddWaypoint(waypointCycle);

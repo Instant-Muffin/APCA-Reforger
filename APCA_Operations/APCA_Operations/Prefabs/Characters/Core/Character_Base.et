@@ -6,5 +6,10 @@ SCR_ChimeraCharacter {
   APCA_HVTComponent "{632880C03665FBD3}" {
    Enabled 0
   }
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_aRespawnPrefabs {
+    "{BED0073DD5B60D0C}Prefabs/Characters/Core/Character_Base_APCA.et"
+   }
+  }
  }
 }

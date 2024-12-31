@@ -17,7 +17,6 @@ class APCA_SpawnLogic: SCR_SpawnLogic
 	override void OnPlayerSpawnResponse_S(SCR_SpawnRequestComponent requestComponent, SCR_ESpawnResult response)
 	{
 		#ifdef _ENABLE_RESPAWN_LOGS
-		PrintFormat("APCA - %1::OnPlayerSpawnResponse_S(playerId: %2, response: %3)",
 			Type().ToString(), requestComponent.GetPlayerId(), typename.EnumToString(SCR_ESpawnResult, response));
 		#endif
 		
@@ -42,10 +41,8 @@ class APCA_SpawnLogic: SCR_SpawnLogic
 	override void OnPlayerKilled_S(int playerId, IEntity playerEntity, IEntity killerEntity, notnull Instigator killer)
 	{
 		#ifdef _ENABLE_RESPAWN_LOGS
-		PrintFormat("APCA - %1::OnPlayerKilled_S(playerId: %2, playerEntity: %3, killerEntity: %4, killerId: %5)",
 			Type().ToString(), playerId, playerEntity, killerEntity, killer.GetInstigatorPlayerID());
 		#endif
-		Print("Test");
 		
 		//m_playerLoadout = GetPlayerLoadoutComponent_S(playerId).GetLoadout();
 
@@ -60,7 +57,7 @@ class APCA_SpawnLogic: SCR_SpawnLogic
 	override protected void OnPlayerEntityLost_S(int playerId)
 	{
 		#ifdef _ENABLE_RESPAWN_LOGS
-		PrintFormat("APCA - %1::OnPlayerEntityLost_S(playerId: %2)", Type().ToString(), playerId);
+		//PrintFormat("APCA - %1::OnPlayerEntityLost_S(playerId: %2)", Type().ToString(), playerId);
 		#endif
 	}
 	

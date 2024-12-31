@@ -1,3 +1,7 @@
+GenericEntity : "{060E70051177F302}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Barracks_US_02.et" {
+ coords 5799.521 232.238 7265.93
+ angleY 51.115
+}
 GenericEntity Marker2 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
  coords 5772.715 229.656 7246.292
  angleX 0.881
@@ -23,4 +27,78 @@ GenericEntity Marker2 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
    }
   }
  }
+}
+Vehicle M923A1_command_MERDC2 : "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et" {
+ coords 5813.154 232.777 7250.427
+ angleX -1.919
+ angleY -124.788
+ angleZ 3.507
+}
+$grp StaticModelEntity : "{39F7EE885940DC8F}Prefabs/Structures/Military/Fortifications/DirtCover_01/DirtCover_01_long_v1.et" {
+ {
+  coords 5634.421 -0.141 7122.181
+  angleY 14.769
+ }
+ {
+  coords 5633.623 -0.015 7124.074
+  angleY 103.846
+ }
+ {
+  coords 5634.458 -0.097 7127.017
+  angleY 103.846
+ }
+ {
+  coords 5635.482 -0.189 7130.014
+  angleY 103.846
+ }
+ {
+  coords 5636.172 -0.219 7132.586
+  angleY 103.846
+ }
+}
+GenericEntity : "{517AA13D85047AD4}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Barracks_US_03.et" {
+ coords 5794.505 232.172 7272.361
+ angleY 51.343
+}
+StaticModelEntity : "{5FB3A1755261CA59}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Bunker_Camouflaged_US_01.et" {
+ coords 5702.768 211.113 7364.74
+ angleY -54.27
+}
+GenericEntity : "{76D4FE49EA6C57F3}Prefabs/Compositions/Slotted/SlotFlatLarge/LivingArea_L_US_01.et" {
+ coords 5651.036 217.455 7123.531
+ angleX -0.732
+ angleY -164.183
+ angleZ 2.582
+}
+Vehicle M923A1_transport_covered1 : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ coords 5658.924 217.797 7100.248
+ angleX 2.787
+ angleY 81.455
+ angleZ 0.486
+}
+$grp GenericEntity : "{83A10E8547281E58}Prefabs/Compositions/Slotted/SlotRoadSmall/Barricade_S_USSR_01.et" {
+ {
+  coords 5801.49 231.91 7287.062
+  angleY -32.442
+ }
+ {
+  coords 5796.823 231.976 7282.841
+  angleY 139.932
+ }
+}
+GenericEntity : "{A6FBA7EA8DE8CAC6}Prefabs/Compositions/Misc/SubCompositions/Fortifications/SandbagCamo_wall_High_US.et" {
+ coords 5706.22 210.802 7366.214
+ angleY 145.263
+}
+GenericEntity : "{C7D38772154D45BB}Prefabs/Compositions/Slotted/SlotFlatSmall/Bunker_S_US_01.et" {
+ coords 5789.58 231.333 7250.735
+ angleY -101.275
+}
+GenericEntity : "{D8B2D92435256291}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_Barracks_US_01.et" {
+ coords 5804.457 232.363 7259.881
+ angleY 49.004
+}
+GenericEntity : "{F09296B9255F6704}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_CommandPost_US_01.et" {
+ coords 5804.919 232.239 7242.526
+ angleY 135.123
 }

@@ -44,6 +44,7 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
    m_BudgetType CAMPAIGN
    m_iCompositionRefundPercentage 100
+   m_bSameFactionDisassembleOnly 1
    m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" {
    }
    m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
@@ -61,22 +62,20 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
   SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
    m_iKillFeedType DISABLED
-   m_iReceiveKillFeedType ALL
    m_aKillfeedReceiveTypeNames {
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B747E765}" {
-     m_iKillfeedreceiveType 2147483647
+     m_iKillfeedreceiveType GROUP_ONLY
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B7003ECC}" {
-     m_iKillfeedreceiveType 2147483647
+     m_iKillfeedreceiveType GROUP_ONLY
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B7D2B6CF}" {
-     m_iKillfeedreceiveType 2147483647
+     m_iKillfeedreceiveType GROUP_ONLY
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B6AB6528}" {
-     m_iKillfeedreceiveType 2147483647
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036A5A136C4}" {
-     m_iKillfeedreceiveType 2147483647
+     m_iKillfeedreceiveType GROUP_ONLY
     }
    }
   }
@@ -147,6 +146,14 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
  }
  {
+  PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+   ID "633E538926EAF0A6"
+   coords 0 0 0
+  }
+  SCR_FactionManager : "{AFCB5AA09CEA909A}Prefabs/MP/Managers/Factions/FactionManager_APCA.et" {
+   ID "633E5389235B65F3"
+   coords 0 0 0
+  }
   RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
    ID "62E0D844870653EC"
   }

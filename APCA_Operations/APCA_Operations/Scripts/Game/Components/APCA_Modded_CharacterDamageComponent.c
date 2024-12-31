@@ -11,7 +11,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
 	//------------------------------------------------------------------------------------------------
 	override void OnLifeStateChanged(ECharacterLifeState previousLifeState, ECharacterLifeState newLifeState)
 	{
-		Print("APCA - OnLifeStateChanged");
+		//Print("APCA - OnLifeStateChanged");
 		ChimeraCharacter character = ChimeraCharacter.Cast(GetOwner());
 		if (!character)
 			return;
@@ -28,7 +28,7 @@ modded class SCR_CharacterDamageManagerComponent : ScriptedDamageManagerComponen
         if (currentWeapon)
 		{
             PlayersHeldItem = currentWeapon;
-			PrintFormat("APCA - Current Weapon: %1",PlayersHeldItem);
+			//PrintFormat("APCA - Current Weapon: %1",PlayersHeldItem);
 		}
 		
 		super.OnLifeStateChanged(previousLifeState, newLifeState);

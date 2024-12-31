@@ -36,7 +36,7 @@ modded class SCR_MeleeComponent : ScriptComponent
 		APCA_HVTComponent hvt = APCA_HVTComponent.Cast(Victim.FindComponent(APCA_HVTComponent));
 		if (hvt)
 		{
-			Print("HVT Melee!");
+			//Print("HVT Melee!");
 			SCR_CharacterDamageManagerComponent damageComp = SCR_CharacterDamageManagerComponent.Cast(Victim.FindComponent(SCR_CharacterDamageManagerComponent));
 			if (damageComp)
 			{			
@@ -54,11 +54,11 @@ modded class SCR_MeleeComponent : ScriptComponent
 				SCR_AIGroup Group = SCR_AIGroup.Cast(Victim_Agent);
 				if (!Group)
 				{
-					Print("There is a group");
+					//Print("There is a group");
 					Group = SCR_AIGroup.Cast(Victim_Agent.GetParentGroup());
 					if (Group)
 					{
-						Print("There is a group owner. Setting faction");
+						//Print("There is a group owner. Setting faction");
 						Group.SetFaction(faction);
 					}
 				}

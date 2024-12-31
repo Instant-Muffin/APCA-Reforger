@@ -1669,7 +1669,7 @@ GenericEntity : "{4510C273B794F3A9}Prefabs/Compositions/Slotted/SlotFlatMedium/V
  }
 }
 Vehicle UAZ469_QRF1 : "{4745646CD7106929}Prefabs/Vehicles/Wheeled/UAZ469_QRF.et" {
- coords 2241.134 19.165 7520.01
+ coords 2244.177 19.234 7508.281
  angleY 165.462
 }
 GenericEntity : "{6DD8F04BE0E4C916}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/FuelService_USSR_NoAffiliation.et" {

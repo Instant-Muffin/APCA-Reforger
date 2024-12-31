@@ -10,9 +10,9 @@ modded class SCR_MapEntity : MapEntity
 		GetGame().GetInputManager().AddActionListener("Map3", EActionTrigger.DOWN, QuickMarkerCircle);
 		
 		// Pointing
-		GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.DOWN, StartPointing);
-		GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.UP, EndPointing);
-		GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.PRESSED, UpdatePointing);
+		//GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.DOWN, StartPointing);
+		//GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.UP, EndPointing);
+		//GetGame().GetInputManager().AddActionListener("MapCtrl", EActionTrigger.PRESSED, UpdatePointing);
 	}
 	
 	override void CloseMap()
@@ -25,9 +25,9 @@ modded class SCR_MapEntity : MapEntity
 		GetGame().GetInputManager().RemoveActionListener("Map3", EActionTrigger.DOWN, QuickMarkerCircle);
 		
 		// Pointing
-		GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.DOWN, StartPointing);
-		GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.UP, EndPointing);
-		GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.PRESSED, UpdatePointing);
+		//GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.DOWN, StartPointing);
+		//GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.UP, EndPointing);
+		//GetGame().GetInputManager().RemoveActionListener("MapCtrl", EActionTrigger.PRESSED, UpdatePointing);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -109,9 +109,9 @@ modded class SCR_MapEntity : MapEntity
 		array<int> allPlayers = {};
 		array<int> nearbyPlayers = {};
 		playerManager.GetPlayers(allPlayers);
-		PrintFormat("APCA - allPlayers: %1",allPlayers);
 		IEntity playerEntity = IEntity.Cast(playerController.GetControlledEntity());
 		vector playerPosition = playerEntity.GetOrigin();
+		//PrintFormat("APCA - nearbyPlayers: %1",nearbyPlayers);
 		for(int i = 0; i < allPlayers.Count(); i++)
 		{
 			IEntity otherPlayerEntity = playerManager.GetPlayerControlledEntity(i);
@@ -119,8 +119,7 @@ modded class SCR_MapEntity : MapEntity
 				continue;
 			vector otherPlayerPosition = otherPlayerEntity.GetOrigin();
 			float distance = vector.Distance(playerPosition, otherPlayerPosition);
-			PrintFormat("APCA - distance: %1",distance);
-			if(distance < 2)
+			if(distance < 5)
 				nearbyPlayers.Insert(i);
 		}
 		
@@ -140,10 +139,11 @@ modded class SCR_MapEntity : MapEntity
 		marker.SetColorEntry(color);
 		marker.SetCustomText(name);
 		marker.SetWorldPos(0, 0);
-		marker.SetCanBeRemovedByOwner(false);
+		marker.SetCanBeRemovedByOwner(true);
 		marker.SetVisible(false);
 		
-		mapMarkerMgr.InsertStaticMarker(marker, true, true);
+		mapMarkerMgr.InsertStaticMarker(marker, true, false);
+		
 		Rpc(SetPointingVisibility, marker, nearbyPlayers);
 	}
 	
@@ -153,30 +153,44 @@ modded class SCR_MapEntity : MapEntity
 		SCR_MapMarkerManagerComponent mapMarkerMgr = SCR_MapMarkerManagerComponent.GetInstance();
 		SCR_PlayerController playerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
 		SCR_MapMarkerBase marker = mapMarkerMgr.GetStaticMarkerByID(playerController.GetPlayerId() + 123);
-		float posX = 0;
-		float posY = 0;
-		GetMapCursorWorldPosition(posX, posY);
-		marker.SetWorldPos(posX, posY);
+		if(marker)
+		{
+			float posX = 0;
+			float posY = 0;
+			GetMapCursorWorldPosition(posX, posY);
+			marker.SetWorldPos(posX, posY);
+		}
 	}
 	
 	protected void EndPointing()
 	{
 		//Print(" APCA - Deleting Marker");
-		SCR_MapMarkerManagerComponent mapMarkerMgr = SCR_MapMarkerManagerComponent.GetInstance();
-		SCR_PlayerController playerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
-		SCR_MapMarkerBase marker = mapMarkerMgr.GetStaticMarkerByID(playerController.GetPlayerId() + 123);
 		
-		mapMarkerMgr.RemoveStaticMarker(marker);
+		SCR_PlayerController playerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
+		Rpc(RemoveMarker, playerController.GetPlayerId() + 123)
+		
 	}
 	
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	protected void SetPointingVisibility(SCR_MapMarkerBase marker, array<int> nearbyPlayers)
+	protected void RemoveMarker(int markerId)
+	{
+		SCR_MapMarkerManagerComponent mapMarkerMgr = SCR_MapMarkerManagerComponent.GetInstance();
+		SCR_MapMarkerBase marker = mapMarkerMgr.GetStaticMarkerByID(markerId);
+		if(marker)
+		{
+			mapMarkerMgr.RemoveStaticMarker(marker);	
+		}
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	protected void SetPointingVisibility(SCR_MapMarkerBase marker, array<int> nearbyPlayerIds)
 	{
 		SCR_PlayerController playerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
+		IEntity playerEnt = playerController.GetControlledEntity();
 		int playerID = playerController.GetPlayerId();
-		for(int i = 0; i < nearbyPlayers.Count(); i++)
+		for(int i = 0; i < nearbyPlayerIds.Count(); i++)
 		{
-			if(playerID==i)
+			if(playerID == nearbyPlayerIds[i])
 				marker.SetVisible(true);
 		}
 	}

@@ -1,3 +1,9 @@
+GenericEntity : "{0AF1C4C9C7EF05F2}Prefabs/Compositions/Slotted/SlotFlatSmall/FuelStorage_S_US_01.et" {
+ coords 4278.721 63.537 5801.394
+ angleX 4.481
+ angleY 136.085
+ angleZ -3.068
+}
 $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
  Marker9 {
   coords 3851.288 163.805 4330.78
@@ -13,31 +19,7 @@ $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
-        }
-       }
-      }
-      coords 11.079 -0.093 1.636
-     }
-    }
-   }
-  }
- }
- Marker10 {
-  coords 3508.496 113.478 5398.674
-  angleX 0.881
-  angleY -0.11
-  angleZ -7.126
-  {
-   GenericEntity Layer10 {
-    ID "630686459DADE4AD"
-    {
-     GenericEntity {
-      ID "630686459DADE4AE"
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
-         m_eMapMarkerIcon POINT_OF_INTEREST
-         m_eMapMarkerColor BLUFOR
+         m_sMapMarkerText "Wolf Hill"
         }
        }
       }
@@ -48,7 +30,7 @@ $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
   }
  }
  Marker11 {
-  coords 4234.552 116.791 5393.609
+  coords 4000.573 108.692 5554.271
   angleX 0.881
   angleY -0.11
   angleZ -7.126
@@ -61,7 +43,7 @@ $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
       components {
        SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
         m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
-         m_eMapMarkerIcon POINT_OF_INTEREST
+         m_eMapMarkerIcon MARK_QUESTION
          m_eMapMarkerColor BLUFOR
         }
        }
@@ -72,29 +54,81 @@ $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
    }
   }
  }
- Marker12 {
-  coords 2608.688 91.106 5368.466
-  angleX 0.881
-  angleY -0.11
-  angleZ -7.126
-  {
-   GenericEntity Layer12 {
-    ID "630686459DADE4AD"
-    {
-     GenericEntity {
-      ID "630686459DADE4AE"
-      components {
-       SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
-        m_MapMarkerType SCR_ScenarioFrameworkMarkerCustom "{6306864566DFB553}" {
-         m_eMapMarkerIcon POINT_OF_INTEREST
-         m_eMapMarkerColor BLUFOR
-        }
-       }
-      }
-      coords 11.079 -0.093 1.636
-     }
-    }
-   }
-  }
+}
+$grp GenericEntity : "{24B7F96197053B39}Prefabs/Compositions/Slotted/SlotRoadSmall/Barricade_S_US_01.et" {
+ {
+  coords 4003.374 144.42 4444.874
+  angleX 6.352
+  angleY -114.771
+  angleZ 0.995
  }
+ {
+  coords 4000.398 144.509 4449.996
+  angleX 8.043
+  angleY -115.267
+  angleZ -3.778
+ }
+ {
+  coords 4104.259 105.518 4038.909
+  angleX 4.676
+  angleY -54.611
+  angleZ -3.573
+ }
+ {
+  coords 4107.176 105.553 4044.044
+  angleX 4.686
+  angleY -55.133
+  angleZ 1.075
+ }
+}
+GenericEntity : "{2A27606856B8A914}Prefabs/Compositions/Slotted/SlotRoadLarge/Barricade_L_USSR_01.et" {
+ coords 3896.252 159.046 4279.5
+ angleX -5.032
+ angleY 129.958
+ angleZ 0.443
+}
+GenericEntity : "{3386EAA823BE462E}Prefabs/Props/Wrecks/UAZ469_wreck_static.et" {
+ coords 3106.96 118.168 5227.817
+ angleY 144.304
+}
+Vehicle M923A1_command_MERDC1 : "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et" {
+ coords 3842.551 163.642 4326.004
+ angleX -2.49
+ angleY -124.747
+ angleZ -0.45
+}
+GenericEntity : "{4D69F9D77C372BE5}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_US_01_M60.et" {
+ coords 4298.743 61.396 5820.982
+ angleY 98.671
+}
+GenericEntity : "{75FEF1CA582431F3}Prefabs/Props/Wrecks/BTR70_wreck.et" {
+ coords 3092.685 118.236 5256.755
+ angleY -40.347
+}
+GenericEntity : "{8B4B8BF44162B24E}Prefabs/Compositions/Slotted/SlotFlatSmall/Antenna_S_US_01.et" {
+ coords 4246.18 64.625 5807.871
+ angleY 115.932
+}
+GenericEntity : "{9D720679B696FEE1}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_US_01_M2HB.et" {
+ coords 4220.826 73.602 5668.458
+ angleY -122.494
+}
+GenericEntity : "{AE300E34EA8FF40C}Prefabs/Props/Wrecks/Ural4320_wreck_static.et" {
+ coords 3063.794 118.199 5215.593
+ angleX -2.463
+ angleY 45.283
+}
+GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_wreck_static.et" {
+ coords 3151.215 118.932 5234.035
+ angleX 1.59
+ angleY -26.053
+ angleZ 1.215
+}
+GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
+ coords 4268.498 59.562 5852.325
+ angleY 46.33
+}
+GenericEntity : "{F09296B9255F6704}Prefabs/Compositions/Misc/SubCompositions/Tents/Tent_CommandPost_US_01.et" {
+ coords 3849.733 162.71 4306.126
+ angleY 47.403
 }
