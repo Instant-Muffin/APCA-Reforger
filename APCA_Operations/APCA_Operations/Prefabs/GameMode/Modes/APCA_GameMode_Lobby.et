@@ -146,11 +146,11 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
  }
  {
-  PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+  PerceptionManager "633E994033028B49" : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
    ID "633E538926EAF0A6"
    coords 0 0 0
   }
-  SCR_FactionManager : "{AFCB5AA09CEA909A}Prefabs/MP/Managers/Factions/FactionManager_APCA.et" {
+  SCR_FactionManager "633E99403303AA59" : "{AFCB5AA09CEA909A}Prefabs/MP/Managers/Factions/FactionManager_APCA.et" {
    ID "633E5389235B65F3"
    coords 0 0 0
   }
@@ -167,10 +167,6 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   SCR_EditorSettingsEntity {
    ID "62E0D8448706E4E8"
    m_bIsUnlimitedEditorLegal 1
-  }
-  SCR_LoadoutManager : "{25B8CD39D9DAC28C}Prefabs/GameMode/Managers/Loadouts/LoadoutManager_APCA.et" {
-   ID "632880FEB48E42CE"
-   coords 0 0 0
   }
   ItemPreviewManagerEntity "5E7AE0AB2109F297" : "{AB5D049A3AB43FC0}Prefabs/World/Game/ItemPreviewManager_PS.et" {
    ID "62E0D8448706E4E6"

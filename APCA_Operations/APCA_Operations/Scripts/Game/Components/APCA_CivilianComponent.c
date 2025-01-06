@@ -19,10 +19,57 @@ class APCA_CivilianComponent : ScriptComponent
 		super.OnPostInit(owner);
 		
 		AddWaypoints();
+		
+		//GetGame().GetCallqueue().CallLater(ClearInventory, 10000, false, owner);
+		
+	}
+	
+	void ClearInventory(IEntity owner)
+	{
+		SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(owner);
+		
+		SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(character.FindComponent(SCR_InventoryStorageManagerComponent));	
+		
+		if (m_InventoryManager)
+		{
+			// Clear current items
+			array<IEntity> currentItems = {};
+			array<BaseInventoryStorageComponent> storages = {};
+			
+			m_InventoryManager.GetItems( currentItems );
+			
+			m_InventoryManager.GetStorages( storages );
+			PrintFormat("APCA - storages: %1", storages);
+			foreach(BaseInventoryStorageComponent storage : storages)
+			{
+				int numSlots = storage.GetSlotsCount();
+				array<InventoryItemComponent> slotItems = {};
+				storage.GetOwnedItems(slotItems);
+				
+				for(int i = 0; i < numSlots; i++)
+				{
+					// This gets items in storage but not attached stuff
+					InventoryStorageSlot slot = storage.GetSlot(i);
+					IEntity attachedEntity = slot.GetAttachedEntity();
+					if(attachedEntity)
+					{
+						PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+						//m_InventoryManager.TryRemoveItemFromInventory(attachedEntity);
+						//m_InventoryManager.TryDeleteItem(attachedEntity);
+						SCR_EntityHelper.DeleteEntityAndChildren(attachedEntity);
+						//currentItems.Insert(attachedEntity);
+						
+					}
+				}
+			}
+			
+			PrintFormat("APCA - Clearing Items: %1", currentItems);
+		}
 	}
 	
 	// Courtesy of Bacon
-	bool CollectMapDescriptors() {
+	bool CollectMapDescriptors() 
+	{
         
         SCR_EditableEntityCore core = SCR_EditableEntityCore.Cast(SCR_EditableEntityCore.GetInstance(SCR_EditableEntityCore));
         if (!core)

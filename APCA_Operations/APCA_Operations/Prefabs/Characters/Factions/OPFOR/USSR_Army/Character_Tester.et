@@ -1,0 +1,13 @@
+SCR_ChimeraCharacter : "{BED0073DD5B60D0C}Prefabs/Characters/Core/Character_Base_APCA.et" {
+ ID "520EC961A090B1EE"
+ components {
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Vest {
+     Prefab "{9713FE6DDCC9510D}Prefabs/Characters/Vests/Vest_Lifchik/Vest_Lifchik.et"
+    }
+   }
+  }
+ }
+ coords 2241.568 19.458 7503.357
+}

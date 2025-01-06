@@ -24,6 +24,11 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
    m_iTime 3000
   }
  }
+ {
+  SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
+   coords 0 0 0
+  }
+ }
 }
 SCR_AIGroup : "{702533E6E9DC6F0F}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_Alpha.et" {
  coords 2286.942 18.477 7513.178
@@ -34,7 +39,7 @@ SCR_AIGroup : "{A5492C39A8B7B40F}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_
  angleY -129.28
 }
 SCR_AIGroup : "{DB78870FB996E960}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_Command.et" {
- coords 2241.804 18.707 7502.125
+ coords 2241.804 19.496 7502.125
  angleY 78.567
 }
 SCR_AIGroup : "{DC9524C1053BA9A8}Prefabs/Groups/OPFOR/USSR_Army/Group_APCA_USSR_VICTOR.et" {

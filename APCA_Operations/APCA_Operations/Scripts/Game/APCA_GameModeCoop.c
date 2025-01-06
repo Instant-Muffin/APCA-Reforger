@@ -193,23 +193,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		playableComponentNew.SetPlayable(true);
 		ChimeraCharacter character = playableComponentNew.GetOwnerCharacter();
 		
-		SwapInventory(entity, playerItems);
-		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, 4);
-	}
-	
-	override void Respawn(int playerId, PS_RespawnData respawnData)
-	{
-		Resource resource = Resource.Load(respawnData.m_sPrefabName);
-		EntitySpawnParams params = new EntitySpawnParams();
-		Math3D.MatrixCopy(respawnData.m_aSpawnTransform, params.Transform);
-		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
-		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_iId);
-		SCR_AIGroup playabelGroup = aiGroup.GetSlave();
-		playabelGroup.AddAIEntityToGroup(entity);
-		
-		PS_PlayableComponent playableComponentNew = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		playableComponentNew.SetPlayable(true);
-		
+		// Delay the equipment swap to fix the belt getting stuck for some reason
+		GetGame().GetCallqueue().CallLater(SwapInventory, 2000, false, entity, playerItems);
 		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, 4);
 	}
 	
@@ -236,6 +221,23 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		TeleportToSpawn(entity);
 	}
 	
+	protected void DeleteChildrens(IEntity entity, bool deleteRoot)
+	{
+		if (!entity || !entity.FindComponent(InventoryItemComponent))
+			return;
+
+		IEntity child = entity.GetChildren();
+		while (child)
+		{
+			IEntity sibling = child.GetSibling();
+			DeleteChildrens(child, true);
+			child = sibling;
+		}
+
+		if (!entity.IsDeleted() && deleteRoot)
+			delete entity;
+	}
+	
 	void SwapInventory(IEntity entity, array<IEntity> playerItems)
 	{
 		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
@@ -258,37 +260,31 @@ class APCA_GameModeCoop : PS_GameModeCoop
 					m_InventoryManager.GetItems( currentItems );
 					
 					m_InventoryManager.GetStorages( storages );
-					PrintFormat("APCA - storages: %1", storages);
 					foreach(BaseInventoryStorageComponent storage : storages)
 					{
 						int numSlots = storage.GetSlotsCount();
+						array<InventoryItemComponent> slotItems = {};
+						storage.GetOwnedItems(slotItems);
+						
 						for(int i = 0; i < numSlots; i++)
 						{
+							// This gets items in storage but not attached stuff
 							InventoryStorageSlot slot = storage.GetSlot(i);
 							IEntity attachedEntity = slot.GetAttachedEntity();
 							if(attachedEntity)
 							{
 								//PrintFormat("APCA - attachedEntity: %1", attachedEntity);
-								currentItems.Insert(attachedEntity);
+								SCR_EntityHelper.DeleteEntityAndChildren(attachedEntity);
 							}
 						}
 					}
 					
 					PrintFormat("APCA - Clearing Items: %1", currentItems);
-					
-					//for(int i = 0; i < currentItems.Count(); i++)
-					for(int i = currentItems.Count() - 1; i >= 0; i--)
-					{
-						if(currentItems[i])
-						{
-							//m_InventoryManager.TryDeleteItem(currentItems[i]);
-							SCR_EntityHelper.DeleteEntityAndChildren(currentItems[i]);
-						}
-					}
-					
+
+					//DeleteChildrens(entity, false);
 					
 					// Add old items
-					PrintFormat("APCA - Adding Items: %1", playerItems);
+					//PrintFormat("APCA - Adding Items: %1", playerItems);
 					for(int i = 0; i < playerItems.Count(); i++)
 					{
 				

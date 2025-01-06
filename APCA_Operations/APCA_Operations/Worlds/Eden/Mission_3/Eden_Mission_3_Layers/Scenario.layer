@@ -113,39 +113,3 @@ $grp GenericEntity : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
   }
  }
 }
-$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
- UAZ1 {
-  coords 5422.586 90.093 6021.136
-  {
-   GenericEntity : "{E4E0C2DCD84E1892}Prefabs/Systems/Sound/Sound_Distant_Firefight.et" {
-    coords 0 23.576 0
-   }
-  }
- }
- UAZ3 {
-  coords 5190.345 59.069 5385.996
-  angleY -60.812
-  {
-   GenericEntity : "{E4E0C2DCD84E1892}Prefabs/Systems/Sound/Sound_Distant_Firefight.et" {
-    components {
-     SoundComponent "{6336856DB3E91F53}" {
-      Filenames {
-       "{DD1D885601C14071}Sounds/Weapons/Machineguns/PKM/Weapons_Machineguns_PKM_Shot.acp" "{C58276FAF1433491}Sounds/Weapons/Machineguns/M249/Weapons_Machineguns_M249_Shot.acp"
-      }
-     }
-     APCA_SoundFirefightComponent "{6336856DB3E91F60}" {
-      soundNames {
-       "PKM_SHOT" "M249_SHOT"
-      }
-      minDelay 15
-      maxDelay 35
-      profiles {
-       3 3 4 4
-      }
-     }
-    }
-    coords 0 25.096 0
-   }
-  }
- }
-}

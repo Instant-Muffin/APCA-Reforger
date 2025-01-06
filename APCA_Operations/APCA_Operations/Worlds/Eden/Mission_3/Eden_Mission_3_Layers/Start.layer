@@ -1774,6 +1774,10 @@ StaticModelEntity : "{E8697D4489516AE0}Prefabs/Compositions/Misc/SubCompositions
   }
  }
 }
+GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Props/Military/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
+ coords 2245.19 19.445 7502.752
+ angleY -112.783
+}
 GenericEntity : "{FD952CFF9CAD3F2B}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_USSR_01.et" {
  coords 2279.671 17.532 7540.877
  angleY -92.279
