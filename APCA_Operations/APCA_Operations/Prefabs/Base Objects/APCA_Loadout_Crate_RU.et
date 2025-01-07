@@ -4,6 +4,9 @@ GenericEntity : "{81F5036CEB26F399}Prefabs/Base Objects/APCA_Loadout_Crate.et" {
   MeshObject "{63247BE06818C9A2}" {
    Object "{468DC8CD41213919}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01_USSR_general.xob"
   }
+  SCR_ArsenalComponent "{63247BE044169419}" {
+   m_eSupportedArsenalItemTypes 1048574
+  }
   SCR_FactionAffiliationComponent "{6324810C70414AA5}" {
    "faction affiliation" "USSR"
   }

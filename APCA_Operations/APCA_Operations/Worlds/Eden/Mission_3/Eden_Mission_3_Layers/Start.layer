@@ -1671,6 +1671,31 @@ GenericEntity : "{4510C273B794F3A9}Prefabs/Compositions/Slotted/SlotFlatMedium/V
 Vehicle UAZ469_QRF1 : "{4745646CD7106929}Prefabs/Vehicles/Wheeled/UAZ469_QRF.et" {
  coords 2244.177 19.234 7508.281
  angleY 165.462
+ {
+  GenericEntity {
+   components {
+    SCR_EditableEntityVisibilityChildComponent "{5E6A90B0246F70E2}" {
+     m_State 96
+    }
+    SCR_FuelSupportStationComponent "{644CAD3DD2282A14}" {
+    }
+    SCR_HealSupportStationComponent "{644CAD3E3E438D3D}" {
+    }
+    SCR_RepairSupportStationComponent "{644CAD3DDD4CB331}" {
+    }
+    SCR_SupportStationAreaMeshComponent "{5E6A90B0246F70C8}" {
+     Enabled 1
+     m_vResolution 48
+     m_bStretchMaterial 1
+     m_Material "{0A8FAD171DB3DC49}Assets/Editor/VirtualArea/VirtualArea_01_Focused.emat"
+     m_fRadius 15
+    }
+    Hierarchy "{5E6A90B0246F70C3}" {
+    }
+   }
+   angleY -165.462
+  }
+ }
 }
 GenericEntity : "{6DD8F04BE0E4C916}Prefabs/Compositions/Misc/CustomEntities/InteractionPoints/FuelService_USSR_NoAffiliation.et" {
  coords 2252.55 18.196 7533.416
@@ -1748,13 +1773,1693 @@ $grp GenericEntity : "{8B1AC1172A23D0A8}Prefabs/Base Objects/APCA_Loadout_Crate_
 }
 Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
  components {
+  EventHandlerManagerComponent "{52CAB06F9C274D14}" {
+   EventHandlers {
+    BaseEventHandler "{56437C92FB0A6880}" {
+     EventName "OnCompartmentEntered"
+    }
+    BaseEventHandler "{56437C92FB9B4A7D}" {
+     EventName "OnCompartmentLeft"
+    }
+   }
+  }
+  SCR_VehicleSoundComponent "{55C2E66AD4EF2CA6}" {
+   Filenames +{
+   }
+   SoundPoints {
+    SoundPointInfo Hatch_Handle_L {
+     Offset -0.09 1.5585 2.5623
+    }
+    SoundPointInfo Hatch_Handle_R {
+     Offset 0.09 1.5585 2.5623
+    }
+    SoundPointInfo Engine {
+     Offset 0 1.2 -2.8
+     Angles 0 180 0
+    }
+    SoundPointInfo Horn {
+     Offset 0 1 3
+    }
+    SoundPointInfo Supplies {
+     Offset 0 1.85 -2.65
+    }
+    SoundPointInfo FuelTank {
+     Offset 0 0.76 -1.2
+    }
+   }
+   Wheels {
+    VehicleWheelSound L_01 {
+     Filename "{A9997E455F672798}Sounds/Vehicles/Wheeled/BTR70/Vehicles_BTR70_Wheel_l_1.acp"
+     SoundPoint PointInfo "{54A2A290B157C00B}" {
+      PivotID "v_wheel_L01"
+     }
+    }
+    VehicleWheelSound R_01 {
+     Filename "{5CEAEF266CBBF0F1}Sounds/Vehicles/Wheeled/BTR70/Vehicles_BTR70_Wheel_r_1.acp"
+     SoundPoint PointInfo "{54A2A290B157C005}" {
+      PivotID "v_wheel_R01"
+     }
+    }
+    VehicleWheelSound L_03 {
+     Filename "{A764EF8E1EAC175A}Sounds/Vehicles/Wheeled/BTR70/Vehicles_BTR70_Wheel_l_2.acp"
+     SoundPoint PointInfo "{54A2A290B157C007}" {
+      PivotID "v_wheel_L03"
+     }
+    }
+    VehicleWheelSound R_03 {
+     Filename "{C5F456BF715CC161}Sounds/Vehicles/Wheeled/BTR70/Vehicles_BTR70_Wheel_r_2.acp"
+     SoundPoint PointInfo "{54A2A290B157C006}" {
+      PivotID "v_wheel_R03"
+     }
+    }
+   }
+   m_aHitZoneStateSignalData {
+    SCR_HitZoneStateSignalData "{5E72C71D94477DBA}" {
+     m_aHitZoneNames +{
+     }
+    }
+    SCR_HitZoneStateSignalData "{5E72C71D96AACB05}" {
+     m_aHitZoneNames +{
+     }
+    }
+    SCR_HitZoneStateSignalData "{5E72C90576A68CB0}" {
+     m_sSignalName "Engine_02DamageState"
+     m_aHitZoneNames +{
+     }
+    }
+   }
+  }
+  AICarMovementComponent "{5A3EFB66475D9F87}" {
+   "Max Stuck Time" 4
+   "Min Prediction Distance" 2.3
+   CruiseVehicleSpeedKmh 60
+   FrictionCoefficient 0.15
+   StopDistanceCoefficient 15
+   SteeringPID 15 0.08 0.5
+   ThrottlePID 5 0.1 0
+  }
+  AIPathfindingComponent "{5676B7807269CA5B}" {
+   IgnoreFlags 8
+  }
+  BaseLightManagerComponent "{51E210F17D2534F7}" {
+   LightSlots {
+    SCR_LightSlot "{51E2210DFD8FE30D}" : "{89853FD0B72E39A1}Prefabs/Vehicles/Core/Lights/Light_Head.conf" {
+     LightPositionInfo EntitySlotInfo "{51DAAC8FC2824EEC}" {
+      Offset -1.2386 1.4616 2.7621
+      Angles -25 -3 0
+     }
+     LightPrefab "{B873C5C657A2F600}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_VehicleLight_Head_Small_L.et"
+     ParentSurface "LHeadlight"
+    }
+    SCR_LightSlot "{51E2210DFC93122E}" : "{89853FD0B72E39A1}Prefabs/Vehicles/Core/Lights/Light_Head.conf" {
+     LightPositionInfo EntitySlotInfo "{51DAAC8FC2824EEC}" {
+      Offset 1.2385 1.4624 2.7608
+      Angles -25 10 0
+     }
+     LightPrefab "{CBF41E77F99E1510}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_VehicleLight_Head_Small_R.et"
+     ParentSurface "RHeadlight"
+    }
+    SCR_LightSlot "{51E2210DFF2078F3}" : "{FCCBB28A48232EE4}Prefabs/Vehicles/Core/Lights/Light_HiBeam.conf" {
+     LightPositionInfo EntitySlotInfo "{51E17746999D1D6E}" {
+      Offset -1.2386 1.4628 2.7621
+      Angles -17 -2 0
+     }
+     LightPrefab "{F14FF03459132823}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_VehicleLight_HiBeam_Small_L.et"
+     ParentSurface "LHeadlight"
+    }
+    SCR_LightSlot "{51E2210DFE23CD40}" : "{FCCBB28A48232EE4}Prefabs/Vehicles/Core/Lights/Light_HiBeam.conf" {
+     LightPositionInfo EntitySlotInfo "{51E17746999D1D6E}" {
+      Offset 1.2401 1.4608 2.7615
+      Angles -17 7 0
+     }
+     LightPrefab "{E7D69D1496A2B2D5}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_VehicleLight_HiBeam_Small_R.et"
+     ParentSurface "RHeadlight"
+    }
+    SCR_LightSlot "{51E2210D3764C178}" : "{50D459CD2CEC9DAD}Prefabs/Vehicles/Core/Lights/Light_Dashboard.conf" {
+     LightPositionInfo EntitySlotInfo "{51E2210D04212E5A}" {
+      Offset 0.1249 1.7711 1.7526
+      Angles -80 0 0
+     }
+     LightRadiusOverride 1.5
+     LightConeAngleOverride 160
+     LightCastShadowsOverride 1
+    }
+    SCR_LightSlot "{51E210F3B6509160}" : "{88DADCB91DCE5E4A}Prefabs/Vehicles/Core/Lights/Light_Rear.conf" {
+     LightPositionInfo EntitySlotInfo "{51E1774683E31D16}" {
+      Offset -0.9882 1.6335 -3.56
+      Angles 0 180 0
+     }
+     ParentSurface "LBrake"
+    }
+    SCR_LightSlot "{51E210F3B95B59D0}" : "{88DADCB91DCE5E4A}Prefabs/Vehicles/Core/Lights/Light_Rear.conf" {
+     LightPositionInfo EntitySlotInfo "{51E1774683E31D16}" {
+      Offset 0.9886 1.6341 -3.56
+      Angles 0 180 0
+     }
+     ParentSurface "RBrake"
+    }
+    SCR_LightSlot "{51E210F3BEAB0401}" : "{3F796555FD10152A}Prefabs/Vehicles/Core/Lights/Light_Brake.conf" {
+     LightPositionInfo EntitySlotInfo "{51E177468DA2D7F8}" {
+      Offset -0.98 1.63 -3.56
+      Angles 0 180 0
+     }
+     ParentSurface "LBrake"
+    }
+    SCR_LightSlot "{51E210F3A1E9D264}" : "{3F796555FD10152A}Prefabs/Vehicles/Core/Lights/Light_Brake.conf" {
+     LightPositionInfo EntitySlotInfo "{51E177468DA2D7F8}" {
+      Offset 0.9879 1.63 -3.56
+      Angles 0 180 0
+     }
+     ParentSurface "RBrake"
+    }
+    SCR_LightSlot "{553CC271F53CE6F0}" : "{50D459CD2CEC9DAD}Prefabs/Vehicles/Core/Lights/Light_Dashboard.conf" {
+     LightPositionInfo EntitySlotInfo "{51E2210D04212E5A}" {
+      Offset -0.7576 1.6246 -1.3924
+      Angles 0 0 0
+     }
+     LightRadiusOverride 1.5
+     LightConeAngleOverride 160
+     LightCastShadowsOverride 1
+    }
+   }
+   EmissiveSurfaceSlots {
+    SCR_EmissiveLightSurfaceSlot LHeadlight {
+     Prefab "{E3ED1D67EDB92B68}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Headlight_L.et"
+     RegisterDamage 1
+     LightType 522
+     LightSide 0
+     EmissiveOnMultiplier 5
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{551CDAC83BA038BA}" : "{E0DC1C489DFD91ED}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Dipped.conf" {
+       EmissiveMultiplier 5
+      }
+      SurfaceLightConfigItem "{551CDAC83918F55F}" : "{1EF1BAD986852D8F}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Beam.conf" {
+       EmissiveMultiplier 30
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot RHeadlight {
+     Prefab "{8F4987409D4C558F}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Headlight_R.et"
+     RegisterDamage 1
+     LightType 522
+     LightSide 1
+     EmissiveOnMultiplier 5
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{551CDAC83EB95E5C}" : "{E0DC1C489DFD91ED}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Dipped.conf" {
+       EmissiveMultiplier 5
+      }
+      SurfaceLightConfigItem "{551CDAC83C70BDFC}" : "{1EF1BAD986852D8F}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Beam.conf" {
+       EmissiveMultiplier 30
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot LBrake {
+     Prefab "{9B260B9B066FEA8B}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Breaklight_L.et"
+     RegisterDamage 1
+     LightType 66
+     LightSide 0
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{551CDAC82F6DA90F}" : "{59F3FC900B204F60}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Brake.conf" {
+      }
+      SurfaceLightConfigItem "{551CDAC85BAE54F6}" : "{D2808DEC948D08B2}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Rear.conf" {
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot RBrake {
+     Prefab "{F29675CE2A79121B}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Breaklight_R.et"
+     RegisterDamage 1
+     LightType 66
+     LightSide 1
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{551CDAC8206DB942}" : "{59F3FC900B204F60}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Brake.conf" {
+      }
+      SurfaceLightConfigItem "{551CDAC8604EB6BE}" : "{D2808DEC948D08B2}Prefabs/Vehicles/Core/LightSurfaces/LightSurface_Rear.conf" {
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot LFInterior {
+     Prefab "{05231C583AD65F4D}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Interior_Front_L.et"
+     LightType 128
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{553CC27268E8E272}" {
+       EmissiveMultiplier 2
+       EmissiveColorTint 1 0.563 0.094 1
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot RFInterior {
+     Prefab "{783BF0A05F4563D4}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Interior_Front_R.et"
+     LightType 128
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{553CC27256B5D6E7}" {
+       EmissiveMultiplier 2
+       EmissiveColorTint 1 0.563 0.094 1
+      }
+     }
+    }
+    SCR_EmissiveLightSurfaceSlot MRInterior {
+     Prefab "{BF66661743C35AC9}Prefabs/Vehicles/Wheeled/BTR70/Lights/BTR70_ES_Interior_Rear_M.et"
+     LightType 128
+     ConfigurationsOverride {
+      SurfaceLightConfigItem "{553CC2725942428D}" {
+       EmissiveMultiplier 2
+       EmissiveColorTint 1 0.563 0.094 1
+      }
+     }
+    }
+   }
+   LightAction {
+    SCR_LightsHazardUserAction "{51E21B904DA4E348}" : "{89078886B54A5AED}Prefabs/Vehicles/Core/Lights/UA_Hazard.conf" {
+     ParentContextList {
+      "light_hazard_switch"
+     }
+    }
+    SCR_LightsHiBeamsUserAction "{51E21B904C2B7BC0}" : "{0B4038621E89171C}Prefabs/Vehicles/Core/Lights/UA_HiBeam.conf" {
+     ParentContextList {
+      "light_switch"
+     }
+    }
+    SCR_LightsSearchLightUserAction "{51E21B91B1C03CE5}" : "{7446937341419009}Prefabs/Vehicles/Core/Lights/UA_Searchlight.conf" {
+     ParentContextList {
+      "light_spotlight_switch"
+     }
+    }
+    SCR_LightsTurnLeftUserAction "{51E21B91B054061C}" : "{C451F5D275621FB9}Prefabs/Vehicles/Core/Lights/UA_TurnLeft.conf" {
+    }
+    SCR_LightsTurnRightUserAction "{51E21B91B366F79A}" : "{875343A307E854B4}Prefabs/Vehicles/Core/Lights/UA_TurnRight.conf" {
+    }
+    SCR_LightsDashboardUserAction "{51E2210D828FDC7E}" : "{97F134A922F3989A}Prefabs/Vehicles/Core/Lights/UA_Dashboard.conf" {
+     ParentContextList {
+      "light_cabin_switch"
+     }
+    }
+    SCR_LightsPresenceUserAction "{51E22680FD9D9B1B}" : "{543FB4FCD60B1B36}Prefabs/Vehicles/Core/Lights/UA_Lights.conf" {
+    }
+   }
+  }
+  BaseVehicleNodeComponent "{20FB66C5B2237133}" {
+   components {
+    SCR_CarControllerComponent "{20FB66C5BC92275B}" {
+     AirIntakes {
+      PointInfo "{5606DBABC4308027}" {
+       Offset 0 1.862 -1.8431
+      }
+      PointInfo "{56087ECDA8BA7355}" {
+       Offset -0.58 1.862 -1.8431
+      }
+      PointInfo "{56087ECDA9FB7DE2}" {
+       Offset 0.58 1.862 -1.8431
+      }
+     }
+     DrowningTime 10
+     ThrottleCurve +{
+     }
+     ReverseCurve +{
+     }
+     ClutchUncoupleTime 0.4
+     ClutchCoupleTime 0.2
+     ClutchUncoupleRpm 1700
+     ClutchCoupleRpm 2100
+     Latency 1
+     UpShiftRpm 1900
+     DownShiftFactor 0.65
+     DownShiftRpm 1700
+    }
+    SCR_BaseHUDComponent "{37C2676694790BC7}" {
+     InfoDisplays {
+      SCR_InfoDisplay "{50E6E6F81354B90F}" {
+       InfoDisplays {
+        SCR_AnalogGauge "{50E6E9C4280A17FE}" {
+         InfoDisplays {
+          SCR_HandBrakeInfo "{5A76D388CCFA456A}" : "{7AFBF8F192B9E8F9}Configs/VehicleHUD/VehicleInfo_InGauge_Handbrake.conf" {
+          }
+          SCR_LightManagerInfo "{5A76D388C9EAFE6B}" : "{4D83CA1004337B6B}Configs/VehicleHUD/VehicleInfo_InGauge_LightsHead.conf" {
+          }
+          SCR_LightManagerInfo "{5A76D388C4B800AB}" : "{9F13049CE1FCB054}Configs/VehicleHUD/VehicleInfo_InGauge_LightsBeam.conf" {
+          }
+          SCR_LightManagerInfo "{5A76D388C254BF64}" : "{A2034850F85D14C3}Configs/VehicleHUD/VehicleInfo_InGauge_LightsDirLeft.conf" {
+          }
+          SCR_LightManagerInfo "{5A76D388C00C9187}" : "{0F439756AEDA85BC}Configs/VehicleHUD/VehicleInfo_InGauge_LightsDirRight.conf" {
+          }
+         }
+         m_sParentSlot "Slot-GaugeSpeed"
+         m_bAdaptiveOpacity 0
+         m_eShow IN_3RD_PERSON
+         m_sInterfaceSettingName "m_bShowVehicleInfo"
+         m_sInfoText "#AR-VehicleInfoLabel_Speed_UC"
+         m_sInfo2Text "#AR-VehicleInfo_KMH"
+        }
+        SCR_AnalogGauge "{50E6E9C42E916085}" {
+         m_bIsEnabled 0
+        }
+        SCR_AnalogGaugeMultiSignal "{50E6F12BB4D36587}" {
+         m_fValueMax 290
+         m_fSectionEveryNthValue 145
+         m_iSectionSubdivisions 3
+         m_sSignalNamePrefix "fuel"
+        }
+        SCR_HandBrakeInfo "{5A76D38944ABC993}" : "{DD279161CC88E212}Configs/VehicleHUD/VehicleInfo_Handbrake.conf" {
+        }
+        SCR_GearShiftInfo "{5A76D38943D54CC0}" : "{F3F80EDA76200300}Configs/VehicleHUD/VehicleInfo_Gearshift.conf" {
+        }
+        SCR_LightManagerInfo "{5A76D388B11B0BD0}" : "{BE090E579F4504F8}Configs/VehicleHUD/VehicleInfo_LightsDirLeft.conf" {
+        }
+        SCR_LightManagerInfo "{5A76D3888F5360E3}" : "{B86D420134EC0E32}Configs/VehicleHUD/VehicleInfo_LightsDirRight.conf" {
+        }
+        SCR_HitZoneInfo "{5A76D3888380F3AF}" : "{6AC1287B62EABC82}Configs/VehicleHUD/VehicleInfo_DmgHull.conf" {
+        }
+        SCR_FuelTankInfo "{5A76D3889E3461FF}" : "{6A4A0231B007E3BE}Configs/VehicleHUD/VehicleInfo_DmgFuelTank.conf" {
+        }
+        SCR_EngineHitZoneInfo "{5A76D3889CE315E7}" : "{350C6DFE37155A2F}Configs/VehicleHUD/VehicleInfo_DmgEngine.conf" {
+        }
+        SCR_GearboxHitZoneInfo "{5A76D3889A33D976}" : "{3EA94970C69C29C5}Configs/VehicleHUD/VehicleInfo_DmgGearbox.conf" {
+        }
+        SCR_WheelHitZoneInfo "{5B1AADC0234B185E}" : "{32CB0E58815B1E83}Configs/VehicleHUD/VehicleInfo_DmgWheels.conf" {
+        }
+        SCR_LightManagerInfoMulti "{5C86B47E6A990CAA}" {
+         m_bShowWhenCreated 0
+         m_sParentSlot "Slot-LightsHeadAndBeam"
+         m_bAdaptiveOpacity 0
+         m_eShow 7
+         m_sInterfaceSettingName "m_bShowVehicleInfo"
+         m_sIcon "veh_dipped_light"
+         m_aLights {
+          SCR_LightManagerInfoEntry "{5C86B47BA7615C71}" {
+           m_eLightType HiBeam
+           m_sIcon "veh_beam_light"
+           m_eColor BLUE
+          }
+          SCR_LightManagerInfoEntry "{5C86B47BA5941755}" {
+           m_eLightType Head
+           m_sIcon "veh_dipped_light"
+           m_eColor GREEN
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Object "{89447B8C503232EA}Assets/Vehicles/Wheeled/BTR70/BTR70_body.xob"
+   LODFactors +{
+   }
+  }
+  RigidBody "{51DAA09FECF52BBF}" {
+   Mass 11500
+   CenterOfMass 0 1.4 -0.15
+   LinearSleepingThreashold 0.4
+   AngularSleepingThreashold 0.5
+  }
+  SCR_AIVehicleUsageComponent "{60E4E37C467714E8}" {
+   m_eVehicleType GROUND_VEHICLE_WHEELED
+  }
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   CompartmentSlots {
+    PilotCompartmentSlot PilotCompartment {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCC9085FC38}" {
+      m_sDefaultOccupantPrefab "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r01 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      "Sort Priority" 2
+     }
+     GetOutAction SCR_GetOutAction "{509D56665A8C6923}" {
+      ParentContextList +{
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_r01"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_r01"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "codriver_idle"
+     }
+     SeatType 1
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Commander"
+     }
+     ContextName "passenger_r01"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{5436629450D8387A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_SL.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r02 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_r02"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_r02"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      Offset 0.57 0.8 1.52
+     }
+     SeatType 4
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_r02"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_l03 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_l03"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_l03"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerl_idle"
+     }
+     SeatType 2
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     BaseCoverage 0.3
+     ContextName "passenger_l03"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{631158F6898738A4}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AAT.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_r03 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_r03"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_r03"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerr_idle"
+     }
+     SeatType 3
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_r03"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab "{23ADBBC31B6A3DC6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AR.et"
+     }
+    }
+    CargoCompartmentSlot Passenger_l04 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_l04"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_l04"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerl1_idle"
+     }
+     SeatType 2
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_l04"
+     m_bIsWaterTight 1
+    }
+    CargoCompartmentSlot Passenger_r04 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_r04"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_r04"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerr1_idle"
+     }
+     SeatType 3
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_r04"
+     m_bIsWaterTight 1
+    }
+    CargoCompartmentSlot Passenger_l05 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_l05"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_l05"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerl2_idle"
+     }
+     SeatType 2
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_l05"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab ""
+     }
+    }
+    CargoCompartmentSlot Passenger_r05 : "{E9A9474B959891A0}Prefabs/Vehicles/Wheeled/BTR70/CargoCompartment_BTR70.conf" {
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_r05"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_r05"
+       }
+      }
+      SCR_RemoveCasualtyUserAction "{61089D5E00C44348}" {
+       ParentContextList {
+        "door_l01" "door_r01"
+       }
+       UIInfo SCR_ActionUIInfo "{5D528255C71C9310}" : "{A0A9603C4409F8D2}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_RemoveCasulities.conf" {
+        Name "#AR-UserAction_RemoveCasualty"
+       }
+       Duration 1
+       CanAggregate 1
+       "Sort Priority" 9
+       m_bExteriorOnly 1
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passengerr2_idle"
+     }
+     SeatType 3
+     UIInfo UIInfo "{50870A10CE897250}" {
+      Name "#AR-VehiclePosition_Passenger"
+     }
+     ContextName "passenger_r05"
+     m_bIsWaterTight 1
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCD47C51A48}" {
+      m_sDefaultOccupantPrefab ""
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#AR-Vehicle_BTR70_Name"
+    Icon "{95F49CBE9FF7A0CB}UI/Textures/Editor/EditableEntities/Vehicles/EditableEntity_Vehicle_Apc.edds"
+    IconSetName ""
+    m_Image "{01290933E5CEDEF9}UI/Textures/EditorPreviews/Vehicles/Wheeled/BTR70/BTR70.edds"
+    m_sFaction "USSR"
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels +{
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{6052A79ADDA6C7A8}" {
+      m_BudgetType VEHICLES
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 975
+     }
+     SCR_EntityBudgetValue "{5EE71CA1677C234F}" {
+      m_BudgetType COOLDOWN
+      m_Value 1
+     }
+     SCR_EntityBudgetValue "{5EF07CE1D3329EE6}" {
+      m_BudgetType RANK_SERGEANT
+      m_Value 3
+     }
+    }
+    m_bEditorPlaceAsOneGroup 0
+    m_aOccupantFillCompartmentTypes +{
+    }
+    m_aCrewEntityBudgetCost {
+     SCR_EntityBudgetValue "{5A5EA70B9E8C8CFC}" {
+      m_BudgetType AI
+      m_Value 2
+     }
+    }
+    m_aPassengerEntityBudgetCost {
+     SCR_EntityBudgetValue "{5A5EA70B9E84A0AA}" {
+      m_BudgetType AI
+      m_Value 6
+     }
+    }
+   }
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 101
+   m_fFuelConsumptionIdle 2
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 145
+     FuelCapPosition EntitySlotInfo "{566AC6AF9593E4F3}" {
+      Offset -0.54 1.5632 -3.51
+      Angles -55.854 -180 180
+     }
+     m_fInitialFuelTankState 108.75
+     m_MaxFlowCapacityOut MANUAL
+     m_MaxFlowCapacityIn VEHICLE_MEDIUM
+    }
+    SCR_FuelNode "{5628CA8E08F1AAF4}" {
+     MaxFuel 145
+     FuelCapPosition EntitySlotInfo "{566ADD10E03BB1CF}" {
+      Offset 0.5802 1.5632 -3.51
+      Angles -55.854 180 180
+     }
+     m_fInitialFuelTankState 108.75
+     m_MaxFlowCapacityIn VEHICLE_MEDIUM
+     m_iFuelTankID 2
+    }
+   }
+  }
+  SCR_ImpactEffectComponent "{5EFCAAC9739EAE6E}" {
+   m_aDefaultParticles +{
+   }
+   m_aWaterParticles +{
+   }
+  }
+  SCR_MotorExhaustEffectGeneralComponent "{54A2A290B157C015}" {
+   ParticleEffect "{FC98EA459BD98A6C}Particles/Vehicle/Vehicle_smoke_BTR_exhaust_normal_01.ptc"
+   RPMSignal "engineRPM"
+   ThrustSignal "engineThrust"
+   MaxRPM 5000
+   EffectPosition EntitySlotInfo "{54A2A290B157C017}" {
+    PivotID "fx_exhaust_l"
+    Offset 0 0 -0.05
+    Angles 15 0 0
+   }
+   m_sDamagedParticle "{2AA8C9B21E45F21F}Particles/Vehicle/Vehicle_smoke_BTR_exhaust_damaged_01.ptc"
+   m_fStartupTime 3
+  }
+  SCR_PowerComponent "{55E90D989DD9B211}" {
+   Enabled 0
+  }
+  SCR_ResourceComponent "{5D82E3B95C5050B1}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5D82E3B9411BD9B4}" {
+     m_eResourceRights FACTION
+     m_eStorageType CARGO_VEHICLE
+     m_fResourceValueCurrent 0
+     m_fResourceValueMax 0
+    }
+   }
+   m_aEncapsulators {
+    SCR_ResourceEncapsulator "{5DAD42B09AE505C7}" {
+     m_sDebugName "Encapsulator - BTR-70"
+     m_eResourceRights ALL
+     m_ContainerQueue SCR_ResourceEncapsulatorContainerQueue "{5DB8993B72033255}" : "{F214C17E1F29E70A}Configs/Resources/Supplies/ContainerQueues/Encapsulator/Queue_Encapsulator_Vehicle.conf" {
+     }
+     m_aActions {
+      SCR_ResourceEncapsulatorActionChangeDecay "{5DDCCC74435B0723}" {
+      }
+      SCR_ResourceEncapsulatorActionChangeGain "{5DDCCC744270881C}" {
+      }
+      SCR_ResourceEncapsulatorActionChangeOnEmptyBehavior "{5DDCCC744543C226}" {
+       m_eOnEmptyBehavior HIDE
+      }
+      SCR_ResourceEncapsulatorActionChangeResourceValue "{5DDCCC74444F5586}" {
+      }
+     }
+    }
+   }
+   m_aConsumers {
+    SCR_ResourceConsumer "{5DB8993B61039C32}" : "{4126DC9D9F44E513}Configs/Resources/Supplies/Consumers/Consumer_VehicleLoad.conf" {
+    }
+    SCR_ResourceConsumer "{5DB8993B6063034B}" : "{3FF0B8C036F14239}Configs/Resources/Supplies/Consumers/Consumer_VehicleUnload.conf" {
+    }
+   }
+   m_aGenerators {
+    SCR_ResourceGenerator "{5DB8993B7DFF6220}" : "{48782547A13061E2}Configs/Resources/Supplies/Generators/Generator_VehicleLoad.conf" {
+    }
+    SCR_ResourceGenerator "{5DB8993B7C0C789E}" : "{F8496BD9E1CE43B3}Configs/Resources/Supplies/Generators/Generator_VehicleUnload.conf" {
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{59168B38F20DFF74}" {
+   MultiSlots {
+    MultiSlotConfiguration "{5A60D38E3CF4827A}" {
+     SlotTemplate InventoryStorageSlot Bandages {
+      Prefab "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{5A60D38E3C6A4E2F}" {
+     SlotTemplate InventoryStorageSlot Tourniquet {
+      Prefab "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et"
+     }
+     NumSlots 4
+    }
+    MultiSlotConfiguration "{5A60D38E3C46CBE8}" {
+     SlotTemplate InventoryStorageSlot Morphine {
+      Prefab "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
+     }
+     NumSlots 4
+    }
+    MultiSlotConfiguration "{5A60D38E3DAEB055}" {
+     SlotTemplate InventoryStorageSlot HandGrenades {
+      Prefab "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{5A60D38E3D89BD31}" {
+     SlotTemplate InventoryStorageSlot SmokeGrenade {
+      Prefab "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
+     }
+     NumSlots 4
+    }
+    MultiSlotConfiguration "{5A60D38E3D91D053}" {
+     SlotTemplate InventoryStorageSlot AKammunition {
+      Prefab "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
+     }
+     NumSlots 30
+    }
+    MultiSlotConfiguration "{5A60D38E3DE4B1EA}" {
+     SlotTemplate InventoryStorageSlot UGLammo {
+      Prefab "{262F0D09C4130826}Prefabs/Weapons/Ammo/Ammo_Grenade_HE_VOG25.et"
+     }
+     NumSlots 12
+    }
+    MultiSlotConfiguration "{5A60D38E3DCB490D}" {
+     SlotTemplate InventoryStorageSlot RPKammunition {
+      Prefab "{D78C667F59829717}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{5A60D38E3DD3F9D0}" {
+     SlotTemplate InventoryStorageSlot PKMammunition {
+      Prefab "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 4
+    }
+    MultiSlotConfiguration "{5E86A8C91E958185}" : "{D4D77296529174B9}Configs/Inventory/InventoryItem_Jerrycan.conf" {
+    }
+    MultiSlotConfiguration "{5EB0D397DC73FCA8}" : "{3320B86FA03C5FE6}Configs/Inventory/InventoryItem_RepairKit.conf" {
+    }
+    MultiSlotConfiguration "{5A7CC6862AA09361}" {
+     SlotTemplate InventoryStorageSlot Backpack {
+      Prefab "{41A9C55B61F375F0}Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{5A7CC6862BCACE88}" {
+     SlotTemplate InventoryStorageSlot ATMine {
+      Prefab "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
+     }
+     NumSlots 8
+    }
+    MultiSlotConfiguration "{5A7CC6862B68506F}" {
+     SlotTemplate InventoryStorageSlot MineFlag {
+      Prefab "{AC67BAB9763A3977}Prefabs/Items/Demining/MineFlags/MineFlag_USSR.et"
+     }
+     NumSlots 12
+    }
+    MultiSlotConfiguration "{5B10706BD90AF64D}" {
+     SlotTemplate InventoryStorageSlot KPVTAmmo {
+      Prefab "{8257B5AFDE7AE5CB}Prefabs/Weapons/Magazines/Box_145x114_KPVT_50rnd_4API_1APIT.et"
+     }
+     NumSlots 9
+    }
+    MultiSlotConfiguration "{5B10706B2C1FE004}" {
+     SlotTemplate InventoryStorageSlot PKMTAmmo {
+      Prefab "{D8421F6E70B2FB4F}Prefabs/Weapons/Magazines/Box_762x54_PK_250rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 7
+    }
+   }
+   m_fMaxWeight 350
+  }
+  SCR_VehicleBuoyancyComponent "{5ECC936F0C77E390}" {
+   Buoyancy 0.8
+   BuoyancyApplyDistanceScale 0.5
+   BuoyancyDepthOffset 1.4
+   HydrodynamicScaleLinear 4 4 1
+   HydrodynamicScaleAngular 8 2 2
+   BoundingBoxScale 0.85 0.3 0.9
+   BoundingBoxOffset 0 0.5 0
+   ThrustPoints +{
+   }
+   ThurstForward 0.3
+   ThurstReverse 0.1
+   ThurstSteering 5
+   BuoyancyLoss 0
+   BuoyancyGain 0
+  }
+  SCR_VehicleCameraDataComponent "{216DA82C75CDD94B}" {
+   m_fHeight 0.5
+  }
+  SCR_VehicleDustPerWheel "{5476BC43E4910F64}" {
+   m_aWheels +{
+   }
+  }
+  SCR_VehicleFactionAffiliationComponent "{5882CBD9AC741CEC}" {
+   "faction affiliation" "USSR"
+  }
+  SCR_VehiclePerceivableComponent "{566CD04B8A6107DD}" {
+   "Additional aim points" {
+    AimPoint "{5A448CE484C5A9D6}" : "{9E76A1CE4C88117E}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Hull_APC.conf" {
+     AimPointPosition PointInfo "{5A449D943A64878C}" {
+      Offset 0 1 2
+     }
+    }
+    AimPoint "{5A669B396970A90F}" : "{9E76A1CE4C88117E}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Hull_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB148C16BF03}" {
+      Offset 0 1 -1
+     }
+    }
+    AimPoint "{5A669B3AA07A8C38}" : "{5D12ACF04A43E73A}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Crew_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1CE905843B}" {
+      Offset 0 1.2 2.1
+     }
+    }
+    AimPoint "{5A669B3B52DC132B}" : "{5D12ACF04A43E73A}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Crew_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1CE905843B}" {
+      Offset 0 1.1 -0.75
+     }
+    }
+    AimPoint "{5A669B3A3FC7B490}" : "{495CEB8368A8EAA4}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Powertrain_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1CB55BE678}" {
+      Offset 0 1 -2
+     }
+    }
+    AimPoint "{5A669B3AEA7E0F3D}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_L01"
+     }
+    }
+    AimPoint "{5A669B3AE94EB3A8}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_L02"
+     }
+    }
+    AimPoint "{5A669B3AE8F61587}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_L03"
+     }
+    }
+    AimPoint "{5A669B3AE6624DD4}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_L04"
+     }
+    }
+    AimPoint "{5A669B3AE50DD3B4}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_R01"
+     }
+    }
+    AimPoint "{5A669B3AE4A617E6}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_R02"
+     }
+    }
+    AimPoint "{5A669B3AE2382928}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_R03"
+     }
+    }
+    AimPoint "{5A669B3AE11CC947}" : "{D4AC0F146D113267}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Wheel_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1C4323C319}" {
+      PivotID "v_wheel_R04"
+     }
+    }
+    AimPoint "{5A66D5B309D84E61}" : "{5D12ACF04A43E73A}Prefabs/Vehicles/Core/Configs/AimPoints/AimPoint_Crew_APC.conf" {
+     AimPointPosition PointInfo "{5A44DB1CE905843B}" {
+      Offset 0 1.8 0.8
+     }
+    }
+   }
+  }
   SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
    "Additional hit zones" {
     SCR_FlammableHitZone Hull {
      m_fMinFireBurningTime 10
      m_fMaxFireBurningTime 20
     }
+    SCR_EngineHitZone Engine_01 : "{6B37047F22EFB1B8}Prefabs/Vehicles/Core/Configs/HitZones/Engine_APC.conf" {
+     ColliderNames {
+      "UCX_FG_Engine_01"
+     }
+    }
+    SCR_EngineHitZone Engine_02 : "{6B37047F22EFB1B8}Prefabs/Vehicles/Core/Configs/HitZones/Engine_APC.conf" {
+     ColliderNames {
+      "UCX_FG_Engine_02"
+     }
+    }
+    SCR_GearboxHitZone Gearbox_01 : "{743AF1385C5293C5}Prefabs/Vehicles/Core/Configs/HitZones/Gearbox_APC.conf" {
+     ColliderNames {
+      "UCS_FG_Gearbox_01" "UCS_FG_Driveshaft_01" "UCS_FG_Differential_01" "UCS_FG_Differential_03"
+     }
+    }
+    SCR_GearboxHitZone Gearbox_02 : "{743AF1385C5293C5}Prefabs/Vehicles/Core/Configs/HitZones/Gearbox_APC.conf" {
+     ColliderNames {
+      "UCS_FG_Gearbox_02" "UCS_FG_Driveshaft_02" "UCS_FG_Differential_02" "UCS_FG_Differential_04"
+     }
+    }
+    SCR_FuelHitZone FuelTank_01 : "{A56FA93D1A62497D}Prefabs/Vehicles/Core/Configs/HitZones/FuelTank_APC.conf" {
+     ColliderNames {
+      "UCX_FG_Fueltank_01"
+     }
+     m_SecondaryExplosionPoint PointInfo "{5E70BAEDE2572E70}" {
+      Offset -0.6863 1.0699 -3.3175
+     }
+    }
+    SCR_FuelHitZone FuelTank_02 : "{A56FA93D1A62497D}Prefabs/Vehicles/Core/Configs/HitZones/FuelTank_APC.conf" {
+     ColliderNames {
+      "UCX_FG_Fueltank_02"
+     }
+     m_SecondaryExplosionPoint PointInfo "{5E70BAEDE2572E70}" {
+      Offset 0.6906 1.0883 -3.2768
+     }
+     m_iFuelTankID 2
+    }
+    SCR_BatteryHitZone Battery_01 : "{9A01A1755D987A76}Prefabs/Vehicles/Core/Configs/HitZones/Battery_APC.conf" {
+     ColliderNames {
+      "UBX_FG_Battery_01"
+     }
+    }
+    SCR_BatteryHitZone Battery_02 : "{9A01A1755D987A76}Prefabs/Vehicles/Core/Configs/HitZones/Battery_APC.conf" {
+     ColliderNames {
+      "UBX_FG_Battery_02"
+     }
+    }
    }
+  }
+  VehicleWheeledSimulation "{731B26FCA2F19855}" {
+   Simulation Wheeled "{4D8B26DEA5F25978}" {
+    Engine Engine Engine {
+     Inertia 1.3
+     MaxPower 219
+     MaxTorque 664
+     RpmMaxPower 3300
+     RpmMaxTorque 2200
+     Steepness 50
+     Friction 176
+     RpmIdle 600
+     RpmRedline 3650
+     RpmMax 5000
+    }
+    Clutch Clutch Clutch {
+     MaxClutchTorque 1000
+    }
+    Gearbox Gearbox Gearbox {
+     Forward +{
+     }
+     Reverse 6.7
+     Output "Diff_C"
+    }
+    Differentials {
+     Differential Diff_C {
+      Type Locked
+      Ratio 6.8
+      "Anti slip" 10000
+      "Anti slip torque" 20000
+      Output0 "Diff_01_03"
+      Output1 "Diff_02_04"
+     }
+     Differential Diff_01_03 {
+      Type LSD
+      Strength 0.6
+      "Anti slip" 10000
+      "Anti slip torque" 20000
+      Output0 "Diff_01"
+      Output1 "Diff_03"
+     }
+     Differential Diff_02_04 {
+      Type LSD
+      Strength 0.6
+      "Anti slip" 10000
+      "Anti slip torque" 20000
+      Output0 "Diff_02"
+      Output1 "Diff_04"
+     }
+    }
+    Axles {
+     Axle "{4D8B26DF957A8E1C}" {
+      TorqueShare 0.25
+      Differential Differential Diff_01 {
+       Type LSD
+       Ratio 6.8
+       "Anti slip" 10000
+       "Anti slip torque" 20000
+       Output0 "Wheel_L01"
+       Output1 "Wheel_R01"
+      }
+      Suspension Suspension "{4D8B26DFF8859A7B}" {
+       MaxSteeringAngle 28
+       SpringRate 98
+       CompressionDamper 5300
+       RelaxationDamper 8000
+       MaxTravelUp 0.17
+       MaxTravelDown 0.11
+      }
+      Wheel Wheel "{4D8B26DFFE211745}" {
+       Radius 0.55
+       Mass 160
+       Ratio 0.95
+       BrakeTorque 4000
+      }
+      Tyre Tyre "{55A54B49B3B43E77}" : "{D6C7327B8A56A2B3}Prefabs/Vehicles/Wheeled/BTR70/VehicleSimulationTire_BTR70.conf" {
+      }
+      WheelPositions {
+       WheelPosition Wheel_L01 {
+        PivotID "v_wheel_L01"
+       }
+       WheelPosition Wheel_R01 {
+        PivotID "v_wheel_R01"
+       }
+      }
+     }
+     Axle "{4D8B26DF8CF2F3D8}" {
+      TorqueShare 0.25
+      Differential Differential Diff_02 {
+       Type LSD
+       Ratio 6.8
+       Strength 0.6
+       "Anti slip" 10000
+       "Anti slip torque" 20000
+       Output0 "Wheel_L02"
+       Output1 "Wheel_R02"
+      }
+      Suspension Suspension "{4D8B26DF2B10AE05}" {
+       MaxSteeringAngle 18
+       SpringRate 99
+       CompressionDamper 3800
+       RelaxationDamper 5500
+       MaxTravelUp 0.17
+       MaxTravelDown 0.11
+      }
+      Wheel Wheel "{4D8B26DF30A4E4D7}" {
+       Radius 0.55
+       Mass 160
+       Ratio 0.95
+       BrakeTorque 4000
+      }
+      Tyre Tyre "{55A54B49B6930E8E}" : "{D6C7327B8A56A2B3}Prefabs/Vehicles/Wheeled/BTR70/VehicleSimulationTire_BTR70.conf" {
+      }
+      WheelPositions {
+       WheelPosition Wheel_L02 {
+        PivotID "v_wheel_L02"
+       }
+       WheelPosition Wheel_R02 {
+        PivotID "v_wheel_R02"
+       }
+      }
+     }
+     Axle "{54A2A290B157C04D}" {
+      TorqueShare 0.25
+      HasHandbrake 1
+      Differential Differential Diff_03 {
+       Type LSD
+       Ratio 6.8
+       Strength 0.6
+       "Anti slip" 10000
+       "Anti slip torque" 20000
+       Output0 "Wheel_L03"
+       Output1 "Wheel_R03"
+      }
+      Suspension Suspension "{54A2A290B157C04F}" {
+       SpringRate 99
+       CompressionDamper 3000
+       RelaxationDamper 4000
+       MaxTravelUp 0.15
+       MaxTravelDown 0.1
+      }
+      Wheel Wheel "{54A2A290B157C049}" {
+       Radius 0.55
+       Mass 160
+       Ratio 0.95
+       BrakeTorque 3000
+      }
+      Tyre Tyre "{55A54B49A838F8D9}" : "{D6C7327B8A56A2B3}Prefabs/Vehicles/Wheeled/BTR70/VehicleSimulationTire_BTR70.conf" {
+      }
+      WheelPositions {
+       WheelPosition Wheel_L03 {
+        PivotID "v_wheel_L03"
+       }
+       WheelPosition Wheel_R03 {
+        PivotID "v_wheel_R03"
+       }
+      }
+     }
+     Axle "{54A2A290B157C044}" {
+      TorqueShare 0.25
+      HasHandbrake 1
+      Differential Differential Diff_04 {
+       Type LSD
+       Ratio 6.8
+       Strength 0.6
+       "Anti slip" 10000
+       "Anti slip torque" 20000
+       Output0 "Wheel_L04"
+       Output1 "Wheel_R04"
+      }
+      Suspension Suspension "{54A2A290B157C046}" {
+       SpringRate 101
+       CompressionDamper 4500
+       RelaxationDamper 6000
+       MaxTravelUp 0.15
+       MaxTravelDown 0.1
+      }
+      Wheel Wheel "{54A2A290B157C040}" {
+       Radius 0.55
+       Mass 160
+       Ratio 0.95
+       BrakeTorque 3000
+      }
+      Tyre Tyre "{55A54B49AE0FCBD2}" : "{D6C7327B8A56A2B3}Prefabs/Vehicles/Wheeled/BTR70/VehicleSimulationTire_BTR70.conf" {
+      }
+      WheelPositions {
+       WheelPosition Wheel_L04 {
+        PivotID "v_wheel_L04"
+       }
+       WheelPosition Wheel_R04 {
+        PivotID "v_wheel_R04"
+       }
+      }
+     }
+    }
+    Pacejka Pacejka "{72F8E7631D0D6953}" : "{2E1044D5BFA6FB16}Prefabs/Vehicles/Core/Configs/PacejkaTire_Truck_Offroad.conf" {
+    }
+   }
+  }
+  BaseFlattenGrassComponent "{55FCDD8048D3AE17}" {
+   ParametersCollection {
+    FlattenGrassParametersObject "{55FCDD804A371EA5}" {
+     SideX 8.5
+     SideZ 3.8
+     Offset 0
+    }
+   }
+  }
+  CarProcAnimComponent "{A201E6A6F82F2CDA}" {
+   Parameters {
+    ProcAnimParams "{54A2A290B157C0BB}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0BA}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B4}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B7}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B6}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B1}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B0}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0B3}" {
+     ResourceName "{FEFBB47B33FB500F}anims/proc/wheel_suspension.pap"
+     BoneNames +{
+     }
+    }
+    ProcAnimParams "{54A2A290B157C0AD}" {
+     ResourceName "{D0B492CE555ADE98}Assets/Vehicles/Wheeled/BTR70/anm/proc/BTR70_hatch.pap"
+     BoneNames +{
+     }
+     SimulationDistance 100
+    }
+    ProcAnimParams "{54A2A290B157C0AE}" {
+     ResourceName "{F687C95A70046B36}Assets/Vehicles/Wheeled/BTR70/anm/proc/BTR70_dashboard.pap"
+     BoneNames +{
+     }
+     SimulationDistance 15
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo window_right {
+     PivotID "v_glass_windshield_r01"
+     Prefab "{61802ACE946DC776}Prefabs/Vehicles/Wheeled/BTR70/Dst/BTR70_window_right.et"
+     DeactivatePhysicsOnAtaching 1
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo window_left {
+     PivotID "v_glass_windshield_l01"
+     Prefab "{7F0ADD9A46F87F23}Prefabs/Vehicles/Wheeled/BTR70/Dst/BTR70_window_left.et"
+     DeactivatePhysicsOnAtaching 1
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo Turret {
+     PivotID "v_root"
+     MergePhysics 1
+     Prefab "{66596659FB0F645B}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Turret/BTR70_Turret.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterWeapons 1
+     RegisterCompartments 1
+    }
+    EntitySlotInfo ShadowAO {
+     PivotID "v_body"
+     Offset 0 -0.6 0
+     Angles 90 0 0
+     Prefab "{FAB2DC66A07B9432}Prefabs/Vehicles/Wheeled/BTR70/VehParts/BTR70_shadow.et"
+    }
+    SCR_WheelSlotInfo Wheel_L01 {
+     PivotID "v_wheel_L01"
+     MergePhysics 1
+     Prefab "{A0E4130C2D86B4B9}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_left_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 0
+    }
+    SCR_WheelSlotInfo Wheel_L02 {
+     PivotID "v_wheel_L02"
+     MergePhysics 1
+     Prefab "{A0E4130C2D86B4B9}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_left_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 2
+    }
+    SCR_WheelSlotInfo Wheel_L03 {
+     PivotID "v_wheel_L03"
+     MergePhysics 1
+     Prefab "{A0E4130C2D86B4B9}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_left_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 4
+    }
+    SCR_WheelSlotInfo Wheel_L04 {
+     PivotID "v_wheel_L04"
+     MergePhysics 1
+     Prefab "{A0E4130C2D86B4B9}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_left_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 6
+    }
+    SCR_WheelSlotInfo Wheel_R01 {
+     PivotID "v_wheel_R01"
+     Angles 0 180 0
+     MergePhysics 1
+     Prefab "{008035E1E5144C32}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_right_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 1
+    }
+    SCR_WheelSlotInfo Wheel_R02 {
+     PivotID "v_wheel_R02"
+     Angles 0 180 0
+     MergePhysics 1
+     Prefab "{008035E1E5144C32}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_right_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 3
+    }
+    SCR_WheelSlotInfo Wheel_R03 {
+     PivotID "v_wheel_R03"
+     Angles 0 180 0
+     MergePhysics 1
+     Prefab "{008035E1E5144C32}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_right_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 5
+    }
+    SCR_WheelSlotInfo Wheel_R04 {
+     PivotID "v_wheel_R04"
+     Angles 0 180 0
+     MergePhysics 1
+     Prefab "{008035E1E5144C32}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Wheels/BTR70_wheel_right_01.et"
+     RegisterDamage 1
+     m_iWheelIndex 7
+    }
+    EntitySlotInfo SupplyStorage_01 {
+     PivotID "v_body"
+     Offset 0.4285 1.233 -3.0315
+     Angles -15.7747 170.4411 1.8581
+     MergePhysics 1
+     Prefab "{11E588E215EBCF23}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_02 {
+     PivotID "v_body"
+     Offset -0.2187 1.2047 -3.167
+     Angles -14.9861 -177.4774 -0.6527
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_03 {
+     PivotID "v_body"
+     Offset -0.5652 1.2131 -3.1626
+     Angles 0 -90 -15
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_04 {
+     PivotID "v_body"
+     Offset -0.2658 1.4157 -3.0241
+     Angles -76.198 0 0
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_05 {
+     PivotID "v_body"
+     Offset -0.5854 1.3508 -2.9838
+     Angles 54.3107 -180 0
+     MergePhysics 1
+     Prefab "{8C29E423099B0C5A}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_medium_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_06 {
+     PivotID "v_body"
+     Offset -0.3589 1.3458 -1.9088
+     Angles -0.1591 -93.6816 -2.4705
+     MergePhysics 1
+     Prefab "{11E588E215EBCF23}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_07 {
+     PivotID "v_body"
+     Offset -0.0852 1.6132 -1.8919
+     Angles -86.9733 0.0001 85.9937
+     MergePhysics 1
+     Prefab "{11E588E215EBCF23}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_01/SupplyCrate_01_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_08 {
+     PivotID "v_body"
+     Offset 0.5284 1.3446 -2.0006
+     Angles 0 79.9955 2.7417
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_09 {
+     PivotID "v_body"
+     Offset 0.4095 1.3458 -1.6504
+     Angles 2.4759 0 0
+     MergePhysics 1
+     Prefab "{2E10FD09B66A44FF}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_large_Vehicle.et"
+    }
+    EntitySlotInfo SupplyStorage_10 {
+     PivotID "v_body"
+     Offset -0.1604 1.4581 -1.4776
+     Angles 80.7495 172.12173 0
+     MergePhysics 1
+     Prefab "{8C29E423099B0C5A}Prefabs/Props/Military/SupplyBox/SupplyPortableContainers/SupplyPortableContainer_01/SupplyPortableContainers_01_medium_Vehicle.et"
+    }
+    RegisteringComponentSlotInfo AmmoStorage {
+     PivotID "v_root"
+     Prefab "{0A21DC21B1D23732}Prefabs/Vehicles/Wheeled/BTR70/VehParts/Magazines/VehPart_BTR70_AmmoStorage_PKMT_KVPT.et"
+     RegisterDamage 1
+    }
+   }
+  }
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   additionalActions {
+    SCR_RefuelAtSupportStationAction "{5B02B547EDCF6F99}" : "{E71D57494CCF6458}Configs/Actions/SupportStationActions/Refuel/Refuel_Left.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CE61B81F8A127}" : "{C86CFA48975A710F}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Refuel.conf" {
+     }
+    }
+    SCR_ResourceEntityRefundAction "{5D5EC6128E6342C0}" {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{5D5EC61283EBA5B6}" : "{04CF2089F45CCD59}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Decommission.conf" {
+      m_sIconName "decommission"
+     }
+    }
+    SCR_RepairAtSupportStationAction "{5B02B547E8F16AF2}" : "{57BB4933D61DFB44}Configs/Actions/SupportStationActions/Repair/DriveTrain/BTR_Repair_DriveTrain.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CD92100AE73A4}" : "{BD2C8C53269EEF4D}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Repair.conf" {
+     }
+    }
+    SCR_RepairAtSupportStationAction "{5E20D2E3B055B082}" : "{84AA4E1472E564AD}Configs/Actions/SupportStationActions/Repair/Hull/BTR_Repair_Hull.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CD92100AE73A4}" : "{BD2C8C53269EEF4D}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Repair.conf" {
+     }
+    }
+    SCR_RepairAtSupportStationAction "{5E1CB6DF63753AD9}" : "{273497CAE31CA86A}Configs/Actions/SupportStationActions/Repair/FuelTank/Left_Repair_FuelTank.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CD92100AE73A4}" : "{BD2C8C53269EEF4D}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Repair.conf" {
+     }
+    }
+    SCR_RepairAtSupportStationAction "{5E3ACC1CF6F95044}" : "{2F19A493E4B1379F}Configs/Actions/SupportStationActions/Repair/Engine/BTR_Repair_Engine.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CD92100AE73A4}" : "{BD2C8C53269EEF4D}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Repair.conf" {
+     }
+    }
+    SCR_UnflipVehicleAction "{5C96333D28423C46}" {
+     m_fSuggestedUsersMultiplier 1.1
+    }
+    SCR_UnflipVehicleAction "{5D5F64CA576C1D07}" {
+     m_fSuggestedUsersMultiplier 1.1
+    }
+    SCR_PushVehicleAction "{60DA85DB5FFC6E4F}" {
+     ParentContextList +{
+     }
+    }
+    SCR_ToggleHandbrakeAction "{60DC8885D52C4097}" : "{7BD2343F494FF645}Prefabs/Vehicles/Core/Configs/ToggleHandBrakeFromOutsideAction.conf" {
+    }
+    SCR_ToggleHandbrakeAction "{60DE778F7045386D}" : "{42CDFCACBE35291A}Prefabs/Vehicles/Core/Configs/ToggleHandBrakeFromInsideAction.conf" {
+    }
+    SCR_RepairAtSupportStationAction "{5E2CD3EFEECF3485}" : "{99AB8790F65E573C}Configs/Actions/SupportStationActions/Repair/FuelTank/Right_Repair_FuelTank.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CD92100AE73A4}" : "{BD2C8C53269EEF4D}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Repair.conf" {
+     }
+    }
+    SCR_RefuelAtSupportStationAction "{5C52D9E94C349D8D}" : "{C09A0B59716EE5DF}Configs/Actions/SupportStationActions/Refuel/Refuel_Right.conf" {
+     UIInfo SCR_ActionUIInfo "{5E1CE61B81F8A127}" : "{C86CFA48975A710F}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Refuel.conf" {
+     }
+    }
+    SCR_AdjustSignalAction "{56328A26AA343F32}" {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{5A4D326F2F0838B5}" : "{6404F19156C91DC4}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Open.conf" {
+      Name "#AR-UserAction_Open"
+      m_sIconName "use"
+     }
+     "Signal name" "WindowHatch1"
+     m_fAdjustmentStep 1
+     m_sActionStartSoundEvent "SOUND_HATCH_LEFT_ACTION_START"
+     m_sActionCanceledSoundEvent "SOUND_HATCH_LEFT_ACTION_CANCEL"
+     m_bOnlyInVehicle 1
+    }
+    SCR_AdjustSignalAction "{6084D719CE266813}" {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{5A4D326F2F0838B5}" : "{9D90716578926759}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Close.conf" {
+      Name "#AR-UserAction_Close"
+      m_sIconName "use"
+     }
+     "Signal name" "WindowHatch1"
+     m_fAdjustmentStep -1
+     m_sActionStartSoundEvent "SOUND_HATCH_LEFT_ACTION_START"
+     m_sActionCanceledSoundEvent "SOUND_HATCH_LEFT_ACTION_CANCEL"
+     m_bOnlyInVehicle 1
+    }
+    SCR_AdjustSignalAction "{5632AE426D739CCE}" {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{5A4D326F496BBD4D}" : "{6404F19156C91DC4}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Open.conf" {
+      Name "#AR-UserAction_Open"
+      m_sIconName "use"
+     }
+     "Signal name" "WindowHatch2"
+     m_fAdjustmentStep 1
+     m_sActionStartSoundEvent "SOUND_HATCH_RIGHT_ACTION_START"
+     m_sActionCanceledSoundEvent "SOUND_HATCH_RIGHT_ACTION_CANCEL"
+     m_bOnlyInVehicle 1
+    }
+    SCR_AdjustSignalAction "{6084D719D150DD48}" {
+     ParentContextList +{
+     }
+     UIInfo SCR_ActionUIInfo "{5A4D326F496BBD4D}" : "{9D90716578926759}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_Close.conf" {
+      Name "#AR-UserAction_Close"
+      m_sIconName "use"
+     }
+     "Signal name" "WindowHatch2"
+     m_fAdjustmentStep -1
+     m_sActionStartSoundEvent "SOUND_HATCH_RIGHT_ACTION_START"
+     m_sActionCanceledSoundEvent "SOUND_HATCH_RIGHT_ACTION_CANCEL"
+     m_bOnlyInVehicle 1
+    }
+    SCR_EngineAction "{56B3068BCBE7F8BF}" : "{FEEF05EC7DFE19F2}Prefabs/Vehicles/Core/Configs/Actions/EngineOnAction.conf" {
+    }
+    SCR_EngineAction "{56B3068BC95F2578}" : "{B67160046438840C}Prefabs/Vehicles/Core/Configs/Actions/EngineOffAction.conf" {
+     UIInfo SCR_ActionUIInfo "{56B2FCDE0095A914}" : "{6FF20418A28A47A7}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_EngineOff.conf" {
+     }
+    }
+    SCR_OpenVehicleStorageAction "{59168B38A8A8F95C}" : "{4758882BA3638A5D}Prefabs/Vehicles/Core/Configs/Actions/OpenVehicleStorageAction.conf" {
+     ParentContextList {
+      "door_l01" "door_r01"
+     }
+     UIInfo SCR_ActionUIInfo "{5D9AF69CDAA235AE}" : "{470BC225513DC503}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_TrunkOpen.conf" {
+      m_sIconName "veh_trunk"
+     }
+    }
+    SCR_ResourceContainerVehicleLoadAction "{5DAD7519D5DCEEC7}" {
+    }
+    SCR_ResourceContainerVehicleUnloadAction "{5DAD7519C925851B}" {
+    }
+    SCR_ResourceContainerVehicleLoadAction "{5E43466C9377F425}" : "{A0E53319BFA4E848}Configs/Resources/Supplies/Actions/Supplies_Vehicle_Load.conf" {
+     ParentContextList {
+      "door_r01"
+     }
+     UIInfo SCR_ActionUIInfo "{5E43466A3FCBF8C9}" : "{2CFDC4CCD3262BC1}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_SuppliesLoad.conf" {
+     }
+    }
+    SCR_ResourceContainerVehicleUnloadAction "{5E43466C92B2BA9E}" : "{F10C4B3E2E87F15B}Configs/Resources/Supplies/Actions/Supplies_Vehicle_Unload.conf" {
+     ParentContextList {
+      "door_r01"
+     }
+     UIInfo SCR_ActionUIInfo "{5E43466A389D3C33}" : "{0812267D0EC50926}Prefabs/Vehicles/Core/Configs/Actions/ActionUIInfo/ActionUIInfo_SuppliesUnLoad.conf" {
+     }
+    }
+   }
+  }
+  VehicleAnimationComponent "{50B803EAA459B0AF}" {
+   StartNode "VehicleMasterControl"
+  }
+  VehicleGamepadEffectsManagerComponent "{61E2E297F9B95CA6}" {
+   OwnedEffects {
+    GamepadTriggerEffect "{61E2E29609EDEEF2}" : "{362D65D58B10EF07}Prefabs/Vehicles/Core/Configs/TriggerEffects/TriggerEffect_VehicleBrake.conf" {
+    }
+    GamepadTriggerEffect "{61E2E296F9AAFB22}" : "{B61CA04D65EAE9B2}Prefabs/Vehicles/Core/Configs/TriggerEffects/TriggerEffect_VehicleAccelerate.conf" {
+    }
+    GamepadTriggerEffect "{61E2E2961DDBA9E9}" : "{1E110CD5221FA1E6}Prefabs/Vehicles/Core/Configs/TriggerEffects/TriggerEffect_VehicleBrakeReverse.conf" {
+    }
+    GamepadTriggerEffect "{61E2E296F839F358}" : "{1F5A2C0170820793}Prefabs/Vehicles/Core/Configs/TriggerEffects/TriggerEffect_VehicleAccelerateReverse.conf" {
+    }
+   }
+  }
+  RplComponent "{517AACDFA78F5EE7}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
   }
  }
  coords 2247.521 18.21 7534.187
@@ -1773,10 +3478,6 @@ StaticModelEntity : "{E8697D4489516AE0}Prefabs/Compositions/Misc/SubCompositions
    coords 0.016 0.108 0.289
   }
  }
-}
-GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Props/Military/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
- coords 2245.19 19.445 7502.752
- angleY -112.783
 }
 GenericEntity : "{FD952CFF9CAD3F2B}Prefabs/Compositions/Slotted/SlotFlatSmall/LivingArea_S_USSR_01.et" {
  coords 2279.671 17.532 7540.877

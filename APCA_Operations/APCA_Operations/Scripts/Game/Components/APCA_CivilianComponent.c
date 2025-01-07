@@ -39,7 +39,7 @@ class APCA_CivilianComponent : ScriptComponent
 			m_InventoryManager.GetItems( currentItems );
 			
 			m_InventoryManager.GetStorages( storages );
-			PrintFormat("APCA - storages: %1", storages);
+			//PrintFormat("APCA - storages: %1", storages);
 			foreach(BaseInventoryStorageComponent storage : storages)
 			{
 				int numSlots = storage.GetSlotsCount();
@@ -53,7 +53,7 @@ class APCA_CivilianComponent : ScriptComponent
 					IEntity attachedEntity = slot.GetAttachedEntity();
 					if(attachedEntity)
 					{
-						PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+						//PrintFormat("APCA - attachedEntity: %1", attachedEntity);
 						//m_InventoryManager.TryRemoveItemFromInventory(attachedEntity);
 						//m_InventoryManager.TryDeleteItem(attachedEntity);
 						SCR_EntityHelper.DeleteEntityAndChildren(attachedEntity);
@@ -63,7 +63,7 @@ class APCA_CivilianComponent : ScriptComponent
 				}
 			}
 			
-			PrintFormat("APCA - Clearing Items: %1", currentItems);
+			//PrintFormat("APCA - Clearing Items: %1", currentItems);
 		}
 	}
 	

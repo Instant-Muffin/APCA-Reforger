@@ -19,14 +19,199 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 }
 APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Modes/APCA_GameMode_Lobby.et" {
  coords 2055.849 3.987 7360.391
- m_aFactionRespawnCount {
-  PS_FactionRespawnCount "{631653F79A064F2A}" {
-   m_iTime 3000
-  }
- }
  {
+  SCR_FactionManager {
+   ID "633E5389235B65F3"
+   Factions {
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     m_aEntityCatalogs {
+      SCR_EntityCatalogMultiList "{5C68A0E9AFE1E631}" {
+       m_aMultiLists {
+        SCR_EntityCatalogMultiListEntry "{5C68AD5F14BDB1A7}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{60E8C6E812E22C57}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{60E8C6E81EA2129C}" {
+             m_bEnabled 0
+            }
+           }
+          }
+         }
+        }
+        SCR_EntityCatalogMultiListEntry "{5C68AD5F137C9AFF}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{5C62F7DF5AE77809}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5C62F7DEBB8F5AF2}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{605ECB2AF9F37DF5}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{605ECB2AE1BFBE86}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{619AC1D98880569B}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{619AC1D9EBD32B2B}" {
+             m_bEnabled 0
+            }
+           }
+          }
+         }
+        }
+        SCR_EntityCatalogMultiListEntry "{5C68AD5F1351A624}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{60FD565F7DFBE6A4}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{60FD565F75061ED6}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{60FD565F20A453B3}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{60FD565F5B120DC6}" {
+             m_bEnabled 0
+            }
+           }
+          }
+         }
+        }
+        SCR_EntityCatalogMultiListEntry "{5C68AD5F13240031}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{644E7C22EC9D15AF}" {
+           m_sEntityPrefab "{3D74845B9D0867B0}Prefabs/Characters/HeadGear/Helmet_SSh68_01/Helmet_SSh68_01_cover.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{644E7C22EC9D1671}" {
+             m_eItemType HEADWEAR
+             m_iSupplyCost 1
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6064F385A305987F}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{6064F385AFB47197}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6064F385A40E130C}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{6064F38596F3EA8C}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6064F385A50ECECD}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{6064F38592AE0440}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6060849A195E3DF7}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{6060849A71812099}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6060849A6810196E}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{6060849A5001FC40}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{6060849A4186C031}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{60608499A2C40BFD}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{644E7C2CD9416562}" {
+           m_sEntityPrefab "{4F71E7468E78DDD2}Prefabs/Characters/Handwear/Gloves_Leather_01/Gloves_Leather_01.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{644E7C2CD94165DE}" {
+             m_eItemType HANDWEAR
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{644E7C22A27D7524}" {
+           m_sEntityPrefab "{4C6029AB8BF5C044}Prefabs/Characters/Footwear/CombatBoots_Soviet_01_Dirty.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{644E7C22A27D75F1}" {
+             m_eItemType FOOTWEAR
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{632D34754C3EC797}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5C62F7DF7D8B5AAE}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{632D34754D659B16}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5C62F7DF7D8B5AAE}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{632D34754EE7481C}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5C62F7DF7D8B5AAE}" {
+             m_bEnabled 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{632D34754E3E60AA}" {
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5C62F7DF7D8B5AAE}" {
+             m_bEnabled 0
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
   SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
    coords 0 0 0
+  }
+ }
+}
+GenericEntity Marker4 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
+ coords 2240.059 19.266 7509.48
+ {
+  GenericEntity Layer4 {
+   ID "630686459DADE4AD"
+   {
+    GenericEntity QRF {
+     ID "630686459DADE4AE"
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_sID "QRF"
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6306864566DFB553}" {
+        m_sMapMarkerText "QRF"
+        m_eMapMarkerFactionIcon INDFOR
+       }
+      }
+     }
+    }
+   }
   }
  }
 }

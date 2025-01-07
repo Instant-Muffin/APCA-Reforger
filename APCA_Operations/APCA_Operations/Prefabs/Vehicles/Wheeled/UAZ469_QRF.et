@@ -1,5 +1,13 @@
 Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
  ID "BBCBA43A9778AE21"
+ components {
+  APCA_MarkerComponent "{644C8C723FCBE46B}" {
+   MarkerName "QRF"
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   EnableDamage 0
+  }
+ }
  coords 2240.933 19.165 7520.597
  angleY 164.794
  {

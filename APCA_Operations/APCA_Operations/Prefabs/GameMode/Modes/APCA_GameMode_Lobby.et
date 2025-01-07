@@ -40,6 +40,9 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
   PS_VoNRoomsManager "{62E0D8448706FB11}" {
   }
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bEnableTeamKillPunishment 0
+  }
   SCR_CampaignBuildingManagerComponent "{62E0D8448706FB3E}" {
    m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
    m_BudgetType CAMPAIGN
@@ -50,6 +53,9 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
   }
   SCR_CommandingManagerComponent "{62E0D8448706FB36}" {
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.5
   }
   SCR_GameModeSFManager "{62E0D8448706FB34}" {
    m_bDynamicDespawn 1
@@ -121,6 +127,9 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
  PlayerControllerPrefab "{4E5DAC62A374950F}Prefabs/Characters/Core/DefaultPlayerControllerMP_Coop.et"
  m_bAutoPlayerRespawn 0
  m_bAllowFactionChange 1
+ m_aDisabledResourceTypes {
+  0
+ }
  m_bTeamSwitch 1
  m_bRemoveRedundantUnits 0
  m_bRemoveSquadMarkers 0
