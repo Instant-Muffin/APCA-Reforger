@@ -118,11 +118,288 @@ GenericEntity : "{AE300E34EA8FF40C}Prefabs/Props/Wrecks/Ural4320_wreck_static.et
  angleX -2.463
  angleY 45.283
 }
-GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_wreck_static.et" {
- coords 3151.215 118.932 5234.035
- angleX 1.59
- angleY -26.053
- angleZ 1.215
+$grp GenericEntity : "{B90E5414AB7C325B}Prefabs/Props/Wrecks/BTR70_wreck_static.et" {
+ {
+  coords 3151.215 118.932 5234.035
+  angleX 1.59
+  angleY -26.053
+  angleZ 1.215
+ }
+ {
+  coords 7547.153 166.255 4246.192
+  angleX 2.539
+  angleY -77.249
+  angleZ -1.548
+ }
+ {
+  coords 7545.344 165.996 4227.401
+  angleY 13.555
+ }
+ {
+  coords 7550.631 166.067 4225.458
+  angleY 13.555
+ }
+ {
+  coords 7555.976 166.067 4223.591
+  angleY 13.555
+ }
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Area_Outer {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 1000
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 3852.759 163.682 4330.26
+  {
+   GenericEntity Layer17 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI7 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -196.224 -14.436 40.053
+      }
+      SlotAI9 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords 149.219 -23.311 -129.759
+      }
+     }
+    }
+   }
+  }
+ }
+ Area_Inner {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 500
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 3853.309 164.803 4317.034
+  {
+   GenericEntity Layer18 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI11 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -2.39 -1.725 -0.565
+      }
+      SlotAI12 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -15.244 -0.401 14.981
+      }
+      SlotAI13 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords 33.764 -3.034 24.801
+      }
+      SlotAI14 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DE15FB5FAFC3E63F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Officer.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -6.021 -1.97 -11.048
+      }
+      SlotAI15 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DE15FB5FAFC3E63F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Officer.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -2.063 -1.973 -11.565
+      }
+      SlotAI16 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{DE15FB5FAFC3E63F}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Officer.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -7.497 -1.007 13.247
+      }
+     }
+    }
+   }
+  }
+ }
+ Area_Repair_Base {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 800
+    m_bShowDebugShapesInWorkbench 1
+   }
+  }
+  coords 4274.831 61.834 5824.308
+  {
+   GenericEntity Layer19 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI17 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -16.25 1.245 18.886
+      }
+      SlotAI18 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords 18.784 -0.393 1.202
+      }
+      SlotAI19 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -49.927 7.42 -85.215
+      }
+      SlotAI20 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords 311.347 -2.6 -189.131
+      }
+      SlotAI21 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et"
+         m_sWPToSpawn "{E2CA9CD5CB855913}Prefabs/AI/Waypoints/AIWaypoint_Scout100m.et"
+        }
+       }
+       coords -20.458 28.68 -431.496
+      }
+      SlotAI22 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -6.981 -2.271 23.724
+      }
+      SlotAI23 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -26.327 2.791 -16.452
+      }
+      SlotAI24 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -10.551 2.078 -10.464
+      }
+      SlotAI25 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 2.101 1.859 -25.157
+      }
+      SlotAI26 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 6.571 1.363 -19.909
+      }
+      SlotAI27 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 23.803 -0.464 -0.09
+      }
+      SlotAI28 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{464524F836DD40F1}Prefabs/AI/Waypoints/AIWaypoint_GetInNearestSmall.et"
+        }
+       }
+       coords 23.455 -0.275 -3.393
+      }
+      SlotAI29 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 0.879 -0.276 6.239
+      }
+      SlotAI30 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{26A9756790131354}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Rifleman.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 3.853 -2.096 24.157
+      }
+     }
+    }
+   }
+  }
+ }
 }
 GenericEntity : "{ECB8E313DFBD3415}Prefabs/Compositions/Slotted/SlotFlatSmall/VehicleMaintenance_S_US_01.et" {
  coords 4268.498 59.562 5852.325

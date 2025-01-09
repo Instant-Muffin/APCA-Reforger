@@ -59,6 +59,7 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
   SCR_GameModeSFManager "{62E0D8448706FB34}" {
    m_bDynamicDespawn 1
+   m_iUpdateRate 6
   }
   SCR_InitWeatherComponent "{62E0D8448706FB31}" {
    Enabled 0

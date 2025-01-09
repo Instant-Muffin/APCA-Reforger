@@ -1,7 +1,3 @@
-GenericEntity : "{010D5FBC85347C38}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_US_01_M2HB.et" {
- coords 1461.932 63.032 5777.205
- angleY 103.616
-}
 GenericEntity Marker10 : "{0CC0D60A87468A6A}Prefabs/Marker.et" {
  coords 1070.913 2.825 6059.933
  angleX 0.881
@@ -116,6 +112,12 @@ $grp GenericEntity : "{83A10E8547281E58}Prefabs/Compositions/Slotted/SlotRoadSma
   angleY 101.176
   angleZ -1.76
  }
+}
+GenericEntity : "{92A3009960EBCFD9}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_US_01_M60.et" {
+ coords 1461.843 63.131 5777.193
+ angleX 2.829
+ angleY 109.109
+ angleZ 0.033
 }
 StaticModelEntity : "{95A4CF49FC9C0481}Prefabs/Compositions/Misc/SubCompositions/Tent_Barrack_Cluttered_US_01.et" {
  coords 1088.955 2.737 6023.827
