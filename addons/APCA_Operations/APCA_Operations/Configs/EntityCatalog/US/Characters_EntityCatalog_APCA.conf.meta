@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BBF0774E56F66F97}Configs/EntityCatalog/US/Characters_EntityCatalog_APCA.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

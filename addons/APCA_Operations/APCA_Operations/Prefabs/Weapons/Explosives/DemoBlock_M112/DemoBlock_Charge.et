@@ -1,0 +1,9 @@
+GenericEntity {
+ ID "64E2C2BBFB7C09B0"
+ components {
+  MeshObject "{64E2C2B8F304B2AC}" {
+   Object "{AF064FFD5FFCB477}Assets/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.xob"
+  }
+ }
+ coords 0 0 0.046
+}

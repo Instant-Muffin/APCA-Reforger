@@ -1,0 +1,21 @@
+MatPBRMulti {
+ MetalnessScale 0
+ UVSrcGlobalMaps "UV set 2"
+ MaskMap "{04A93F10F47F49A7}Assets/Items/Demining/MineFlags/Data/Mineflag_US_01_GLOBAL_MASK.edds"
+ MaskGreenScale 3
+ GlobalNMOMap "{C39D234EF0D4B94D}Assets/Props/Fabric/Flags/Data/Flag_1_2_N.edds"
+ UVSrcGlobNormal "UV set 2"
+ Enabled_3 1
+ Color_3 0.055 0.318 0.118 1
+ NMO_3 "{61DE3875B9DBD343}Assets/_SharedData/Fabric/ST_FabricWrinkles_1m_01_NMO.edds"
+ DetNormal_3 0.6
+ Enabled_2 1
+ Color_2 0.223 0.246 0.231 1
+ BCR_2 "{42D93EA9992BB127}Assets/_SharedData/Wood/ST_WoodPlanks_02_BCR.edds"
+ NMO_2 "{6E8CE1807D694599}Assets/_SharedData/Wood/ST_WoodPlain_Rough_01_NMO.edds"
+ DetNormal_2 0.983
+ Color_1 0.22 0.195 0.153 1
+ BCR_1 "{12F7DB7333E60620}Assets/_SharedData/Wood/ST_WoodPlain_Rough_01_BCR.edds"
+ NMO_1 "{6E8CE1807D694599}Assets/_SharedData/Wood/ST_WoodPlain_Rough_01_NMO.edds"
+ DetNormal_1 0.5
+}

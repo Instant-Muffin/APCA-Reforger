@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Color 0.212 0.212 0.212 1
+ SpecularMul 0.3
+ RoughnessScale 1.408
+ BCRMap "{5EFD62442505EC49}Prefabs/IED_Props/Data/IED_PressurePlate_02_BaseColor.edds"
+ NMOMap "{946F5467F1A34682}Prefabs/IED_Props/Data/IED_PressurePlate_02_NMO.edds"
+}

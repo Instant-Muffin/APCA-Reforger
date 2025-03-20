@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{C917E72D979F39EE}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_PL_DPCU.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

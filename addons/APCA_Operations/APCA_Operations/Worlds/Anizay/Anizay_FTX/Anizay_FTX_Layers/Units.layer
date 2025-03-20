@@ -1,0 +1,16 @@
+SCR_AIGroup : "{1A41295581ACD1B8}Prefabs/Groups/BLUFOR/US_Army/D/Group_APCA_Bravo_D.et" {
+ coords 4487.833 134.875 5865.578
+ angleY 90
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 4502.201 134.875 5760.662
+ angleY 89.971
+}
+SCR_AIGroup : "{606030A87D4DF244}Prefabs/Groups/BLUFOR/US_Army/D/Group_APCA_Command_D.et" {
+ coords 4492.345 134.875 5833.577
+ angleY -90
+}
+SCR_AIGroup : "{A3E3D431A4252688}Prefabs/Groups/BLUFOR/US_Army/D/Group_APCA_Alpha_D.et" {
+ coords 4522.354 134.875 5863.615
+ angleY 88.219
+}

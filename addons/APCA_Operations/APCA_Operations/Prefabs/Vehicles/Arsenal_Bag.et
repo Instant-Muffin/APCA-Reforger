@@ -1,0 +1,30 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  MeshObject "{56F2C6D1431AD85A}" {
+   Object "{AD560ADB3B8B102E}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium.xob"
+  }
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "APCA"
+  }
+  ActionsManagerComponent "{56F2C6D1431ADB12}" {
+   ActionContexts {
+    UserActionContext "{56F2C6D1431ADB6E}" {
+     Position PointInfo "{56F2C6D1431ADB9D}" {
+      Offset -0.0003 1.3221 -0.3106
+     }
+    }
+   }
+   additionalActions {
+    Bacon_GunBuilderOpenAction "{606B12191E111053}" {
+     UIInfo UIInfo "{606B12192038245D}" {
+      Name "Loadout Editor"
+     }
+    }
+   }
+  }
+ }
+ coords 0.655 0.059 -1.583
+ angleX 9.936
+ angleY -90.023
+}

@@ -1,0 +1,38 @@
+SCR_ChimeraCharacter : "{C9E4FEAF5AAC8D8C}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_Medic.et" {
+ ID "51FA8A5F10E81780"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Medic"
+   m_bIsPlayable 1
+  }
+  SCR_CharacterRankComponent "{528E6D4286AA2D8F}" {
+   m_iRank CORPORAL
+  }
+  CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
+   WeaponTemplate "{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et"
+  }
+  BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
+   Slots {
+    LoadoutSlotInfo Hat {
+     Prefab "{6C359424ADC61683}Prefabs/Characters/HeadGear/Hat_Boonie_US_01/Hat_Boonie_US_6ColourDesert.et"
+    }
+    LoadoutSlotInfo Jacket {
+     Prefab "{9C520ACFC4183EFF}Prefabs/Characters/Uniforms/US/Jacket_US_DBDU_rolledup.et"
+    }
+    LoadoutSlotInfo Pants {
+     Prefab "{E5BE6AD5A2955467}Prefabs/Characters/Uniforms/US/Pants_US_DBDU.et"
+    }
+    LoadoutSlotInfo Boots {
+     Prefab "{DAAFD15478BDE1C3}Prefabs/Characters/Footwear/CombatBoots_US_01.et"
+    }
+   }
+  }
+  SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
+   InitialInventoryItems {
+    ItemsInitConfigurationItem "{5D7CAAFB9235E902}" {
+     TargetStorage "Prefabs/Characters/Uniforms/US/Pants_US_DBDU.et"
+    }
+   }
+  }
+ }
+}

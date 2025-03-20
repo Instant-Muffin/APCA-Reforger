@@ -1,0 +1,30 @@
+GameEntity : "{B6CC74F306F54A8D}Prefabs/Items/Equipment/Patches/Patch_Base.et" {
+ ID "5DB09136945FC6DB"
+ components {
+  InventoryItemComponent "{5DB09136B1C985CE}" {
+   Attributes SCR_ItemAttributeCollection "{5DB09136B1C985C1}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{5DB09136B1C985EB}" {
+     Name "#RHS-Item_Patch_USMC_Anderson_Name"
+     Description "#RHS-Item_Patch_USMC_Anderson_Description"
+    }
+   }
+  }
+  MeshObject "{5DB09136B1C985B5}" {
+   Object "{2E743FF4BAE745EF}Assets/Characters/Patches/rhs_patch_usmc_id_1.xob"
+   Materials {
+    MaterialAssignClass "{64A69C5AA7791879}" {
+     SourceMaterial "rhs_patch_usmc_id_1"
+     AssignedMaterial "{684A363F45D67F51}Prefabs/Items/Equipment/Patches/rhs_patch_apca.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5DB09136B1C9859A}" {
+   WornMaterialsOverride {
+    "{684A363F45D67F51}Prefabs/Items/Equipment/Patches/rhs_patch_apca.emat"
+   }
+   ItemMaterialsOverride {
+    "{684A363F45D67F51}Prefabs/Items/Equipment/Patches/rhs_patch_apca.emat"
+   }
+  }
+ }
+}

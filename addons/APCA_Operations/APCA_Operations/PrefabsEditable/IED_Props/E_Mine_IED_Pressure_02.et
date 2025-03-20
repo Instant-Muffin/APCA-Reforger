@@ -1,0 +1,22 @@
+GenericEntity : "{AD53865EE0281D4B}Prefabs/IED_Props/Mine_IED_Pressure_Base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  APCA_IEDComponent "{6472C4BF35C0C1F5}" {
+   InvestigateHint SCR_HintUIInfo "{6472C4BF2A4C1C7E}" {
+    Description "You find a thin metal pressure plate with a small mortar shell connected below"
+   }
+  }
+  MeshObject "{5968D9C73C08706E}" {
+   Object "{412209671A3E639C}Prefabs/IED_Props/PressurePlate_02.xob"
+  }
+  SCR_EditableEntityComponent "{647065E1CB16B977}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{647065E1C890E277}" {
+    Name "IED (Metal Pressure Plate)"
+   }
+  }
+  SCR_PressureTriggerComponent "{59E6BE151DCC9953}" {
+   TRIGGER_ALIVE 0
+   m_fMinWeight 1
+  }
+ }
+}

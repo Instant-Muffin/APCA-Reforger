@@ -1,0 +1,21 @@
+GameEntity : "{AED832115FDF5148}Prefabs/Characters/Items/Equipment/Patches/Patch_APCA.et" {
+ ID "5DB09136945FC6DB"
+ components {
+  MeshObject "{5DB09136B1C985B5}" {
+   Materials {
+    MaterialAssignClass "{64A69C5AA7791879}" {
+     SourceMaterial "rhs_patch_usmc_id_1"
+     AssignedMaterial "{E5A008B25D350E64}Prefabs/Characters/Items/Equipment/Patches/rhs_patch_apca_blue.emat"
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5DB09136B1C9859A}" {
+   WornMaterialsOverride {
+    "{E5A008B25D350E64}Prefabs/Characters/Items/Equipment/Patches/rhs_patch_apca_blue.emat"
+   }
+   ItemMaterialsOverride {
+    "{E5A008B25D350E64}Prefabs/Characters/Items/Equipment/Patches/rhs_patch_apca_blue.emat"
+   }
+  }
+ }
+}

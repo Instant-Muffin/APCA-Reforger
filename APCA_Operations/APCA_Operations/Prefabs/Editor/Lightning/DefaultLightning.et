@@ -1,8 +1,0 @@
-Projectile : "{241DC68C9CAEF721}Prefabs/Editor/Lightning/DefaultLightning.et" {
- ID "DA5C6308000CDEF2"
- components {
-  RigidBody "{594CC43B7A1EFBF5}" {
-   Enabled 0
-  }
- }
-}

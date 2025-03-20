@@ -1,0 +1,46 @@
+Vehicle : "{CBD8C2393BE87581}Prefabs/Vehicles/Core/Helicopter_Base.et" {
+ ID "57DA6675519A417B"
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{6465275090E6546A}" {
+     ContextName "cargo"
+     Position PointInfo "{646527508A4B28F0}" {
+      Offset 0 1.7831 1.8921
+     }
+    }
+   }
+   additionalActions {
+    APCA_DeployCrateUserAction "{64652750874FE961}" {
+     ParentContextList {
+      "cargo"
+     }
+     UIInfo UIInfo "{64652750EB0A538F}" {
+      Name "Deploy Ammo Crate"
+     }
+     Duration 8
+     crateResourceName "{6FA6541FE6C2E4E5}Prefabs/Base Objects/APCA_Resupply_Crate.et"
+     failHint SCR_HintUIInfo "{64652750FF758C77}" {
+      Name "No space"
+      Description "Not enough space to deploy crate"
+     }
+    }
+    APCA_DeployCrateUserAction "{64652750E3837834}" {
+     ParentContextList {
+      "cargo"
+     }
+     UIInfo UIInfo "{64652750E383789B}" {
+      Name "Deploy Medical Crate"
+     }
+     Duration 8
+     "Sort Priority" 1
+     crateResourceName "{7B5DD58E8215C349}Prefabs/Base Objects/APCA_Medical_Crate.et"
+     failHint SCR_HintUIInfo "{64652750E3837892}" {
+      Name "No space"
+      Description "Not enough space to deploy crate"
+     }
+    }
+   }
+  }
+ }
+}

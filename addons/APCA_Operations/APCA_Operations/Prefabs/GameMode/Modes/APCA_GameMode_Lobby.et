@@ -1,0 +1,286 @@
+APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SignalsManagerComponent "{62E0D8448706FB76}" {
+  }
+  SCR_CommunicationSoundComponent "{62E0D8448706FB08}" {
+  }
+  BON_RadialMenuAnimationsComponent "{5DECB375888A6083}" {
+   m_MenuController SCR_RadialMenuController "{5DECB3758357EC2E}" {
+    m_sEnableControl 0
+   }
+  }
+  PS_CutsceneManager "{62E0D8448706FB04}" {
+  }
+  PS_MissionDataManager "{62E0D8448706FB03}" {
+  }
+  PS_MissionDescriptionManager "{62E0D8448706FB02}" {
+   Enabled 1
+  }
+  PS_ObjectiveManager "{62E0D8448706FB01}" {
+   m_aObjectiveLavels {
+    PS_ObjectiveLevel "{62E0D8448706FB1B}" {
+     m_iScore 0
+     m_sName "#PS-ObjectiveLevel_MajorLoss"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB18}" {
+     m_iScore 25
+     m_sName "#PS-ObjectiveLevel_MinorLoss"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB17}" {
+     m_iScore 50
+     m_sName "#PS-ObjectiveLevel_Draw"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB16}" {
+     m_iScore 75
+     m_sName "#PS-ObjectiveLevel_MinorVictory"
+    }
+    PS_ObjectiveLevel "{62E0D8448706FB15}" {
+     m_iScore 100
+     m_sName "#PS-ObjectiveLevel_MajorVictory"
+    }
+   }
+  }
+  PS_PlayableManager "{62E0D8448706FB12}" {
+  }
+  PS_VoNRoomsManager "{62E0D8448706FB11}" {
+  }
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bEnableTeamKillPunishment 0
+  }
+  SCR_CampaignBuildingManagerComponent "{62E0D8448706FB3E}" {
+   m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+   m_iCompositionRefundPercentage 100
+   m_bSameFactionDisassembleOnly 1
+   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" {
+   }
+   m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
+  }
+  SCR_CommandingManagerComponent "{62E0D8448706FB36}" {
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.5
+  }
+  SCR_GameModeSFManager "{62E0D8448706FB34}" {
+   m_bDynamicDespawn 1
+   m_iUpdateRate 6
+  }
+  SCR_HintManagerComponent "{5702B54C6CBC9D7F}" {
+   m_fPersistentDelay 4
+  }
+  SCR_InitWeatherComponent "{62E0D8448706FB31}" {
+   Enabled 0
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{DA87337BCDEACB6B}Configs/NameTags/NametagSingleAPCA.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+   m_aKillfeedReceiveTypeNames {
+    SCR_NotificationKillfeedreceiveTypeName "{5932B036B747E765}" {
+     m_iKillfeedreceiveType GROUP_ONLY
+    }
+    SCR_NotificationKillfeedreceiveTypeName "{5932B036B7003ECC}" {
+     m_iKillfeedreceiveType GROUP_ONLY
+    }
+    SCR_NotificationKillfeedreceiveTypeName "{5932B036B7D2B6CF}" {
+     m_iKillfeedreceiveType GROUP_ONLY
+    }
+    SCR_NotificationKillfeedreceiveTypeName "{5932B036B6AB6528}" {
+    }
+    SCR_NotificationKillfeedreceiveTypeName "{5932B036A5A136C4}" {
+     m_iKillfeedreceiveType GROUP_ONLY
+    }
+   }
+  }
+  SCR_PreGameGameModeStateComponent "{62E0D8448706FBCB}" {
+   m_fDuration 0
+  }
+  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
+   Enabled 1
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic APCA_SpawnLogic "{62E0D8448706FBC7}" {
+   }
+  }
+  SCR_RestoreEditorModesComponent "{62E0D8448706FBC4}" {
+  }
+  SCR_SaveLoadComponent "{62E0D8448706FBC3}" {
+   m_Struct SCR_MissionStruct "{62E0D8448706FBC2}" {
+    m_Struct0 SCR_EditorStruct "{62E0D8448706FBC0}" {
+     m_AttributeList SCR_EditorAttributeList "{590C7881C296FA7D}" {
+     }
+    }
+   }
+   m_iAutosavePeriod 600
+  }
+  SCR_TimeAndWeatherHandlerComponent "{62E0D8448706FBDB}" {
+   Enabled 1
+   m_iStartingHours 14
+   m_iStartingMinutes 0
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{62E6889EA320C793}" {
+     m_sWeatherPresetName "Clear"
+     m_iStartingHour 14
+     m_iStartingMinutes 0
+    }
+   }
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
+  }
+  RplComponent "{56B2B4793BF2E1B4}" {
+   "Rpl State Override" None
+   Streamable Enabled
+  }
+ }
+ coords 7695.74 12.969 8108.813
+ PlayerControllerPrefab "{4E5DAC62A374950F}Prefabs/Characters/Core/DefaultPlayerControllerMP_Coop.et"
+ m_bAutoPlayerRespawn 0
+ m_bAllowFactionChange 1
+ m_aDisabledResourceTypes {
+ }
+ m_bTeamSwitch 1
+ m_bRemoveRedundantUnits 0
+ m_bRemoveSquadMarkers 0
+ m_iFreezeTime 0
+ m_aFactionRespawnCount {
+  PS_FactionRespawnCount "{62E0D8448706FBEA}" {
+   m_sFactionKey "US"
+   m_iCount 999
+   m_iTime 360000
+   m_bWaveMode 1
+  }
+  PS_FactionRespawnCount "{631653F79A064F2A}" {
+   m_sFactionKey "USSR"
+   m_iCount 999
+   m_iTime 360000
+   m_bWaveMode 1
+  }
+  PS_FactionRespawnCount "{631653F79DEEE8C9}" {
+   m_sFactionKey "FIA"
+   m_iCount 999
+   m_iTime 360000
+   m_bWaveMode 1
+  }
+  PS_FactionRespawnCount "{64DA628E6EDC579A}" {
+   m_sFactionKey "APCA"
+   m_iCount 999
+   m_iTime 5
+   m_bWaveMode 1
+  }
+ }
+ {
+  PerceptionManager "633E994033028B49" : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+   ID "633E538926EAF0A6"
+   coords 0 0 0
+  }
+  SCR_FactionManager "64D89A3725836EBB" : "{AFCB5AA09CEA909A}Prefabs/MP/Managers/Factions/FactionManager_APCA.et" {
+   ID "64D486E00F7EBFC3"
+   coords 0 0 0
+   Factions {
+    SCR_Faction "{64D486F00365A291}" {
+     m_aEntityCatalogs {
+      SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" {
+       m_aMultiLists {
+        SCR_EntityCatalogMultiListEntry "{64D486F0DC15D9DC}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{64D89A3932DF6593}" {
+           m_sEntityPrefab "{AED832115FDF5148}Prefabs/Characters/Items/Equipment/Patches/Patch_APCA.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5DB2BC12838D5403}" {
+             m_eItemType EQUIPMENT
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A393ABFFE65}" {
+           m_sEntityPrefab "{F525DC8BFEA1CA66}Prefabs/Characters/Items/Equipment/Patches/Patch_APCA_Blue.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64D89A393ABFFE38}" {
+             m_eItemType EQUIPMENT
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A393BA9DD93}" {
+           m_sEntityPrefab "{6645E0F081AD1891}Prefabs/Characters/Items/Equipment/Patches/Patch_APCA_Red.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64D89A393BA9DDAF}" {
+             m_eItemType EQUIPMENT
+             m_iSupplyCost 0
+            }
+           }
+          }
+         }
+        }
+        SCR_EntityCatalogMultiListEntry "{64D486F0DC168A1B}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{64D89A3A9765F581}" {
+           m_sEntityPrefab "{5E6CF4F99FCA0339}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_MID_AMCU.et"
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A3AE20C43A8}" {
+           m_sEntityPrefab "{7E5C73049A746A40}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_MID_Headset_AMCU.et"
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A38B226F04A}" {
+           m_sEntityPrefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5D4A8E6F2C974461}" {
+             m_eItemType HEADWEAR
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A38B9C6316F}" {
+           m_sEntityPrefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64D89A38B9C6313C}" {
+             m_eItemType HEADWEAR
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A38BA202E38}" {
+           m_sEntityPrefab "{85D618A51C013F7A}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_yellow.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64D89A38BA202FCC}" {
+             m_eItemType HEADWEAR
+             m_iSupplyCost 0
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A3890CA4B99}" {
+           m_sEntityPrefab "{AE7FEA2CC676F772}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_XP_AMCU.et"
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A3891FE5E91}" {
+           m_sEntityPrefab "{EE84C590AD38E7BC}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_XP_Headset_AMCU.et"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "62E0D844870653EC"
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "62E0D844870653EF"
+   Channels {
+    BaseChatChannel "{559077E72C7027BC}" {
+    }
+   }
+  }
+  SCR_EditorSettingsEntity {
+   ID "62E0D8448706E4E8"
+   m_bIsUnlimitedEditorLegal 1
+  }
+  ItemPreviewManagerEntity "5E7AE0AB2109F297" : "{AB5D049A3AB43FC0}Prefabs/World/Game/ItemPreviewManager_PS.et" {
+   ID "62E0D8448706E4E6"
+  }
+ }
+}

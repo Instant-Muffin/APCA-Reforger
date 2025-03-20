@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{4C51ADF0B3E072D4}Configs/EntityCatalog/US/Groups_EntityCatalog_APCA.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

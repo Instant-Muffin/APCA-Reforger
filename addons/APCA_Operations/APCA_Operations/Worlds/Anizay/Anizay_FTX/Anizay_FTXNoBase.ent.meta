@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{FE05F2FDE5F20A9E}Worlds/Anizay/Anizay_FTX/Anizay_FTXNoBase.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+ }
+}

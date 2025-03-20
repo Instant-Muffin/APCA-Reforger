@@ -1,0 +1,7 @@
+SCR_AIGroup : "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et" {
+ ID "0000000000000001"
+ coords 4526.564 134.875 5796.255
+ m_aUnitPrefabSlots {
+  "{AC57A698B7E761D0}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Rifleman.et" "{3D0F1DAB20F8F255}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Rifleman_Light.et" "{3D0F1DAB20F8F255}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Rifleman_Light.et" "{60152BE5346BE4BA}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_LMG.et"
+ }
+}

@@ -1,0 +1,148 @@
+GenericEntity : "{2945E6BE78F6F5B5}Prefabs/Intel_Props/APCA_Intel_Notebook_1.et" {
+ coords 4522.013 135.775 5800.022
+ angleY -20.445
+}
+Vehicle AUS_UH60_unarmed1 : "{420562B2B5D106C3}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_unarmed.et" {
+ coords 4547.861 135.271 5772.337
+}
+GenericEntity : "{4511D25EC4327A9B}Prefabs/Intel_Props/APCA_Intel_Notebook_2.et" {
+ components {
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0 0.0297 0.0645
+     }
+    }
+   }
+  }
+ }
+ coords 4521.993 135.775 5800.479
+ angleY 0
+}
+GenericEntity : "{5ED6DA414FB0E70F}Prefabs/Intel_Props/APCA_Intel_Folder.et" {
+ coords 4521.617 135.775 5800.215
+ angleY -23.938
+}
+GenericEntity : "{6DD4EC6319425BCB}Prefabs/Intel_Props/APCA_Intel_Clipboard.et" {
+ coords 4522.311 135.781 5800.728
+ angleY 149.07
+}
+$grp StaticModelEntity : "{7762F50A860DD074}Prefabs/Props/Military/Furniture/TableMilitary_US_01.et" {
+ {
+  coords 4522.069 134.875 5800.313
+  angleY 146.348
+ }
+ {
+  coords 4520.884 134.875 5799.503
+  angleY 146.348
+ }
+}
+$grp GenericEntity : "{81F5036CEB26F399}Prefabs/Base Objects/APCA_Loadout_Crate.et" {
+ {
+  coords 4537.312 134.875 5874.2
+  angleY 85.048
+ }
+ {
+  coords 4539.551 134.875 5849.783
+  angleY 88.093
+ }
+ {
+  coords 4539.505 134.875 5858.607
+  angleY 89.445
+ }
+ {
+  coords 4492.471 134.875 5860.362
+  angleY -94.952
+ }
+ {
+  coords 4492.382 134.875 5868.626
+  angleY -94.952
+ }
+ {
+  coords 4488.462 134.875 5827.147
+  angleY -94.952
+ }
+ {
+  coords 4491.95 134.875 5840.326
+  angleY 175.048
+ }
+}
+GenericEntity : "{894A1AFDCB71CD0D}Prefabs/Compositions/Misc/CustomEntities/CompositionDecals/CompositionDecal_Dirt_Patch_02.et" {
+ coords 4516.114 135.092 5801.678
+ scale 0.14
+}
+GenericEntity : "{9C8E7C5711730A49}Prefabs/Intel_Props/APCA_Intel_Manual.et" {
+ components {
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset -0.069 0.0059 -0.1008
+     }
+    }
+   }
+  }
+ }
+ coords 4521.292 135.775 5799.423
+ angleY 165
+}
+$grp GenericEntity : "{BF92CB15C723FFED}Prefabs/Intel_Props/APCA_Intel_Suitcase.et" {
+ {
+  coords 4521.049 135.775 5799.699
+  angleY -34.522
+ }
+ {
+  coords 4520.313 135.866 5799.219
+  angleX 90
+  angleY 55.478
+  angleZ -180
+ }
+}
+$grp GenericEntity : "{C1935551B662F04C}Prefabs/Intel_Props/APCA_Intel_Photo.et" {
+ {
+  coords 4521.14 135.775 5799.4
+  angleY -24.141
+ }
+ {
+  components {
+   MeshObject "{5AB0B9C3C3E4A143}" {
+    Materials {
+     MaterialAssignClass "{6468AE84850F35A2}" {
+      SourceMaterial "Photo_01_791C2A16044F424E"
+      AssignedMaterial "{69C4EA1C63201ABA}Assets/Props/Civilian/Photos/Data/Photo_04.emat"
+     }
+    }
+   }
+  }
+  coords 4521.003 135.775 5799.302
+  angleY -42.956
+ }
+}
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ coords 4524.338 134.875 5824.355
+ {
+  GenericEntity Layer1 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    GenericEntity FOB_Marker : "{E537867C6E760514}Prefabs/ScenarioFramework/Components/SlotMarker.et" {
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{6464D473563FFD82}" {
+        m_sMapMarkerText "FOB Nauzad"
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{D3372E3631DB07B6}Prefabs/Intel_Props/APCA_Intel_Notebook_Open.et" {
+ coords 4522.409 135.775 5800.27
+ angleY -29.49
+}
+Vehicle UH1H_armed1 : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ coords 4524.311 135.266 5772.743
+}

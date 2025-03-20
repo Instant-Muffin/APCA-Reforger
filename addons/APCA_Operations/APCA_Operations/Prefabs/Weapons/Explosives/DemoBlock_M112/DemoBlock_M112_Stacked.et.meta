@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{77A721C18B82AC5B}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112_Stacked.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

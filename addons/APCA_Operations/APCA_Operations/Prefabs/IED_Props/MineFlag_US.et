@@ -1,0 +1,17 @@
+GenericEntity : "{37535B53F57D1632}Prefabs/Items/Demining/MineFlags/MineFlag_base.et" {
+ ID "5A3CF888928BCFEB"
+ components {
+  SCR_PlaceableInventoryItemComponent "{5A3CF888928BCFD1}" {
+   Attributes SCR_ItemAttributeCollection "{5A3CF888928BCFDA}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{5A3CF888928BCFDF}" {
+     ItemVolume 5
+    }
+   }
+  }
+  SCR_EditableEntityComponent "{647443B20C4FD861}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{647443B202651BA7}" {
+    Name "Mine Flag (Red)"
+   }
+  }
+ }
+}

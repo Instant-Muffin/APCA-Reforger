@@ -1,0 +1,7 @@
+MatTerrainObject {
+ DiffuseIBL 0.003 0 0 1
+ Emissive 0.502 0 0 1
+ OccludeRain 0
+ DisableInteriorProbes 1
+ FallbackColor 0.318 0.561 0.071 1
+}

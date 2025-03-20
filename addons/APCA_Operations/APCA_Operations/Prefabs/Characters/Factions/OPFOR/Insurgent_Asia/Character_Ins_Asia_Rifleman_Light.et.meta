@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Iraq_Rifleman_Light_2_2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

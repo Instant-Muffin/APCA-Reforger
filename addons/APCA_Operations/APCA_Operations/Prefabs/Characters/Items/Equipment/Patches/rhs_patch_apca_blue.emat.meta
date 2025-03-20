@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{E5A008B25D350E64}Prefabs/Characters/Items/Equipment/Patches/rhs_patch_apca_blue.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

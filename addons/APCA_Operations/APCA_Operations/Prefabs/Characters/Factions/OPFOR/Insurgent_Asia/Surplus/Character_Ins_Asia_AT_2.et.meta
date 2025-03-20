@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{BAAE38E1A852EE6B}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_AT_2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,52 @@
+GenericEntity : "{5ED6DA414FB0E70F}Prefabs/Intel_Props/APCA_Intel_Folder.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  APCA_IntelComponent "{6468AE878B7F6DDB}" {
+   IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+    m_bPersistent 1
+   }
+  }
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    m_Size SLOT_2x1
+   }
+  }
+  MeshObject "{5AB0B9C3C3E4A143}" {
+   Object "{8C8D2EF181A72B14}Assets/Props/Civilian/Suitcase_01/Suitcase_01.xob"
+   Materials {
+    MaterialAssignClass "{6468AE8462D47D9E}" {
+     SourceMaterial "Notebook_01"
+     AssignedMaterial "{6DBA359EA58C72E1}Assets/Props/Civilian/Notebook_01/Data/Notebook_01_Orange.emat"
+    }
+    MaterialAssignClass "{6468AE8462D47DAA}" {
+     SourceMaterial "Palette"
+     AssignedMaterial "{A95B2794A0EE8340}Common/Materials/ColorPalette/Color_palette_02.emat"
+    }
+   }
+   LODFactors {
+    5 2 1.5 1 1 1
+   }
+  }
+  RigidBody "{5AB0B9C3C3E4A158}" {
+   Mass 10
+   ResponseIndex "Normal"
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   ActionContexts {
+    UserActionContext "{508AC2ABEC97066C}" {
+     Position PointInfo "{508AC2ABEAC4A0F5}" {
+      Offset 0.0001 0.2068 0.0509
+     }
+     Radius 1
+    }
+   }
+   additionalActions {
+    APCA_CheckIntelUserAction "{6468AE865050088D}" {
+     VisibilityRange 1.5
+    }
+   }
+  }
+ }
+ coords 4521.821 135.775 5799.874
+ angleY -23.938
+}

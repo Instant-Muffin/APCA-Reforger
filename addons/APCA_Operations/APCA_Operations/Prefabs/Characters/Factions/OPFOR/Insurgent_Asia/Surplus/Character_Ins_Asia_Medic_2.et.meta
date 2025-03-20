@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{904DA75E831594A1}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Medic_2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

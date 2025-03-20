@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{9968CCC0AA153728}Prefabs/IED_Props/Data/IED_PressurePlate_03_Sand.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

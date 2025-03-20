@@ -1,0 +1,43 @@
+SCR_ChimeraCharacter : "{3ECA3A935BC069B9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_BaseLoadout.et" {
+ ID "520EC961A090B1EE"
+ components {
+  SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AR-Random_USSR_Soldier_Name"
+    Icon "{C431FD61793AA13F}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Random.edds"
+    m_Image "{B905D63636577FCB}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Randomized.edds"
+    m_aAuthoredLabels {
+     290 70 2 10
+    }
+   }
+   m_VariantData SCR_EditableEntityVariantData "{64E25AC5B5435866}" {
+    m_bRandomizeDefaultVariant 0
+    m_aVariants {
+     SCR_EditableEntityVariant "{64E25AC5B543586D}" {
+      m_sVariantPrefab "{34EA95A630897984}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_AT.et"
+     }
+     SCR_EditableEntityVariant "{64E25AC5B5435868}" {
+      m_sVariantPrefab "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et"
+     }
+     SCR_EditableEntityVariant "{64E25AC5B543586A}" {
+      m_sVariantPrefab "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+     }
+     SCR_EditableEntityVariant "{64E25AC5B5435814}" {
+      m_sVariantPrefab "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+      m_iRandomizerWeight 2
+     }
+     SCR_EditableEntityVariant "{64E25AC5B5435810}" {
+      m_sVariantPrefab "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+      m_iRandomizerWeight 2
+     }
+     SCR_EditableEntityVariant "{64E25AC599C6F699}" {
+      m_sVariantPrefab "{A8F9581974152776}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Sapper.et"
+     }
+     SCR_EditableEntityVariant "{64E25AC59903D8A9}" {
+      m_sVariantPrefab "{420EE03150341249}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Sharpshooter.et"
+     }
+    }
+   }
+  }
+ }
+}

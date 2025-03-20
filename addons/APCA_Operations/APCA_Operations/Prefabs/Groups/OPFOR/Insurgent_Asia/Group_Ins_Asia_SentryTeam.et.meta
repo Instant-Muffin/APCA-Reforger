@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{A37A8ABFEBFA432C}Prefabs/Groups/OPFOR/Iraq/Loyalist/Group_Iraq_SentryTeam_2.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

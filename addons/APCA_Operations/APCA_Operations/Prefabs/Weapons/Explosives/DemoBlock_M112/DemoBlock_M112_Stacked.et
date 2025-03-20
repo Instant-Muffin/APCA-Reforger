@@ -1,0 +1,42 @@
+GenericEntity : "{33CBDE73AB48172A}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_M112.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  SCR_ExplosiveChargeInventoryItemComponent "{5AA692DC30B9C62B}" {
+   Attributes SCR_ItemAttributeCollection "{60D6BB563667D737}" {
+    ItemDisplayName WeaponUIInfo "{60D6BB563543F2F2}" {
+     Name "Stacked Demo Charge"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{5F10E041E86255CD}" {
+     Weight 2
+    }
+    m_Size SLOT_2x1
+   }
+  }
+  SCR_ExplosiveTriggerComponent "{5AA692DC30B9C65A}" {
+   PROJECTILE_EFFECTS {
+    ExplosionEffect "{5F10E04100CCC508}" {
+     EffectPrefab "{7661FC45D703D5EA}Prefabs/Weapons/Warheads/Warhead_ExplosiveCharge_Stacked.et"
+    }
+   }
+  }
+  SlotManagerComponent "{5F1CD138A009B549}" {
+   Slots {
+    EntitySlotInfo charge_01 {
+     Offset 0 0 0.0488
+     MergePhysics 1
+     Prefab "{DBA84972C58FB52B}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_Charge.et"
+    }
+    EntitySlotInfo charge_02 {
+     Offset 0 0.0251 0.0488
+     MergePhysics 1
+     Prefab "{DBA84972C58FB52B}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_Charge.et"
+    }
+    EntitySlotInfo charge_03 {
+     Offset 0 0.0251 -0.0008
+     MergePhysics 1
+     Prefab "{DBA84972C58FB52B}Prefabs/Weapons/Explosives/DemoBlock_M112/DemoBlock_Charge.et"
+    }
+   }
+  }
+ }
+}

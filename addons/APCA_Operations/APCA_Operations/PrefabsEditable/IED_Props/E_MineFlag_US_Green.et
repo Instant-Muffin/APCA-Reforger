@@ -1,0 +1,32 @@
+GenericEntity : "{EC13D4E934B2ADD8}Prefabs/IED_Props/MineFlag_US.et" {
+ ID "5A3CF888928BCFEB"
+ components {
+  MeshObject "{5A2CCE4594CABF3B}" {
+   Materials {
+    MaterialAssignClass "{647065E445C75472}" {
+     SourceMaterial "Mineflag_US_01"
+     AssignedMaterial "{A6F3C953472E27EA}Prefabs/IED_Props/Data/Flags/Mineflag_US_Green.emat"
+    }
+    MaterialAssignClass "{647065E445C7540C}" {
+     SourceMaterial "Mineflag_US_01_MLOD"
+     AssignedMaterial "{0366FF94E669A9A8}Prefabs/IED_Props/Data/Flags/Mineflag_US_Green_MLOD.emat"
+    }
+   }
+  }
+  SCR_EditableEntityComponent "{647443B20C4FD861}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{647443B202651BA7}" {
+    Name "Marker Flag (Green)"
+   }
+  }
+  SCR_MineFlagComponent "{5A3CF888928BCFC8}" {
+   Enabled 0
+  }
+  SCR_PlaceableInventoryItemComponent "{5A3CF888928BCFD1}" {
+   Attributes SCR_ItemAttributeCollection "{5A3CF888928BCFDA}" {
+    ItemDisplayName UIInfo "{5A3CF888928BCFDD}" {
+     Name "Marker Flag (Green)"
+    }
+   }
+  }
+ }
+}

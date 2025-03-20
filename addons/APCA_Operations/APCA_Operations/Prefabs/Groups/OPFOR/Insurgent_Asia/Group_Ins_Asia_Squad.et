@@ -1,0 +1,7 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ coords 4526.517 134.875 5799.33
+ m_aUnitPrefabSlots {
+  "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et" "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et" "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et" "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et" "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et" "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et" "{34EA95A630897984}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_AT.et" "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+ }
+}

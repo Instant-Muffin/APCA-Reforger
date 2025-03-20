@@ -1,0 +1,71 @@
+GenericEntity : "{9C80A507960AA473}Prefabs/Weapons/Core/Mine_base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  SoundComponent "{5A6B57364EA203C7}" {
+   Filenames {
+   }
+  }
+  APCA_IEDComponent "{6472C4BF35C0C1F5}" {
+   InvestigateHint SCR_HintUIInfo "{6472C4BF2A4C1C7E}" {
+    Name "IED"
+    Description "You find a pressure plate with a small explosive connected below"
+   }
+  }
+  BaseTriggerComponent "{59E4E69D8E9B4323}" {
+   PROJECTILE_EFFECTS {
+    AIExplosionEffect "{5EB4AB4A7E9C5DD5}" {
+    }
+    ExplosionEffect "{647065E05819927A}" {
+     EffectPrefab "{F1929AE7DC824D81}Prefabs/Weapons/Warheads/Warhead_ExplosiveCharge_TNT400g.et"
+     SoundEvent "SOUND_EXPLOSION"
+    }
+   }
+  }
+  MeshObject "{5968D9C73C08706E}" {
+   Object "{D83CB0FE07D9520C}Prefabs/IED_Props/PressurePlate_01.xob"
+  }
+  SCR_MineDamageManager "{5A187C4DB2CF86F2}" {
+   "Additional hit zones" {
+    SCR_MineHitZone Main {
+     ColliderNames {
+     }
+     MaxHealth 30
+     "Explosive multiplier" 10
+    }
+   }
+  }
+  SCR_PressureTriggerComponent "{59E6BE151DCC9953}" {
+   Enabled 1
+   TRIGGER_ALIVE 1
+   m_bLive 1
+   m_fMinWeight 5
+   m_bProneSafe 1
+  }
+  ActionsManagerComponent "{59E4E6938E65C2ED}" {
+   additionalActions {
+    SCR_MinePickUpItemAction "{59E4E69368FB23DB}" {
+     ParentContextList {
+      ""
+     }
+    }
+    SCR_MineEquipWeaponAction "{59E4E69349194C2B}" {
+     ParentContextList {
+     }
+    }
+    SCR_MineEquipHolsterAction "{5A78F5000397EFB7}" {
+     ParentContextList {
+     }
+    }
+    SCR_ActivateMineUserAction "{59F2823F52BEB01F}" {
+     ParentContextList {
+     }
+    }
+   }
+  }
+  RplComponent "{59E4E694D3FCE264}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+ }
+ coords 4500.213 134.875 5822.478
+}

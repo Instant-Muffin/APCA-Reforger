@@ -1,0 +1,9 @@
+MatPBRBasic {
+ Color 0.122 0.122 0.122 1
+ SpecularMul 0.42
+ AllowUserAlphaBias 1
+ DisableUserAphaInShadow 1
+ BCRMap "{3646C988ECAFD748}Prefabs/Items/Equipment/Patches/rhs_patch_apca_BaseColor.edds"
+ OpacityMap "{70A53F4EA373F142}Assets/Characters/Basebody/Data/HeadClipping_A.edds"
+ NMOMap "{ED47ED19FAD59A4C}Prefabs/Items/Equipment/Patches/rhs_patch_apca_NMO.edds"
+}

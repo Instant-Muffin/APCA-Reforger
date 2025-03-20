@@ -1,0 +1,162 @@
+GenericEntity : "{AD53865EE0281D4C}Prefabs/IED_Props/Mine_IED_Base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  SoundComponent "{5A6B57364EA203C7}" {
+   Filenames {
+    "{EC7E8631CBC17F15}Sounds/Weapons/HeavyWeapons/M2/Weapons_HeavyWeapons_M2_Handling.acp"
+   }
+  }
+  APCA_IEDComponent "{6472C4BF35C0C1F5}" {
+   InvestigateHint SCR_HintUIInfo "{6472C4BF2A4C1C7E}" {
+    Description "You find a plywood pressure plate with a small mortar shell connected below"
+    m_fDuration 20
+    m_bPersistent 0
+   }
+  }
+  BaseTriggerComponent "{59E4E69D8E9B4323}" {
+   PROJECTILE_EFFECTS {
+    AIExplosionEffect "{5EB4AB4A7E9C5DD5}" {
+    }
+    ExplosionEffect "{647065E05819927A}" {
+     EffectPrefab "{F1929AE7DC824D81}Prefabs/Weapons/Warheads/Warhead_ExplosiveCharge_TNT400g.et"
+     SoundEvent "SOUND_EXPLOSION"
+    }
+   }
+  }
+  MeshObject "{5968D9C73C08706E}" {
+   Object "{D83CB0FE07D9520C}Prefabs/IED_Props/PressurePlate_01.xob"
+  }
+  SCR_EditableEntityComponent "{647065E1CB16B977}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{647065E1C890E277}" {
+    Name "IED (Plywood Pressure Plate)"
+    m_sFaction ""
+   }
+   m_Flags PLACEABLE
+  }
+  SCR_MineDamageManager "{5A187C4DB2CF86F2}" {
+   "Additional hit zones" {
+    SCR_MineHitZone Main {
+     ColliderNames {
+     }
+    }
+   }
+  }
+  SCR_PressureTriggerComponent "{59E6BE151DCC9953}" {
+   Enabled 1
+   m_fMinWeight 5
+   m_bProneSafe 1
+   m_DetonationDelay 1000
+  }
+  SCR_SoundDataComponent "{6472C4AB267CAE8B}" {
+  }
+  ActionsManagerComponent "{59E4E6938E65C2ED}" {
+   additionalActions {
+    SCR_MinePickUpItemAction "{59E4E69368FB23DB}" {
+     ParentContextList {
+     }
+    }
+    SCR_MineEquipWeaponAction "{59E4E69349194C2B}" {
+     ParentContextList {
+     }
+    }
+    SCR_MineEquipHolsterAction "{5A78F5000397EFB7}" {
+     ParentContextList {
+     }
+    }
+    SCR_ActivateMineUserAction "{59F2823F52BEB01F}" {
+     ParentContextList {
+     }
+    }
+    APCA_IEDInteractUserAction "{6472C4BF76E2BCB2}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4BF62DB6C9F}" {
+      Name "Investigate"
+     }
+     Duration 10
+     "Sort Priority" 1
+    }
+    APCA_IEDInteractUserAction "{6472C4BF5115A7E9}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4BF5115A7A1}" {
+      Name "Remove Casing"
+     }
+     Duration 10
+     "Sort Priority" 4
+     ActionType 1
+    }
+    APCA_IEDInteractUserAction "{6472C4BFBF3F2D3E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4BFBF3F2DF5}" {
+      Name "Expose Wiring"
+     }
+     Duration 6
+     "Sort Priority" 3
+     ActionType 2
+    }
+    APCA_IEDInteractUserAction "{6472C4BFB7106F9B}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4BFB7106850}" {
+      Name "Bypass Power"
+     }
+     Duration 5
+     "Sort Priority" 5
+     ActionType 3
+    }
+    APCA_IEDInteractUserAction "{6472C4BFAC4FEA55}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4BFAC4FEA29}" {
+      Name "Dismantle Detonator"
+     }
+     Duration 8
+     "Sort Priority" 2
+     ActionType 4
+    }
+    APCA_IEDInteractUserAction "{6472C4B07287FE77}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4B07287FEC7}" {
+      Name "Disconnect Pressure Plate"
+     }
+     Duration 4
+     "Sort Priority" 2
+     ActionType 99
+    }
+    APCA_IEDInteractUserAction "{6472C4B05EAA067B}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4B05EAA0634}" {
+      Name "Connect Power"
+     }
+     Duration 4
+     "Sort Priority" 1
+     ActionType 99
+    }
+    APCA_IEDInteractUserAction "{6472C4B044426BA2}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6472C4B04442647F}" {
+      Name "Defuse Explosive"
+     }
+     Duration 4
+     "Sort Priority" 5
+     ActionType 99
+    }
+   }
+  }
+ }
+ coords 4501.476 134.875 5823.493
+ angleY -85.956
+}

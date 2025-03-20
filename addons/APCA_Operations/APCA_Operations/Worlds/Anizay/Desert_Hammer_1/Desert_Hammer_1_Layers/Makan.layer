@@ -1,0 +1,10 @@
+GenericEntity : "{7A4078C035F198C1}Prefabs/Structures/Military/CamoNets/FIA/CamoNet_Medium_FIA_01_V1.et" {
+ coords 3546.226 156.883 4503.398
+ angleY -81.109
+}
+Tank ZSU_23_4_Base1 : "{914A69C7F7E8C04E}Prefabs/Vehicles/Tracked/ZSU-23-4/ZSU-23-4_Base.et" {
+ coords 3547.07 156.994 4503.592
+ angleX -0.014
+ angleY -90.891
+ angleZ -0.895
+}

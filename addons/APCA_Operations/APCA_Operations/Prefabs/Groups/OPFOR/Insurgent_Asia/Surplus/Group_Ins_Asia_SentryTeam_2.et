@@ -1,0 +1,7 @@
+SCR_AIGroup : "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" {
+ ID "0000000000000001"
+ coords 4527.793 134.875 5797.979
+ m_aUnitPrefabSlots {
+  "{A8383B13F7D0836A}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_Rifleman_Light_2.et" "{A8383B13F7D0836A}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_Rifleman_Light_2.et"
+ }
+}

@@ -1,0 +1,42 @@
+GenericEntity : "{1126AD9D919F82FF}Prefabs/Weapons/Warheads/Warhead_Explosive_HE.et" {
+ ID "9D9BE68EA2672F76"
+ components {
+  SoundComponent "{D092A75ECEFAE456}" {
+   Filenames {
+    "{15572A81FA5612BB}Sounds/Weapons/Explosives/DemoBlocks/_SharedData/Weapons_Explosives_DemoBlock_Generic.acp"
+   }
+  }
+  BaseTriggerComponent "{55129E81CBAA1390}" {
+   PROJECTILE_EFFECTS {
+    ExplosionDamageContainer "{5F10B4D8DC73BB97}" : "{04BC445FB74FDAA9}Prefabs/Weapons/Core/Damage/ExplosionContainer_Base.conf" {
+     ExplosionEffects {
+      BaseExplosionDamage "{5D8D1EB3EF9D02C6}" {
+       DamageValue 4000
+       DamageDistance 30
+      }
+      BaseExplosionDamage "{61DAF5E24D9CA168}" {
+       DamageValue 666.666
+       DamageDistance 18
+      }
+      BaseExplosionDamage "{5D8D1EB3EBB36077}" {
+       DamageValue 80
+       DamageDistance 16
+      }
+      ExplosionImpulseEffect "{5E6D1CEE09A33086}" {
+       DamageValue 2
+       DamageDistance 30
+      }
+     }
+     ChargeWeight 4200
+     TntEquivalent 1.456
+    }
+    SpawnParticleEffect "{64E2C2BD657E91EF}" {
+     AttachToParent 1
+     ShouldReplicate 0
+     UseFrameEvent 1
+     ParticleEffect "{9D8D204CCCC44A38}Particles/Weapon/Explosion_M112.ptc"
+    }
+   }
+  }
+ }
+}

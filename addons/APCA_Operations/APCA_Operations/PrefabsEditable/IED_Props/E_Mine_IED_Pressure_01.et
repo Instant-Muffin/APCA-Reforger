@@ -1,0 +1,8 @@
+GenericEntity : "{AD53865EE0281D4B}Prefabs/IED_Props/Mine_IED_Pressure_Base.et" {
+ ID "5968D2B6A82C6019"
+ components {
+  SCR_PressureTriggerComponent "{59E6BE151DCC9953}" {
+   TRIGGER_ALIVE 0
+  }
+ }
+}

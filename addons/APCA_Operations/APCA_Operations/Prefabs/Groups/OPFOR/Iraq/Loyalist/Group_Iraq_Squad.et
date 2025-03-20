@@ -1,0 +1,7 @@
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ ID "0000000000000001"
+ coords 4526.517 134.875 5799.33
+ m_aUnitPrefabSlots {
+  "{FD6F500D42973A77}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_GL.et" "{2A040DCCFB38E29F}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Medic.et" "{AC57A698B7E761D0}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Rifleman.et" "{FD6F500D42973A77}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_GL.et" "{60152BE5346BE4BA}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_LMG.et" "{AC57A698B7E761D0}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_Rifleman.et" "{4219940C0D2683A1}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_AT.et" "{60152BE5346BE4BA}Prefabs/Characters/Factions/OPFOR/Iraq/Loyalist/Character_Iraq_LMG.et"
+ }
+}

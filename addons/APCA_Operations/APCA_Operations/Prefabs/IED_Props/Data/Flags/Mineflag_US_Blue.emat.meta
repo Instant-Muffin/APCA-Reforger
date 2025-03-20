@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{1C56C5F94B73FBC1}Assets/Items/Demining/MineFlags/Data/Mineflag_US_01_flag_English.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

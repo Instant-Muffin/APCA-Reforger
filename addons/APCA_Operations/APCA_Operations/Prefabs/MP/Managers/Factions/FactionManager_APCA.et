@@ -1,0 +1,80 @@
+SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionManager_Base.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  SCR_Faction "{56DEAC40D2DBC8B1}" : "{5EB46557DF2AA24F}Configs/Factions/US.conf" {
+   m_bIsPlayable 0
+   m_aFriendlyFactionsIds {
+    "APCA"
+   }
+   m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"
+  }
+  SCR_Faction "{64D486F00365A291}" : "{569A7A98CB9DD381}Configs/Factions/APCA.conf" {
+   FactionKey "APCA"
+   m_aEntityCatalogs {
+    SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" {
+     m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{64D486F0DC168A1B}" {
+       m_aEntities {
+        SCR_EntityCatalogInventoryItem "{64D89A3A9765F581}" {
+         m_sEntityPrefab "{5E6CF4F99FCA0339}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_MID_AMCU.et"
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A3AE20C43A8}" {
+         m_sEntityPrefab "{7E5C73049A746A40}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_MID_Headset_AMCU.et"
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A38B226F04A}" {
+         m_sEntityPrefab "{EB916F0BF524EF25}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_black.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{5D4A8E6F2C974461}" {
+           m_eItemType HEADWEAR
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A38B9C6316F}" {
+         m_sEntityPrefab "{6D6ADA201AD4E09B}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_olive.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D89A38B9C6313C}" {
+           m_eItemType HEADWEAR
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A38BA202E38}" {
+         m_sEntityPrefab "{85D618A51C013F7A}Prefabs/Characters/HeadGear/Headphones_Peltor/Headphones_Peltor_yellow.et"
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D89A38BA202FCC}" {
+           m_eItemType HEADWEAR
+           m_iSupplyCost 0
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A3890CA4B99}" {
+        }
+        SCR_EntityCatalogInventoryItem "{64D89A3891FE5E91}" {
+         m_sEntityPrefab "{EE84C590AD38E7BC}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_XP_Headset_AMCU.et"
+        }
+       }
+      }
+     }
+    }
+   }
+   m_sFactionBackground "{F8AC305446D5D480}UI/Textures/DeployMenu/Loadout-BG/Loadout_US_BG.imageset"
+  }
+  SCR_Faction "{56DEAC40D3C2E623}" : "{09727032415AC39B}Configs/Factions/USSR.conf" {
+   m_bIsPlayable 0
+   m_aFriendlyFactionsIds {
+    "FIA"
+   }
+   m_sFactionBackground "{21533F2089005056}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_USSR.imageset"
+  }
+  SCR_Faction "{56DEAC40D132400B}" : "{8053DB656DD18B14}Configs/Factions/FIA.conf" {
+   m_bIsPlayable 0
+   m_aFriendlyFactionsIds {
+    "USSR"
+   }
+   m_sFactionBackground "{81BF3B1DCC106577}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_FIA.imageset"
+  }
+  SCR_Faction "{607AA5C7A94496DA}" : "{3FA20B01D950D31F}Configs/Factions/CIV.conf" {
+  }
+ }
+}

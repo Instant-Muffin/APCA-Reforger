@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{2DA5C0F7691A23E1}Prefabs/IED_Props/Data/Flags/Mineflag_US_White_MLOD_2.emat"
+ Configurations {
+  EMATResourceClass PC {
+  }
+  EMATResourceClass XBOX_ONE : PC {
+  }
+  EMATResourceClass XBOX_SERIES : PC {
+  }
+  EMATResourceClass PS4 : PC {
+  }
+  EMATResourceClass PS5 : PC {
+  }
+  EMATResourceClass HEADLESS : PC {
+  }
+ }
+}

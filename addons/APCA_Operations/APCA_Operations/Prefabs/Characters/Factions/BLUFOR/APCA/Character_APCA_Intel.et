@@ -1,0 +1,8 @@
+SCR_ChimeraCharacter : "{A8FDC02462B7D739}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_EOD.et" {
+ ID "52092032B0E62200"
+ components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_name "Intel"
+  }
+ }
+}

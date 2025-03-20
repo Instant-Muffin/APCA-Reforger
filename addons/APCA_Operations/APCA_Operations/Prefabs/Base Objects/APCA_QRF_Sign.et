@@ -1,0 +1,67 @@
+GenericEntity : "{43B099F05634173B}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/SignRectangle_01_140x100_base.et" {
+ ID "50D67C36F4200F97"
+ components {
+  MeshObject "{54969A6AAAADA251}" {
+   Object "{CD7A4E79304AA054}Assets/Structures/Signs/Military/SignRectangle_01_75x45.xob"
+   Materials {
+    MaterialAssignClass "{632880FA0DB5F474}" {
+     SourceMaterial "SignRectangle_01_140x100"
+     AssignedMaterial "{569A6011C9A2D572}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01.emat"
+    }
+    MaterialAssignClass "{632880FA0DB5F40D}" {
+     SourceMaterial "SignRectangle_01_140x100_MLOD"
+     AssignedMaterial "{B41E12664BB7B57F}Assets/Structures/Signs/Military/Data/Sign_Warzone_US_01_MLOD.emat"
+    }
+    MaterialAssignClass "{632880FAB9F93806}" {
+     SourceMaterial "SignRectangle_01_75x45"
+     AssignedMaterial "{8B1EA272E37DC0C3}Assets/Structures/Signs/Military/Data/Sign_CommandPost_US_01_BCR.emat"
+    }
+    MaterialAssignClass "{632880FAB9F93826}" {
+     SourceMaterial "SignRectangle_01_75x45_MLOD"
+     AssignedMaterial "{3B9D01D91BD959DF}Assets/Structures/Signs/Military/Data/Sign_CommandPost_US_01_MLOD.emat"
+    }
+   }
+  }
+  RigidBody "{54969A6AA8773997}" {
+   ResponseIndex "TinyDestructible"
+  }
+  SCR_DestructionMultiPhaseComponent "{5496C1EF00137501}" {
+   Enabled 0
+   m_fBaseHealth 100000
+   m_DestroySpawnObjects {
+    SCR_DebrisSpawnable "{58D4C8DAFF1CE2A0}" {
+     m_ModelPrefabs {
+      "{7D5E704E04714F96}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Dst/SignRectangle_01_140x100_dst_02_US_warzone.et" "{34567B212E3EAD9C}Assets/Structures/Signs/Military/Dst/SignRectangle_01_140x100_dst_03.xob"
+     }
+    }
+   }
+   m_bDeleteAfterFinalPhase 0
+  }
+  ActionsManagerComponent "{632880FA0DB5F41C}" {
+   ActionContexts {
+    UserActionContext "{632880FA0DB5F41F}" {
+     ContextName "default"
+     Position PointInfo "{632880FA0DB5F412}" {
+      Offset 0 1.2853 0
+     }
+     Radius 5
+    }
+   }
+   additionalActions {
+    APCA_RespawnAllUserAction "{632880FA0DB5F416}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{632880FA0DB5F428}" {
+      Name "Respawn All Dead Players"
+     }
+     Duration 2
+     "Sort Priority" 99
+    }
+   }
+  }
+  RplComponent "{566CB016AAC374C6}" {
+   "Rpl State Override" None
+  }
+ }
+}

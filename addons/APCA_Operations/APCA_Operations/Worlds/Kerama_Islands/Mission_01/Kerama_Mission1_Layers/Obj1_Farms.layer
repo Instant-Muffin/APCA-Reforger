@@ -1,0 +1,1479 @@
+$grp Tank : "{0144F571F1998FC4}Prefabs/Vehicles/Tracked/BMP1/BMP1_FIA.et" {
+ BMP1_FIA1 {
+  coords 7926.851 2.38 7139.792
+  angleY 174.569
+ }
+ BMP1_FIA2 {
+  coords 7925.842 2.38 7150.407
+  angleY 174.569
+ }
+}
+Vehicle UAZ469_PKM2 : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
+ coords 8680.265 6.682 8518.897
+ angleY -91.276
+}
+Vehicle Ural4320_transport_CIV_forest1 : "{1449105FD658EDFB}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_forest.et" {
+ coords 8612.756 5.821 8527.909
+ angleX -1.981
+ angleY -145.28
+ angleZ -0.284
+}
+Vehicle K4386_Armed_Camo1 : "{1DF4C30C130D8FAD}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Camo.et" {
+ coords 7325.072 4.976 7412.22
+ angleY -164.706
+}
+$grp GenericEntity : "{2945E6BE78F6F5B5}Prefabs/Intel_Props/APCA_Intel_Notebook_1.et" {
+ {
+  components {
+   APCA_IntelComponent "{6468AE878B7F6DDB}" {
+    IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+     Description "The notebook contains references to several emergency weapons caches that have been stashed in the jungle. The exact positions aren't clear but there are three grid references: 021059, 081048, 047080"
+    }
+   }
+  }
+  coords 8024.819 5.781 8375.2
+  angleY 107.435
+ }
+ {
+  components {
+   APCA_IntelComponent "{6468AE878B7F6DDB}" {
+    IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+     Description "The notebook mentions armoured vehicles that were recently delivered and moved to the town of Zamami. No indication of what they are or who they are from is given."
+    }
+   }
+  }
+  coords 8110.681 81.675 4862.623
+  angleX -5.614
+  angleY -102.556
+  angleZ -0.577
+ }
+}
+$grp GenericEntity : "{38464762C5D374D2}Prefabs/MP/Campaign/SupplyDepots/SupplyCache_S_FIA_01_Campaign.et" {
+ {
+  coords 7499.282 134.083 8059.46
+  angleY 172.082
+  {
+   GenericEntity {
+    ID "5D45393FCDDCFA0B"
+    {
+     GenericEntity {
+      ID "5D45393FFA2FEF00"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0E"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0F"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0B"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783A28A7954"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF1C"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF07"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E7825153627D"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF13"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF02"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783AAEB03FC"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF10"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5E330D6FDCD30C24"
+    components {
+     SCR_DestructionMultiPhaseComponent "{5496C1EF00137501}" {
+      Enabled 1
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D1ED92956CA179F"
+   }
+  }
+ }
+ {
+  coords 8113.037 81.095 4870.032
+  angleY -7.918
+  angleZ -2.251
+  {
+   GenericEntity {
+    ID "5D45393FCDDCFA0B"
+    {
+     GenericEntity {
+      ID "5D45393FFA2FEF00"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0E"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0F"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0B"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783A28A7954"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF1C"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF07"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E7825153627D"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF13"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF02"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783AAEB03FC"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF10"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5E330D6FDCD30C24"
+    components {
+     SCR_DestructionMultiPhaseComponent "{5496C1EF00137501}" {
+      Enabled 1
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D1ED92956CA179F"
+   }
+  }
+ }
+ {
+  coords 2199.539 110.051 5989.336
+  angleX 2.777
+  angleY 97.465
+  angleZ -0.538
+  {
+   GenericEntity {
+    ID "5D45393FCDDCFA0B"
+    {
+     GenericEntity {
+      ID "5D45393FFA2FEF00"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0E"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0F"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF0B"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783A28A7954"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF1C"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF07"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E7825153627D"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF13"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF02"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+      {
+       GenericEntity {
+        ID "5D30E783AAEB03FC"
+        components {
+         SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+          Enabled 1
+         }
+        }
+       }
+      }
+     }
+     GenericEntity {
+      ID "5D45393FFA2FEF10"
+      components {
+       SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+        Enabled 1
+       }
+      }
+     }
+    }
+   }
+   GenericEntity {
+    ID "5E330D6FDCD30C24"
+    components {
+     SCR_DestructionMultiPhaseComponent "{5496C1EF00137501}" {
+      Enabled 1
+     }
+    }
+   }
+   GenericEntity {
+    ID "5D1ED92956CA179F"
+   }
+  }
+ }
+}
+$grp GenericEntity : "{3FD3F403025BBDF5}Prefabs/Props/Military/SupplyBox/SupplyStack/SupplyStack_Large_01/SupplyStack_Large_01_storage.et" {
+ {
+  coords 7963.867 6.35 8387.816
+  angleX -1.295
+  angleY -43.653
+  angleZ 1.235
+ }
+ {
+  coords 7964.609 6.374 8387.026
+  angleX -1.295
+  angleY -43.653
+  angleZ 1.235
+ }
+ {
+  coords 7965.328 6.4 8386.188
+  angleX -1.295
+  angleY -43.653
+  angleZ 1.235
+ }
+ {
+  coords 7995.63 6.277 8418.797
+  angleY -2.756
+ }
+ {
+  coords 7996.908 6.277 8418.901
+  angleY -2.756
+ }
+ {
+  coords 7995.584 6.277 8419.945
+  angleY -2.756
+ }
+ {
+  coords 8630.361 6.271 8494.346
+  angleY -2.756
+ }
+ {
+  coords 8630.307 6.271 8495.481
+  angleY -2.756
+ }
+ {
+  coords 8631.716 6.271 8494.331
+  angleY -2.756
+ }
+}
+GenericEntity : "{7030822F7A54F479}Prefabs/Props/Crates/CrateWooden_01_base.et" {
+ coords 8110.701 80.868 4862.687
+ angleX 1.774
+ angleY -0.166
+ angleZ -5.358
+}
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ Area1 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 350
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 8004.063 5.789 8483.757
+  {
+   GenericEntity Layer3 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI1 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 9.753 -1.233 -99.477
+      }
+      SlotAI3 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 20.141 -0.909 -97.553
+      }
+      SlotAI4 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 20.084 -0.908 -95.269
+       angleY 164.926
+      }
+      SlotAI5 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 19.838 2.397 -107.862
+      }
+      SlotAI6 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 12.323 2.397 -106.993
+      }
+      SlotAI7 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 12.675 -0.909 -108.479
+      }
+      SlotAI8 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 16.879 0.488 -63.092
+      }
+      SlotAI9 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 8.442 0.488 -62.937
+      }
+      SlotAI10 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -19.316 0.488 -63.6
+      }
+      SlotAI11 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -3.799 0.488 -64.871
+      }
+      SlotAI12 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 11.774 0.488 -61.81
+      }
+      SlotAI13 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -32.459 0.389 -88.215
+      }
+      SlotAI14 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 14.789 -0.798 -86.326
+      }
+      SlotAI67 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -3.181 14.932 169.483
+      }
+      SlotAI68 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -131.505 1.177 55.744
+      }
+     }
+    }
+   }
+  }
+ }
+ Area3 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 400
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7861.458 7.73 8049.989
+  {
+   GenericEntity Layer4 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI15 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 14.752 4.665 90.092
+      }
+      SlotAI16 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 26.486 16.541 -252.039
+      }
+      SlotAI17 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -42.175 1.572 -29.917
+      }
+      SlotAI18 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 4.624 -0.639 -38.112
+      }
+     }
+    }
+   }
+  }
+ }
+ Area4 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bExcludeFromDynamicDespawn 1
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 150
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7806.66 5.792 8043.101
+  {
+   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 202.192 0 345.479
+    {
+     GenericEntity SlotAI2 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{A37A8ABFEBFA432C}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_SentryTeam.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{64E25AD8EC7999EC}" {
+         m_aLayerName {
+          "SlotWaypoint1" "WP_Target2"
+         }
+        }
+        m_sWPToSpawn "{B049D4C74FBC0C4D}Prefabs/AI/Waypoints/AIWaypoint_GetInNearest.et"
+       }
+      }
+      coords 44.118 20.865 -863.902
+      angleY -62.666
+     }
+     GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+      coords 40.795 21.182 -861.161
+      {
+       Vehicle BTR1 : "{5277EEE45FB383F5}Prefabs/Vehicles/Wheeled/BTR90/BTR90.et" {
+        coords 0 0 0
+        angleX -1.612
+        angleY -35.009
+        angleZ 5.482
+       }
+      }
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+      WP_Target2 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{64E6A07443A4FC66}" {
+         }
+        }
+       }
+       coords -117.727 0.343 -475.194
+      }
+      SlotWaypoint1 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointGetInNearest "{64E25AD8BC5B882E}" {
+         }
+        }
+       }
+       coords 43.041 20.841 -858.569
+       angleY -62.666
+      }
+     }
+    }
+   }
+  }
+ }
+ Area2 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 400
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 8624.316 5.445 8520.51
+  {
+   GenericEntity Layer5 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI20 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -66.98 0.715 -5.071
+      }
+      SlotAI21 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -65.176 0.715 -0.647
+      }
+      SlotAI22 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{34EA95A630897984}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_AT.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -69.795 0.715 3.38
+      }
+      SlotAI23 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{B5AF8DC211DE20BC}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_GL.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -65.828 0.717 9.93
+      }
+      SlotAI24 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -68.929 4.02 6.328
+      }
+      SlotAI25 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -66.849 4.02 9.866
+      }
+      SlotAI26 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -41.795 1.792 24.752
+      }
+      SlotAI27 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -35.907 1.792 26.86
+      }
+      SlotAI28 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -10.409 1.064 30.754
+      }
+      SlotAI29 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{A8F9581974152776}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Sapper.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 28.681 1.064 28.552
+      }
+      SlotAI30 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 44.202 1.064 20.729
+      }
+      SlotAI31 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 52.854 1.064 18.545
+      }
+      SlotAI32 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{420EE03150341249}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Sharpshooter.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 30.512 1.306 -23.183
+      }
+      SlotAI33 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et"
+         m_bRandomizePerFaction 1
+         m_eEntityCatalogType CHARACTER
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 33.787 1.306 -26.438
+      }
+      SlotAI34 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -48.147 0.858 11.218
+      }
+      SlotAI35 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 38.417 0.868 -5.212
+      }
+      SlotAI64 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 172.404 27.853 84.634
+      }
+      SlotAI65 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -33.773 31.719 200.095
+      }
+      SlotAI66 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -178.942 8.841 48.479
+      }
+      SlotAI63 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{5A9E5FF15AC341C1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_LightFireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 72.479 7.632 -101.248
+      }
+     }
+    }
+   }
+  }
+ }
+ Area9 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 300
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7497.559 134.063 8060.928
+  {
+   GenericEntity Layer11 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI58 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 0.757 0.052 10.465
+      }
+      SlotAI59 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 1.552 0.04 8.244
+      }
+      SlotAI60 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -96.572 -27.901 60.102
+      }
+      SlotAI61 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 29.328 -18.269 144.058
+      }
+      SlotAI62 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 99.693 -30.891 -72.591
+      }
+      SlotAI86 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 564.887 -94.238 -884.904
+      }
+      SlotAI87 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 447.585 -90.237 -785.333
+      }
+      SlotAI88 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 283.916 -130.405 -1011.865
+      }
+      SlotAI89 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 295.891 -127.666 -1065.835
+      }
+      SlotAI90 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 471.836 -131.023 -912.426
+      }
+      SlotAI91 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 439.529 -131.535 -933.597
+      }
+     }
+    }
+   }
+  }
+ }
+ Area11 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 350
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7952.889 2.562 7133.845
+  {
+   GenericEntity Layer13 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI72 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 4.685 0.482 21.961
+       angleY -97.919
+      }
+      SlotAI73 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 6.354 0.542 29.531
+       angleY -97.919
+      }
+      SlotAI74 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 11.771 0.992 29.954
+       angleY -97.919
+      }
+      SlotAI75 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 16.165 0.992 32.516
+       angleY -97.919
+      }
+      SlotAI76 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 19.845 0.992 30.942
+       angleY -97.919
+      }
+      SlotAI77 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 26.101 0.992 17.855
+       angleY -97.919
+      }
+      SlotAI78 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 23.974 0.992 14.592
+       angleY -97.919
+      }
+      SlotAI79 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -21.397 0.068 3.437
+       angleY -97.919
+      }
+      SlotAI80 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -31.188 0.068 -0.165
+       angleY -97.919
+      }
+      SlotAI81 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -35.89 0.068 34.877
+       angleY -97.919
+      }
+      SlotAI82 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 21.129 0.711 -4.584
+       angleY -97.919
+      }
+      SlotAI83 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 26.542 1.025 -12.581
+       angleY -97.919
+      }
+      SlotAI84 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 43.314 -1.416 -81
+       angleY -97.919
+      }
+      SlotAI85 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C4BCD9C92088D984}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Random_Single.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords 32.496 -0.936 -76.678
+       angleY -97.919
+      }
+     }
+    }
+   }
+  }
+ }
+ Area12 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 300
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7821.273 109.058 7493.008
+  {
+   GenericEntity Layer14 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI92 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -32.917 0.942 52.526
+      }
+      SlotAI93 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords 40.898 -10.542 87.123
+      }
+      SlotAI94 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{91BDC3C4F9C850F1}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_FireTeam.et"
+         m_aIncludedEditableEntityLabels {
+         }
+         m_sWPToSpawn "{CB955D7C5CE14FFB}Prefabs/AI/Waypoints/AIWaypoint_Scout50m.et"
+        }
+       }
+       coords -128.144 0.514 60.57
+      }
+     }
+    }
+   }
+  }
+ }
+ Area13 {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 30
+    m_bShowDebugShapesInWorkbench 1
+    m_bDynamicDespawnExcludeAir 1
+   }
+  }
+  coords 7941.585 2.51 7157.336
+  {
+   GenericEntity Layer15 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp SCR_AIGroup : "{C91ECE8557F16733}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Squad.et" {
+      {
+       coords -711.596 5.701 57.072
+       angleY 50.891
+      }
+      {
+       coords -622.429 3.004 215.06
+       angleY 75
+      }
+     }
+    }
+   }
+  }
+ }
+}
+Vehicle Ural4320_transport_covered_CIV_blue1 : "{F66EAD0D2016B6BA}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_CIV_blue.et" {
+ coords 8658.405 6.069 8532.192
+ angleX -0.882
+ angleY -99.941
+ angleZ 0.154
+}

@@ -1,0 +1,114 @@
+GenericEntity {
+ ID "63247BE3052AB7E4"
+ components {
+  MeshObject "{63247BE06818C9A2}" {
+   Object "{BCE236082832DE3A}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01_US_general.xob"
+  }
+  RigidBody "{63247BE067FB76CE}" {
+   ResponseIndex "Normal"
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_ArsenalComponent "{63247BE044169419}" {
+   m_eSupportedArsenalItemTypes 1048574
+   m_eSupportedArsenalItemModes 254
+   m_eEditableAttributeGroups 30
+  }
+  SCR_FactionAffiliationComponent "{6324810C70414AA5}" {
+   "faction affiliation" "APCA"
+  }
+  SCR_ResourceComponent "{63247BE0A79C67FD}" {
+   Enabled 0
+   m_aContainers {
+    SCR_ResourceContainer "{63247BE096DABDF4}" {
+    }
+   }
+   m_aConsumers {
+    SCR_ResourceConsumerServicePoint "{63247BE08C61CBD0}" {
+     m_sDebugName "Default - Consumer"
+     m_eResourceRights ALL
+     m_eGeneratorIdentifier DEFAULT
+     m_fResourceRange 135
+     m_fSellMultiplier 0
+    }
+   }
+   m_aGenerators {
+    SCR_ResourceGeneratorServicePoint "{63247BE0FB92E4E7}" {
+     m_sDebugName "Arsenal - Generator"
+     m_eResourceRights ALL
+     m_fResourceMultiplier 0.333
+     m_fStorageRange 135
+     m_aActions {
+      SCR_ResourceGeneratorActionStore "{5E5CC245EF925285}" {
+      }
+      SCR_ResourceGeneratorActionDropContainers "{5E5CC245ECE3A15F}" {
+      }
+     }
+    }
+   }
+  }
+  SCR_ResupplySupportStationComponent "{6324810CB89193AF}" {
+   m_sOnUseSoundEffectFile "{7BACA57AF41F033D}Sounds/SupportStations/SupportStations_Character.acp"
+   m_sOnUseSoundEffectEventName "SOUND_RESUPPLY_AMMUNITION_SELF"
+   m_fRange -1
+  }
+  SCR_SoundDataComponent "{63247BE0E4182D48}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{63247BE0DB1600C2}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_OPEN"
+    }
+    SCR_AudioSourceConfiguration "{63247BE0DB407499}" {
+     m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+     m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+    }
+   }
+  }
+  UniversalInventoryStorageComponent "{6324810CA6FBA227}" {
+   Attributes SCR_ItemAttributeCollection "{6324810C9C8728A5}" {
+    ItemDisplayName SCR_InventoryUIInfo "{58A17A3474A3430E}" {
+     Name "#AR-EditableEntity_AmmoBoxArsenal_Equipment_US_Name"
+     Description "#AR-Arsenal_Description"
+     m_aItemHints {
+      SCR_SupplyAvailableItemHintUIInfo "{5E76A7E6F3D189F7}" {
+      }
+     }
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{599E60F5A7F31EE8}" {
+     }
+    }
+    m_bDraggable 0
+   }
+   Priority 1000
+  }
+  SCR_ArsenalInventoryStorageManagerComponent "{63247BE0CCE73597}" {
+  }
+  ActionsManagerComponent "{63247BE0C50EAD1B}" {
+   ActionContexts {
+    UserActionContext "{63247BE337A71B5E}" {
+     ContextName "default"
+     Position PointInfo "{5476B36C45ADDA89}" {
+      Offset 0 0.4739 0
+     }
+     Radius 10
+     Height 0
+     "Display UI At Reference Point" 0
+    }
+   }
+   additionalActions {
+    Bacon_GunBuilderOpenAction "{6324810D72956E3E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6324810D7438A97A}" {
+      Name "Loadout Editor"
+     }
+    }
+   }
+  }
+  RplComponent "{63247BE33FE2F010}" {
+  }
+ }
+ coords 5349.9 43.531 10546.249
+}

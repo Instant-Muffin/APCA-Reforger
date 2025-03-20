@@ -1,0 +1,14 @@
+Vehicle : "{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et" {
+ ID "5DB688595BAB2FD7"
+ components {
+  ActionsManagerComponent "{C97BE5489221AE18}" {
+   ActionContexts {
+    UserActionContext "{6465275090E6546A}" {
+     Position PointInfo "{646527508A4B28F0}" {
+      Offset 0 1.6636 4.9233
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,20 @@
+SCR_AIGroup : "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+  PS_GroupCallsignAssigner "{6456EC4EB6E43457}" {
+   m_iPlatoonCallsign 1
+   m_iSquadCallsign 1
+  }
+  SCR_AIGroupMovementComponent "{6126A0E02097C7FF}" {
+   DefaultFormation "Line"
+  }
+ }
+ m_aUnitPrefabSlots {
+  "{864E8577C9C57707}Prefabs/Characters/Factions/BLUFOR/US_Army/D/Character_APCA_PL_D.et" "{47E945499EE4A27F}Prefabs/Characters/Factions/BLUFOR/US_Army/D/Character_APCA_Pilot_D.et" "{47E945499EE4A27F}Prefabs/Characters/Factions/BLUFOR/US_Army/D/Character_APCA_Pilot_D.et" "{5BC27C07DAEC671F}Prefabs/Characters/Factions/BLUFOR/US_Army/D/Character_APCA_EOD_D.et"
+ }
+ m_sCustomNameSet "Command"
+ m_bSetPlayable 1
+}

@@ -1,0 +1,49 @@
+GenericEntity : "{5CF603986376EAA9}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01_base.et" {
+ ID "508AB2013EEE1E00"
+ components {
+  InventoryItemComponent "{5222EB4D0C73006B}" {
+   Attributes SCR_ItemAttributeCollection "{5222EB4D0A2B466B}" {
+    ItemDisplayName UIInfo "{5222EB4D07D865FA}" {
+     Name "#AR-Intel_Name"
+     Description "#AR-Intel_Description"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 0.25
+     SizeSetupStrategy Size
+     ItemDimensions 10 1 10
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{6468AE87BB7B0DCF}" {
+      CameraOrbitAngles 0 0 0
+      CameraDistanceToItem 0.4
+      ItemRenderRotation -90 -90 -90
+     }
+    }
+    m_bRefundable 0
+   }
+  }
+  ActionsManagerComponent "{508AB5952B584B2E}" {
+   additionalActions {
+    SCR_PickUpItemAction "{51EC842E3A187379}" {
+     "Sort Priority" 1
+    }
+    APCA_CheckIntelUserAction "{6468AE865050088D}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{6468AE8648CC61D4}" {
+      Name "Check Intel"
+     }
+    }
+   }
+  }
+  APCA_IntelComponent "{6468AE878B7F6DDB}" {
+   IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+    Name "Intel"
+    Description "This item contains mission relevant information. Retrieve the item and inform Command."
+    m_bPersistent 1
+   }
+  }
+ }
+ coords 3275.772 2.095 2873.216
+}
