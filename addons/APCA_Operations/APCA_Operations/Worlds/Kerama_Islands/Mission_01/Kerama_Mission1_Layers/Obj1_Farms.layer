@@ -8,6 +8,9 @@ $grp Tank : "{0144F571F1998FC4}Prefabs/Vehicles/Tracked/BMP1/BMP1_FIA.et" {
   angleY 174.569
  }
 }
+GenericEntity : "{068C2EB42635973F}Prefabs/Weapons/Rifles/M4A1/Rifle_M4A1_RAS.et" {
+ coords 6413.645 44.281 2026.85
+}
 Vehicle UAZ469_PKM2 : "{0B4DEA8078B78A9B}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_PKM.et" {
  coords 8680.265 6.682 8518.897
  angleY -91.276
@@ -469,11 +472,20 @@ $grp GenericEntity : "{3FD3F403025BBDF5}Prefabs/Props/Military/SupplyBox/SupplyS
   angleY -2.756
  }
 }
+GameEntity : "{6939C4C453D9F7A3}Prefabs/Characters/Uniforms/Crye_Shirt/Jacket_Crye_Combat_Shirt_AMCU.et" {
+ coords 6410.981 44.281 2026.16
+}
+GameEntity : "{6DB2921F83F4FCB6}Prefabs/Characters/Uniforms/Military_Pants/Military_Pants_DPCU.et" {
+ coords 6412.184 44.281 2025.398
+}
 GenericEntity : "{7030822F7A54F479}Prefabs/Props/Crates/CrateWooden_01_base.et" {
  coords 8110.701 80.868 4862.687
  angleX 1.774
  angleY -0.166
  angleZ -5.358
+}
+GameEntity : "{7F9BF66F6E7195E5}Prefabs/Characters/HeadGear/Helmet_ECH/Helmet_ECH_lc_AMCU.et" {
+ coords 6410.544 44.281 2024.83
 }
 $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
  Area1 {

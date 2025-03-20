@@ -40,7 +40,7 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
  coords 6402.042 44.281 1994.811
  m_aFactionRespawnCount {
   PS_FactionRespawnCount "{64DA628E6EDC579A}" {
-   m_iTime 360000
+   m_iTime 300
   }
  }
  {

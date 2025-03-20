@@ -98,6 +98,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 	{
 		// Save players inventory
 		array<IEntity> playerItems = {};
+		array<IEntity> playerAttachments = {};
+		array<IEntity> carriedItems = {};
 		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
 		
 		if (playableId != RplId.Invalid())
@@ -113,25 +115,85 @@ class APCA_GameModeCoop : PS_GameModeCoop
 					SCR_InventoryStorageManagerComponent m_InventoryManager = SCR_InventoryStorageManagerComponent.Cast(m_CharacterController.GetInventoryStorageManager());		
 					if (m_InventoryManager)
 					{
-						
 						array<IEntity> tempItems = {};
+						array<IEntity> tempItemsFiltered = {};
 						//Get the current items from all storages
-						m_InventoryManager.GetItems( tempItems );
-				
-						//Remove dupes (Caused by gadget slots like flashlight on vest)
-						for(int i = 0; i < tempItems.Count(); i++)
+						m_InventoryManager.GetAllRootItems( tempItems );
+						foreach(IEntity item : tempItems)
+						{		
+							bool isUnique = true;
+							foreach(IEntity filteredItem : tempItemsFiltered)
+							{
+								if(filteredItem == item) 
+									isUnique = false;
+							}
+							if(isUnique)
+								tempItemsFiltered.Insert(item);
+						}
+						
+						// Add attached items first
+						array<BaseInventoryStorageComponent> storages = {};
+						array<IEntity> entities = {};
+						m_InventoryManager.GetStorages( storages );
+						int numSlots = 0;
+						foreach(BaseInventoryStorageComponent storage : storages)
+						{						
+							if(storage.GetPurpose() == 9) 
+							{
+								//m_InventoryManager.GetAllItems(entities, storage);
+								//PrintFormat("APCA - entities: %1", entities);	
+								numSlots = storage.GetSlotsCount();	
+								for(int i = 0; i < numSlots; i++)
+								{
+									// This gets all the main slotted items (uniforms etc)
+									InventoryStorageSlot slot = storage.GetSlot(i);
+									IEntity attachedEntity = slot.GetAttachedEntity();
+									if(attachedEntity)
+									{
+										playerItems.Insert(attachedEntity);
+										tempItemsFiltered.RemoveItem(attachedEntity);
+										PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+									}
+								}
+							}
+						}
+						foreach(BaseInventoryStorageComponent storage : storages)
 						{
-							
+													
+							if(storage.GetPurpose() != 9 && storage.GetPurpose() != 65) 
+							{
+								PrintFormat("APCA - storage.GetPurpose(): %1", storage.GetPurpose());	
+								//m_InventoryManager.GetAllItems(entities, storage);
+								//PrintFormat("APCA - entities: %1", entities);	
+								numSlots = storage.GetSlotsCount();	
+								for(int i = 0; i < numSlots; i++)
+								{
+									// This gets all the main slotted items (uniforms etc)
+									InventoryStorageSlot slot = storage.GetSlot(i);
+									IEntity attachedEntity = slot.GetAttachedEntity();
+									if(attachedEntity)
+									{
+										playerItems.Insert(attachedEntity);
+										tempItemsFiltered.RemoveItem(attachedEntity);
+										PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+									}
+								}
+							}
+						}
+						
+						for(int i = 0; i < tempItemsFiltered.Count(); i++)
+						{
+							PrintFormat("APCA - tempItemsFiltered: %1", tempItemsFiltered[i]);	
 							bool isUnique = true;
 							for(int j = 0; j < playerItems.Count(); j++)
 							{
-								if(playerItems[j] == tempItems[i])
+								if(playerItems[i] == tempItemsFiltered[i])
 									isUnique = false;
-							}
-							if(isUnique) 
-								playerItems.Insert(tempItems[i]);
-						}
-						
+							};
+							if(isUnique)
+								playerItems.Insert(tempItemsFiltered[i]);
+						};
+
 						// Now add whatever it was they dropped. Not needed if unconcious players do not drop their weapons
 						/*SCR_CharacterDamageManagerComponent newDamageManagerComponent = SCR_CharacterDamageManagerComponent.Cast(playerEntity.FindComponent(SCR_CharacterDamageManagerComponent));
 						IEntity droppedWeapon = newDamageManagerComponent.GetDroppedItem();
@@ -141,6 +203,10 @@ class APCA_GameModeCoop : PS_GameModeCoop
 			}
 		}
 		
+		for(int i = 0; i < playerItems.Count(); i++)
+		{
+			PrintFormat("APCA - playerItems: %1", playerItems[i]);
+		};
 		return playerItems;
 	}
 	
@@ -262,16 +328,14 @@ class APCA_GameModeCoop : PS_GameModeCoop
 					// Clear current items
 					array<IEntity> currentItems = {};
 					array<BaseInventoryStorageComponent> storages = {};
+					int numSlots = 0;
 					
-					m_InventoryManager.GetItems( currentItems );
+					m_InventoryManager.GetAllRootItems( currentItems );
 					
 					m_InventoryManager.GetStorages( storages );
 					foreach(BaseInventoryStorageComponent storage : storages)
 					{
-						int numSlots = storage.GetSlotsCount();
-						array<InventoryItemComponent> slotItems = {};
-						storage.GetOwnedItems(slotItems);
-						
+						numSlots = storage.GetSlotsCount();
 						for(int i = 0; i < numSlots; i++)
 						{
 							// This gets items in storage but not attached stuff
@@ -291,6 +355,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 					
 					// Add old items
 					//PrintFormat("APCA - Adding Items: %1", playerItems);
+						
 					for(int i = 0; i < playerItems.Count(); i++)
 					{
 				
@@ -298,7 +363,22 @@ class APCA_GameModeCoop : PS_GameModeCoop
 						params.TransformMode = ETransformMode.WORLD;
 						params.Transform[3] = entity.GetOrigin();
 						IEntity newItem = GetGame().SpawnEntityPrefabEx(playerItems[i].GetPrefabData().GetPrefabName(), false, GetGame().GetWorld(), params);
+						PrintFormat("APCA - newItem: %1", newItem);
 						
+						BaseLoadoutClothComponent clothNode = BaseLoadoutClothComponent.Cast(newItem.FindComponent(BaseLoadoutClothComponent));
+						if(!clothNode)
+						{
+							DeleteChildrens(newItem, false);
+						}
+						else
+						{
+							if(!LoadoutVestArea.Cast(clothNode.GetAreaType()))
+							{
+								DeleteChildrens(newItem, false);
+							};
+						}
+							
+
 						if(m_InventoryManager.CanInsertItem(newItem))
 						{
 							m_InventoryManager.InsertItem(newItem);
@@ -323,8 +403,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		vector rot;
 		vector transform[4]; 
 		point.GetPositionAndRotation(destination, rot);
-		destination[0] = destination[0] + Math.RandomFloat(-0.5, 0.5);
-		destination[2] = destination[2] + Math.RandomFloat(-0.5, 0.5);
+		destination[0] = destination[0] + Math.RandomFloat(-0.8, 0.8);
+		destination[2] = destination[2] + Math.RandomFloat(-0.8, 0.8);
 		entity.GetWorldTransform(transform);
 		transform[3] = destination;
 		
