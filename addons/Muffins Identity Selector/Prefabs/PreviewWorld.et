@@ -1,0 +1,46 @@
+GenericWorldEntity {
+ ID "64F89C2D2F01B66A"
+ coords 0 0 0
+ boundMins 0 0 0
+ boundMaxs 0 0 0
+ blockSize 200 1500 200
+ SkyPreset "{816A2E9B7F594C5D}Terrains/Common/Sky/SkyBox/HDRi_Neutral.emat"
+ {
+  GenericWorldLightEntity {
+   ID "64F89C2D2F01B66B"
+   coords 3.974 4.836 1.45
+   angleX -13.425
+   angleY -138.057
+   SunAngularSize 1
+   DirectLightLV 0.8
+   DirectLightColor 0.555 0.749 0.812 0
+   IndirectLightLV 0.4
+   IndirectLightColor 0.326 0.396 0.427 0
+   ProbeReflectionEV 1
+   ProbeDiffuseEV 1
+   "GlobalAOPower " 0.609
+   TargetEV 0
+   ManualHDRBrightness always
+   ManualHDRBrightnessLV 1
+  }
+  GenericEntity : "{336AC58F7064BACE}Prefabs/LightEntities.et" {
+   ID "64F89C7119860C22"
+   coords 0 0 0
+   {
+    LightEntity {
+     ID "64F89C2D2CB1D5AA"
+     Color 1 1 1 0
+     LV 7
+    }
+   }
+  }
+  EnvironmentProbeEntity : "{B6B6A21399C5571B}Prefabs/World/DefaultWorld/EnvProbe_Default.et" {
+   ID "64F89C2D2F0674F6"
+   coords 0 0 0
+   Type Local
+   Refresh "Each frame"
+   Rendering 33
+   CaptureLights 1
+  }
+ }
+}

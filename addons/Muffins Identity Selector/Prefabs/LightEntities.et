@@ -1,0 +1,28 @@
+GenericEntity {
+ ID "64F89C2D2CB1D5A9"
+ components {
+  Hierarchy "{64F89C2D2CB1D55A}" {
+  }
+ }
+ {
+  LightEntity {
+   ID "64F89C2D2CB1D5AA"
+   components {
+    Hierarchy "{64F89C2D2CB1D540}" {
+    }
+   }
+   coords 1.889 1.791 -2.187
+   angleX -13.132
+   angleY -19.496
+   angleZ -0.229
+   Color 0.657 0.893 1 0
+   LV 8
+   Type Point
+   Radius 45
+   SpotAngle 47.354
+   Dynamic 0
+   Visualization Disabled
+   SourceSize 1.612
+  }
+ }
+}

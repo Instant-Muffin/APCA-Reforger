@@ -1,0 +1,47 @@
+GenericEntity {
+ ID "650C971D6049C60B"
+ components {
+  MeshObject "{650C971C67990477}" {
+   Object "{ABE728E483D77AFD}Assets/Items/Identity/Belongings_Personal/Personal_Belongings_Generic_US.xob"
+  }
+  RigidBody "{650C971C69DA5081}" {
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_EditableEntityComponent "{650C971C93A08B00}" : "{996046FE206C699A}Prefabs/Editor/Components/Default_SCR_EditableEntityComponent.ct" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#MFN-IdentitySelector"
+    Description "#MFN-IdentitySelector"
+    m_Image "{55D2DAEA048614C2}Assets/Items/Identity/Belongings_Personal/Data/Personal_Belongings_Generic_Book_US_BCR.edds"
+    m_aAuthoredLabels {
+    }
+    m_aAutoLabels {
+     1 1001
+    }
+   }
+  }
+  ActionsManagerComponent "{650C971D35984030}" {
+   ActionContexts {
+    UserActionContext "{650C971D36F5B88F}" {
+     ContextName "default"
+     Position PointInfo "{5EF0C1F9FC3BEAC1}" {
+     }
+     Height 0
+    }
+   }
+   additionalActions {
+    MFN_OpenIdentitySelector_UserAction "{650C971D059765BF}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo SCR_ActionUIInfo "{650C971D119F0F4F}" {
+      Name "#MFN-OpenIdentitySelector"
+     }
+    }
+   }
+  }
+  RplComponent "{650C971C8C80C55A}" : "{B193E926C1935A4C}Prefabs/Editor/Components/Default_RplComponent.ct" {
+  }
+ }
+ coords 1384.876 9.676 1872.336
+}

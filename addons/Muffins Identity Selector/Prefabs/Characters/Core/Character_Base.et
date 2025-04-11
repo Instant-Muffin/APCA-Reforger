@@ -1,0 +1,7 @@
+SCR_ChimeraCharacter {
+ ID "520EC961A090B1EE"
+ components {
+  MFN_IdentitySelectorCharacterComponent "{65109CB25E5F009F}" {
+  }
+ }
+}

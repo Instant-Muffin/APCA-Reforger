@@ -1,0 +1,215 @@
+FrameWidgetClass {
+ Name "IdentitySelector"
+ components {
+  MFN_IdentitySelectorComponent "{64F86CFE60FF44E7}" {
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{64F87B1B8B7BEA0E}" {
+   Name "SizeLayout0"
+   Slot FrameWidgetSlot "{64F87B1B8B7BEA38}" {
+    Anchor 0 0 1 1
+    PositionX 0
+    OffsetLeft 350
+    PositionY 0
+    OffsetTop 100
+    SizeX 0
+    OffsetRight 350
+    SizeY 0
+    OffsetBottom 100
+   }
+   WidthOverride 500
+   MaxDesiredWidth 800
+   MaxDesiredHeight 800
+   {
+    OverlayWidgetClass "{64F87CA739FDA5B0}" {
+     Name "Overlay0"
+     Slot AlignableSlot "{64F87CA73CFDA27C}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     {
+      BlurWidgetClass "{64F87CA6790B2A3A}" {
+       Name "Blur"
+       Slot OverlayWidgetSlot "{64F87CA429FB2C60}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Color 0.305 0.305 0.305 1
+       Intensity 0.7
+      }
+      ImageWidgetClass "{64F87CA667FF6C59}" {
+       Name "Background"
+       Slot OverlayWidgetSlot "{64F87CA429FB2C07}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       Opacity 0.5
+       Color 0 0 0 1
+      }
+      VerticalLayoutWidgetClass "{64F87CA6C7A4D562}" {
+       Name "VerticalLayout0"
+       Slot OverlayWidgetSlot "{64F87CA429FB2C3A}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       {
+        TextWidgetClass "{64F86CF8DA2AEE33}" : "{9D643D214767D616}UI/layouts/WidgetLibrary/TextWidgets/Text_Heading2.layout" {
+         Name "Title"
+         Slot LayoutSlot "{64F86CFE1D027C20}" {
+          HorizontalAlign 1
+          VerticalAlign 0
+          Padding 0 50 0 0
+         }
+         Color 0.7605 0.3916 0.0802 1
+         Text "Identity Selector"
+        }
+        HorizontalLayoutWidgetClass "{64F869AF34B7D8AC}" {
+         Name "Window"
+         Slot LayoutSlot "{64F87CA429FB2D09}" {
+          SizeMode Fill
+         }
+         {
+          OverlayWidgetClass "{64F869AF34B7D870}" {
+           Name "Preview"
+           Slot LayoutSlot "{56EEDE05BFED5D35}" {
+            SizeMode Fill
+           }
+           {
+            VerticalLayoutWidgetClass "{64F86CFA4E8A7B84}" {
+             Name "VerticalLayout0"
+             Slot OverlayWidgetSlot "{64F86CFA4E8A7BBC}" {
+              HorizontalAlign 3
+              VerticalAlign 3
+             }
+             {
+              RenderTargetWidgetClass "{64F86CFA44E66765}" {
+               Name "PreviewWindow"
+               Slot LayoutSlot "{64F86CFE1D027DC6}" {
+                VerticalAlign 3
+                Padding 100 50 100 120
+                SizeMode Fill
+               }
+              }
+              HorizontalLayoutWidgetClass "{64F87CACD69EA622}" {
+               Name "HorizontalLayout0"
+               Slot LayoutSlot "{64F87CACD69EA7D9}" {
+                SizeMode Fill
+                FillWeight 0.2
+               }
+               {
+                ButtonWidgetClass "{64F87CACF36CC864}" : "{0EC7676429DDCBC6}UI/layouts/WidgetLibrary/Buttons/WLib_InputNavigationButton.layout" {
+                 Name "ExitButton"
+                 Slot LayoutSlot "{64F89C71410BFF29}" {
+                  HorizontalAlign 1
+                  VerticalAlign 1
+                  Padding 20 0 0 0
+                 }
+                 components {
+                  SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+                   m_sActionName "MenuBack"
+                   m_sLabel "Cancel"
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+          OverlayWidgetClass "{64F869AFAD30A008}" {
+           Name "IdentityList"
+           Slot LayoutSlot "{56EEDE05C3B3A932}" {
+            SizeMode Fill
+            FillWeight 0.5
+           }
+           {
+            VerticalLayoutWidgetClass "{64F86CFAF2A42B63}" {
+             Name "VerticalLayout0"
+             Slot OverlayWidgetSlot "{64F86CFAF2A42B04}" {
+              HorizontalAlign 3
+              VerticalAlign 3
+              Padding 0 50 50 0
+             }
+             {
+              OverlayWidgetClass "{64F86CFC740CAF90}" : "{94CAAE4A601195D3}UI/layouts/ListBox/ListBox.layout" {
+               Name "IdentityListBox"
+               Slot LayoutSlot "{64F86CFC740CAF80}" {
+                SizeMode Fill
+               }
+               {
+                ImageWidgetClass "{64F869AFAD30A009}" {
+                 Name "Background"
+                 Slot OverlayWidgetSlot "{56EEDE05C99AA714}" {
+                  HorizontalAlign 3
+                  VerticalAlign 3
+                 }
+                 Opacity 0.8
+                 Color 0.005 0.005 0.005 1
+                }
+                ScrollLayoutWidgetClass "{56691148E692435A}" {
+                 Prefab "{56691148E692435A}"
+                 Slot OverlayWidgetSlot "{56691148E692437F}" {
+                  Padding 0 0 0 0
+                 }
+                }
+                ImageWidgetClass "{5DB6D18100D38307}" {
+                 Prefab "{5DB6D18100D38307}"
+                 "Is Enabled" 0
+                 "Is Visible" 0
+                }
+               }
+              }
+              HorizontalLayoutWidgetClass "{64F86CFAFA65DCDC}" {
+               Name "HorizontalLayout0"
+               Slot LayoutSlot "{64F86CFAFA65DCF7}" {
+                SizeMode Fill
+                FillWeight 0.165
+               }
+               {
+                CheckBoxWidgetClass "{64F86CFAEB500628}" {
+                 Name "PersistenceEnable"
+                 Slot LayoutSlot "{64F86CFE1D027AC2}" {
+                  HorizontalAlign 2
+                  VerticalAlign 1
+                  Padding 40 0 10 0
+                  SizeMode Fill
+                 }
+                 text "Persistent"
+                 FontProperties FontProperties "{64F86CFBA90FF043}" {
+                  Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+                  ShadowOffset 0 0
+                 }
+                 checked 1
+                }
+                ButtonWidgetClass "{64F87CA2E3DDC798}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
+                 Name "ApplyButton"
+                 Slot LayoutSlot "{64F87CA2E3DDC7B1}" {
+                  HorizontalAlign 3
+                  VerticalAlign 3
+                  Padding 0 0 20 0
+                 }
+                 components {
+                  SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+                   m_sActionName "MenuSelect"
+                   m_sLabel "Apply Identity"
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

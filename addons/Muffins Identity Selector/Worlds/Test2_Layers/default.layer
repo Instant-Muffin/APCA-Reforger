@@ -1,0 +1,91 @@
+SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A2995A7E8BC2}" {
+     NavmeshFile "{FA94770AE4F52B83}worlds/MP/Navmeshes/Coop_CombatOps_Arland.nmn"
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{60B8A299509CF377}" {
+     NavmeshFile "{39DC008432CB842C}worlds/MP/Navmeshes/Coop_CombatOps_Arland_vehicles.nmn"
+    }
+   }
+  }
+ }
+ coords 1380.92 10.073 1878.714
+}
+SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ coords 1378.889 10.054 1878.081
+ {
+  SCR_FactionManager {
+   ID "56E685E92F1B7E7A"
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     "Identity of soldiers" FactionIdentity "{570D128F4022EF5A}" {
+      SoundIdentityArray {
+       SoundIdentity "{56E6A4E2A10529BB}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+       SoundIdentity "{5AEC87AFA4B23BE3}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+       SoundIdentity "{5AEC87AC5B4BBECE}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+       SoundIdentity "{5AEC87AC4DBA2966}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+       SoundIdentity "{5AEC87AC49BC45A0}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+       SoundIdentity "{5AEC87AC43D515D1}" {
+        VoiceID 201
+        VoicePitch -100
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ coords 1380.845 9.758 1871.026
+}
+GenericEntity : "{8703D964AC15EA53}PrefabsEditable/E_Identity_Selector.et" {
+ coords 1381.262 10.526 1871.02
+ angleY 0.128
+}
+GenericEntity : "{D174C165E264E087}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_BaseEntrance_US_01.et" {
+ components {
+  ActionsManagerComponent "{64F86CFE9AA70CB0}" {
+   ActionContexts {
+    UserActionContext "{64F86CFE9BF776BA}" {
+     ContextName "Default"
+     Position PointInfo "{64F86CFEE8E2D7FE}" {
+      Offset 0 1.1559 0
+     }
+    }
+   }
+   additionalActions {
+    MFN_OpenIdentitySelector_UserAction "{64F86CFEDF9DAC93}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo UIInfo "{64F86CFF2205981C}" {
+      Name "Open Identity Selector"
+     }
+    }
+   }
+  }
+ }
+ coords 1377.964 9.836 1870.723
+}

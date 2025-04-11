@@ -1,0 +1,35 @@
+GameProject {
+ ID "MuffinsIdentitySelector"
+ GUID "64F869693699EEA7"
+ TITLE "Muffins Identity Selector"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+   WidgetManagerSettings WidgetManagerSettings "{AC4BE58770485E02}" {
+    StringTables {
+     StringTableDefinition "{650CA5CDDB5BB4EE}" {
+      StringTableSource "{D32918192A62D400}StringTable.st"
+      Languages {
+       LanguageDefinition "{650CA5CC27920A3D}" {
+        Code "en_us"
+        StringTableRuntime "{5B82D15BD79DB797}ID_Selector.en_us.conf"
+       }
+      }
+     }
+    }
+   }
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig PS5 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

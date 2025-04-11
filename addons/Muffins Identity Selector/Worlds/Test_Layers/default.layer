@@ -1,0 +1,38 @@
+SCR_ChimeraCharacter : "{3726077BE60962FF}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_RTO.et" {
+ coords 1384.407 9.762 1874.415
+}
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ coords 1380.845 9.758 1871.026
+}
+GenericEntity : "{8703D964AC15EA53}PrefabsEditable/E_Identity_Selector.et" {
+ coords 1381.262 10.526 1871.02
+ angleY 0.128
+}
+GenericEntity : "{984D8E08030E5A24}PrefabsEditable/Auto/Props/Furniture/E_Armchair_03.et" {
+ coords 1384.151 9.669 1870.977
+}
+GenericEntity : "{D174C165E264E087}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_BaseEntrance_US_01.et" {
+ components {
+  ActionsManagerComponent "{64F86CFE9AA70CB0}" {
+   ActionContexts {
+    UserActionContext "{64F86CFE9BF776BA}" {
+     ContextName "Default"
+     Position PointInfo "{64F86CFEE8E2D7FE}" {
+      Offset 0 1.1559 0
+     }
+    }
+   }
+   additionalActions {
+    MFN_OpenIdentitySelector_UserAction "{64F86CFEDF9DAC93}" {
+     ParentContextList {
+      "Default"
+     }
+     UIInfo UIInfo "{64F86CFF2205981C}" {
+      Name "Open Identity Selector"
+     }
+    }
+   }
+  }
+ }
+ coords 1377.964 9.836 1870.723
+}
