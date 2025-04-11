@@ -10,9 +10,88 @@ SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionMana
   }
   SCR_Faction "{64D486F00365A291}" : "{569A7A98CB9DD381}Configs/Factions/APCA.conf" {
    FactionKey "APCA"
+   m_aRanks {
+    SCR_CharacterRank "{64D486F01A0F5C79}" {
+     m_iRank CUSTOM1
+     m_sRankName "Rifleman"
+     m_sRankNameUpper "RIFLEMAN"
+     m_sRankNameShort "RFL"
+    }
+    SCR_CharacterRank "{64D486F01A0F5C7B}" {
+     m_iRank CUSTOM2
+     m_sRankName "Machine Gunner"
+     m_sRankNameUpper "MACHINE GUNNER"
+     m_sRankNameShort "LMG"
+     m_sInsignia "AR_Rank_OR-2"
+    }
+    SCR_CharacterRank "{64D486F01A0F5C64}" {
+     m_iRank CUSTOM3
+     m_sRankName "Anti-Tank"
+     m_sRankNameUpper "ANTI-TANK"
+     m_sRankNameShort "AT"
+     m_sInsignia "AR_Rank_OR-2"
+    }
+    SCR_CharacterRank "{64D486F01A0F5C65}" {
+     m_iRank CUSTOM4
+     m_sRankName "Firetem Leader"
+     m_sRankNameUpper "FIRETEAM LEADER"
+     m_sRankNameShort "FTL"
+     m_sInsignia "AR_Rank_OR-4_C"
+    }
+    SCR_CharacterRank "{64D486F01A0F5C66}" {
+     m_iRank CUSTOM5
+     m_sRankName "Medic"
+     m_sRankNameUpper "MEDIC"
+     m_sRankNameShort "CFA"
+     m_sInsignia "AR_Rank_OR-4_C"
+    }
+    SCR_CharacterRank "{64D486F01A0F5C67}" {
+     m_iRank CUSTOM6
+     m_sRankName "Squad Leader"
+     m_sRankNameUpper "SQUAD LEADER"
+     m_sRankNameShort "SQL"
+     m_sInsignia "AR_Rank_OR-5"
+    }
+   }
    m_aEntityCatalogs {
     SCR_EntityCatalogMultiList "{5C68A0EEB3F124F9}" {
      m_aMultiLists {
+      SCR_EntityCatalogMultiListEntry "{64D486F0DC1FE265}" {
+       m_aEntities {
+        SCR_EntityCatalogInventoryItem "{64D486F0DC1E5F7E}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D486F0DC1E5F7D}" {
+           m_eRequiredRank CUSTOM2
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{64D486F0DC1EF2D5}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D486F0DC1E9216}" {
+           m_eRequiredRank CUSTOM3
+          }
+         }
+        }
+        SCR_EntityCatalogInventoryItem "{64D486F40D0EA67B}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D486F40D0EA6BB}" {
+           m_eRequiredRank CUSTOM3
+          }
+         }
+        }
+       }
+      }
+      SCR_EntityCatalogMultiListEntry "{64D486F0DC174852}" {
+       m_aEntities {
+        SCR_EntityCatalogInventoryItem "{64D486F0DC17FBD8}" {
+         m_aEntityDataList {
+          SCR_ArsenalItem "{64D486F0DC17FBDB}" {
+           m_eRequiredRank CUSTOM6
+          }
+         }
+        }
+       }
+      }
       SCR_EntityCatalogMultiListEntry "{64D486F0DC168A1B}" {
        m_aEntities {
         SCR_EntityCatalogInventoryItem "{64D89A3A9765F581}" {
@@ -47,11 +126,6 @@ SCR_FactionManager : "{A242612865F2A48E}Prefabs/MP/Managers/Factions/FactionMana
            m_iSupplyCost 0
           }
          }
-        }
-        SCR_EntityCatalogInventoryItem "{64D89A3890CA4B99}" {
-        }
-        SCR_EntityCatalogInventoryItem "{64D89A3891FE5E91}" {
-         m_sEntityPrefab "{EE84C590AD38E7BC}Prefabs/Characters/HeadGear/Helmet_OPSCORE/variants/Helmet_OPSCORE_XP_Headset_AMCU.et"
         }
        }
       }

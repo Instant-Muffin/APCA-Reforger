@@ -10,6 +10,9 @@ class APCA_CivilianComponent : ScriptComponent
 	//ref array<IEntity> worldEntities = {};
 	ref array<SCR_MapDescriptorComponent> locationMapComponents = {};
 	
+	[Attribute(defvalue: "false", desc: "Randomly Travel Between Locations", category: "CIV")]
+	protected bool m_autoTravel;
+	
 	//---------------------------------------------------------------------------------------------------	
 	override void OnPostInit(IEntity owner)
 	{
@@ -18,8 +21,10 @@ class APCA_CivilianComponent : ScriptComponent
 		
 		super.OnPostInit(owner);
 		
-		AddWaypoints();
-		
+		if(m_autoTravel)
+		{
+			AddWaypoints();
+		}
 	}
 	
 	// Courtesy of Bacon

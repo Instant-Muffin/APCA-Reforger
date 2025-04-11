@@ -48,6 +48,9 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
    m_bEnableTeamKillPunishment 0
   }
+  SCR_ArsenalManagerComponent "{6120A34EB1E9BBEF}" {
+   m_bRankLockedItems 1
+  }
   SCR_CampaignBuildingManagerComponent "{62E0D8448706FB3E}" {
    m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
    m_BudgetType CAMPAIGN
@@ -77,22 +80,47 @@ APCA_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
   SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
    m_iKillFeedType DISABLED
+   m_aKillfeedTypeNames {
+    SCR_NotificationKillfeedTypeName "{5932B0310455E486}" {
+     m_iKillfeedType 2147483647
+    }
+    SCR_NotificationKillfeedTypeName "{5932B0310491106B}" {
+     m_iKillfeedType 2147483647
+    }
+    SCR_NotificationKillfeedTypeName "{5932B031048D51BD}" {
+     m_iKillfeedType 2147483647
+    }
+   }
    m_aKillfeedReceiveTypeNames {
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B747E765}" {
      m_iKillfeedreceiveType GROUP_ONLY
+     m_sKillfeedReceiveTypeName ""
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B7003ECC}" {
      m_iKillfeedreceiveType GROUP_ONLY
+     m_sKillfeedReceiveTypeName ""
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B7D2B6CF}" {
      m_iKillfeedreceiveType GROUP_ONLY
+     m_sKillfeedReceiveTypeName ""
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036B6AB6528}" {
+     m_sKillfeedReceiveTypeName ""
     }
     SCR_NotificationKillfeedreceiveTypeName "{5932B036A5A136C4}" {
      m_iKillfeedreceiveType GROUP_ONLY
+     m_sKillfeedReceiveTypeName ""
     }
    }
+   m_aFriendlyFireKillfeedTypeNames {
+    SCR_NotificationFriendlyFireKillfeedTypeName "{620E8003E24FB839}" {
+     m_eFriendlyFireKillfeedType DEFAULT_SETTINGS
+    }
+   }
+  }
+  SCR_PerceivedFactionManagerComponent "{61AA7E6E0C6A76F9}" {
+   m_eCharacterPerceivedFactionOutfitType FULL_OUTFIT
+   m_bPerceivedFactionChangesAffectsAI 1
   }
   SCR_PreGameGameModeStateComponent "{62E0D8448706FBCB}" {
    m_fDuration 0

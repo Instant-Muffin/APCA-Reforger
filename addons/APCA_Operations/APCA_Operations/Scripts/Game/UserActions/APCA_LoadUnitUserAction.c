@@ -47,7 +47,7 @@ class APCA_LoadUnitUserAction : ScriptedUserAction
 		// Trying to carry while unit is ragdolling will break things
 		if (ownerChar.GetAnimationComponent().IsRagdollActive())
 		{
-			SetCannotPerformReason(ActionMenuFailReason.DEFAULT);
+			SetCannotPerformReason("Ragdolling");
 			return false;
 		}
 		

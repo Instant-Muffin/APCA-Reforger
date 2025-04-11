@@ -40,7 +40,7 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
  coords 6402.042 44.281 1994.811
  m_aFactionRespawnCount {
   PS_FactionRespawnCount "{64DA628E6EDC579A}" {
-   m_iTime 300
+   m_iTime 300000
   }
  }
  {
@@ -97,6 +97,72 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
             SCR_ArsenalItem "{64E2C2BDC9C3FB7F}" {
              m_eItemType EXPLOSIVES
              m_iSupplyCost 4
+            }
+           }
+          }
+         }
+        }
+        SCR_EntityCatalogMultiListEntry "{64D486F0DC15D9DC}" {
+         m_aEntities {
+          SCR_EntityCatalogInventoryItem "{64D486F0DC146AEE}" {
+           m_bEnabled 0
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A3932DF6593}" {
+           m_bEnabled 0
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A393ABFFE65}" {
+           m_bEnabled 0
+          }
+          SCR_EntityCatalogInventoryItem "{64D89A393BA9DD93}" {
+           m_bEnabled 0
+          }
+          SCR_EntityCatalogInventoryItem "{64EC73C718B9BD53}" {
+           m_sEntityPrefab "{5B2FD067D70C1E8F}Prefabs/Items/Medicine/EpinephrineInjection/ACE_Medical_EpinephrineInjection.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{5E110E1D8B6C3689}" {
+             m_eItemType HEAL
+             m_eItemMode CONSUMABLE
+             m_iSupplyCost 3
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64EC73C74676DBC7}" {
+           m_sEntityPrefab "{58CF3AB87C441295}Prefabs/Items/Medicine/AmmoniumCarbonatePackage/ACE_Medical_AmmoniumCarbonatePackage.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64EC73C74676DB9D}" {
+             m_eItemType HEAL
+             m_eItemMode CONSUMABLE
+             m_iSupplyCost 3
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64EC73C76098F5DA}" {
+           m_sEntityPrefab "{9BBA766CD869002C}Prefabs/Items/Medicine/PhenylephrineInjection/ACE_Medical_PhenylephrineInjection.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64EC73C76098F591}" {
+             m_eItemType HEAL
+             m_eItemMode CONSUMABLE
+             m_iSupplyCost 3
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64EC73C7601C1729}" {
+           m_sEntityPrefab "{02DD34077F51F65E}Prefabs/Items/Medicine/NaloxoneInjection/ACE_Medical_NaloxoneInjection.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64EC73C7601C14E0}" {
+             m_eItemType HEAL
+             m_eItemMode CONSUMABLE
+             m_iSupplyCost 3
+            }
+           }
+          }
+          SCR_EntityCatalogInventoryItem "{64EC73C7617B27DA}" {
+           m_sEntityPrefab "{D0434D5215B54181}Prefabs/Items/Medicine/MetoprololInjection/ACE_Medical_MetoprololInjection.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64EC73C7617B2793}" {
+             m_eItemType HEAL
+             m_eItemMode CONSUMABLE
+             m_iSupplyCost 3
             }
            }
           }
@@ -178,6 +244,15 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
             }
            }
           }
+          SCR_EntityCatalogInventoryItem "{64EAD81D6D2023DA}" {
+           m_sEntityPrefab "{8BE4AF4A42081C9A}Prefabs/Characters/Uniforms/Crye_Shirt/Jacket_Crye_Combat_Shirt_Rolled_DPCU.et"
+           m_aEntityDataList {
+            SCR_ArsenalItem "{64EAD81D6D20238A}" {
+             m_eItemType TORSO
+             m_iSupplyCost 0
+            }
+           }
+          }
           SCR_EntityCatalogInventoryItem "{64E2AB5D9AA535EB}" {
            m_sEntityPrefab "{6DB2921F83F4FCB6}Prefabs/Characters/Uniforms/Military_Pants/Military_Pants_DPCU.et"
            m_aEntityDataList {
@@ -251,6 +326,11 @@ APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Mod
       }
      }
     }
+    SCR_Faction "{607AA5C7A94496DA}" {
+     m_aFriendlyFactionsIds {
+      "APCA"
+     }
+    }
    }
   }
  }
@@ -307,10 +387,6 @@ $grp Vehicle : "{420562B2B5D106C3}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60
   coords 6421.764 44.816 2083.112
   angleY 106.45
  }
-}
-Vehicle M151A2_transport1 : "{47D94E1193A88497}Prefabs/Vehicles/Wheeled/M151A2/M151A2_transport.et" {
- coords 6398.639 44.281 2012.423
- angleY 113.148
 }
 SCR_AIGroup : "{4D8E145FBAEF2FBB}Prefabs/Groups/BLUFOR/APCA/Group_APCA_Bravo.et" {
  coords 6345.224 44.281 1969.423

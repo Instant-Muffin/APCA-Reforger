@@ -17,6 +17,6 @@ SCR_AIGroup : "{242BC3C6BCE96EA5}Prefabs/Groups/INDFOR/Group_FIA_Base.et" {
  coords 3821.434 114.864 4997.588
  m_faction "CIV"
  m_aUnitPrefabSlots {
-  "{22E43956740A6794}Prefabs/Characters/Factions/CIV/GenericCivilians/Character_CIV_Randomized.et"
+  "{1D5C32C88886CA16}Prefabs/Characters/Factions/CIV/GenericCivilians/APCA_Character_CIV_Randomized.et"
  }
 }

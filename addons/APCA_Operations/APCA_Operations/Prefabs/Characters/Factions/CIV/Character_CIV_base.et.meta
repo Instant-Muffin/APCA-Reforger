@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{1D5C32C88886CA16}Prefabs/Characters/Factions/CIV/GenericCivilians/APCA_Character_CIV_Randomized.et"
+ Name "{99F600AD4C6BA6A4}Prefabs/Characters/Factions/CIV/Character_CIV_base.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

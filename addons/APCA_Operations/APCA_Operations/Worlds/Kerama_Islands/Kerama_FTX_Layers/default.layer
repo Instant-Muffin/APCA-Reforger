@@ -26,6 +26,14 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 }
 APCA_GameModeCoop APCA_GameMode_Lobby1 : "{5677F55606CF7253}Prefabs/GameMode/Modes/APCA_GameMode_Lobby.et" {
  components {
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_eFriendlyFireKillFeedType SHOW_FRIENDLY_KILLS_TO_PLAYERS_INVOLVED
+   m_aKillfeedTypeNames {
+    SCR_NotificationKillfeedTypeName "{5932B031048D51BD}" {
+     m_iKillfeedType 2147483647
+    }
+   }
+  }
   SCR_TimeAndWeatherHandlerComponent "{62E0D8448706FBDB}" {
    m_iStartingHours 10
    m_iStartingMinutes 30

@@ -33,7 +33,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		if (playableId != RplId.Invalid())
 		{
 			PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
+			PS_PlayableContainer playableContainer = playableManager.GetPlayableById(playableId);
+			PS_PlayableComponent playableComponent = playableContainer.GetPlayableComponent();
 			if (!playableComponent)
 				return;
 			FactionAffiliationComponent factionAffiliationComponent = playableComponent.GetFactionAffiliationComponent();
@@ -63,37 +64,6 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		
 	}
 	
-	void RemoteForceRespawn()
-	{
-		Rpc(ForceRespawn);
-	}
-	
-	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void ForceRespawn()
-	{
-		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-		array<PS_PlayableComponent> allPlayers = playableManager.GetPlayablesSorted();
-		for(int i = 0; i < allPlayers.Count(); i++)
-		{
-			ChimeraCharacter character = allPlayers[i].GetOwnerCharacter();
-			IEntity entity = IEntity.Cast(character);
-			if (character)
-			{			
-				// Check they're waiting to respawn		
-				APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
-				if(APCA_Data.GetRespawning())
-				{
-					// Get their current inventory
-					array<IEntity> playerItems = GetInventory(allPlayers[i].GetId());
-					
-					// Respawn them
-					TryRespawnAfterSpectator(allPlayers[i].GetId(), APCA_Data.GetPlayerID(), playerItems);
-				}
-			}
-			
-		}
-	}
-	
 	array<IEntity> GetInventory(RplId playableId)
 	{
 		// Save players inventory
@@ -104,7 +74,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		
 		if (playableId != RplId.Invalid())
 		{
-			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
+			PS_PlayableContainer playableContainer = playableManager.GetPlayableById(playableId);
+			PS_PlayableComponent playableComponent = playableContainer.GetPlayableComponent();
 			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
 			IEntity entity = IEntity.Cast(character);
 			if (character)
@@ -152,7 +123,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 									{
 										playerItems.Insert(attachedEntity);
 										tempItemsFiltered.RemoveItem(attachedEntity);
-										PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+										//PrintFormat("APCA - attachedEntity: %1", attachedEntity);
 									}
 								}
 							}
@@ -162,7 +133,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 													
 							if(storage.GetPurpose() != 9 && storage.GetPurpose() != 65) 
 							{
-								PrintFormat("APCA - storage.GetPurpose(): %1", storage.GetPurpose());	
+								//PrintFormat("APCA - storage.GetPurpose(): %1", storage.GetPurpose());	
 								//m_InventoryManager.GetAllItems(entities, storage);
 								//PrintFormat("APCA - entities: %1", entities);	
 								numSlots = storage.GetSlotsCount();	
@@ -175,7 +146,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 									{
 										playerItems.Insert(attachedEntity);
 										tempItemsFiltered.RemoveItem(attachedEntity);
-										PrintFormat("APCA - attachedEntity: %1", attachedEntity);
+										//PrintFormat("APCA - attachedEntity: %1", attachedEntity);
 									}
 								}
 							}
@@ -183,7 +154,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 						
 						for(int i = 0; i < tempItemsFiltered.Count(); i++)
 						{
-							PrintFormat("APCA - tempItemsFiltered: %1", tempItemsFiltered[i]);	
+							//PrintFormat("APCA - tempItemsFiltered: %1", tempItemsFiltered[i]);	
 							bool isUnique = true;
 							for(int j = 0; j < playerItems.Count(); j++)
 							{
@@ -202,11 +173,6 @@ class APCA_GameModeCoop : PS_GameModeCoop
 				}
 			}
 		}
-		
-		for(int i = 0; i < playerItems.Count(); i++)
-		{
-			PrintFormat("APCA - playerItems: %1", playerItems[i]);
-		};
 		return playerItems;
 	}
 	
@@ -215,7 +181,8 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
 		if (playableId != RplId.Invalid())
 		{
-			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId);
+			PS_PlayableContainer playableContainer = playableManager.GetPlayableById(playableId);
+			PS_PlayableComponent playableComponent = playableContainer.GetPlayableComponent();
 			if (!playableComponent)
 				return;
 			
@@ -257,7 +224,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		EntitySpawnParams params = new EntitySpawnParams();
 		Math3D.MatrixCopy(respawnData.m_aSpawnTransform, params.Transform);
 		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
-		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_iId);
+		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_Id);
 		SCR_AIGroup playabelGroup = aiGroup.GetSlave();
 		playabelGroup.AddAIEntityToGroup(entity);
 		
@@ -363,7 +330,7 @@ class APCA_GameModeCoop : PS_GameModeCoop
 						params.TransformMode = ETransformMode.WORLD;
 						params.Transform[3] = entity.GetOrigin();
 						IEntity newItem = GetGame().SpawnEntityPrefabEx(playerItems[i].GetPrefabData().GetPrefabName(), false, GetGame().GetWorld(), params);
-						PrintFormat("APCA - newItem: %1", newItem);
+						//PrintFormat("APCA - newItem: %1", newItem);
 						
 						BaseLoadoutClothComponent clothNode = BaseLoadoutClothComponent.Cast(newItem.FindComponent(BaseLoadoutClothComponent));
 						if(!clothNode)
