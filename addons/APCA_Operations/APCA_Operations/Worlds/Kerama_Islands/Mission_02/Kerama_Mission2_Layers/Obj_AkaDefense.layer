@@ -1,0 +1,432 @@
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ TimeSkip_Mortars {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesDuringRuntime 1
+    m_bShowDebugShapesInWorkbench 1
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionChangeWeather "{652A5DED38DFE47B}" {
+      m_sWeatherPresetName "Rainy"
+      m_fTransitionDuration 0.5
+      m_bAutomaticWind 0
+     }
+     APCA_ScenarioFrameworkActionChangeTimeTransition "{652CE75547C56306}" {
+      m_iHours 18
+      m_iMinutes 30
+     }
+    }
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 10
+    m_bExcludeFromDynamicDespawn 1
+   }
+  }
+  coords 6291.177 2.162 951.364
+  {
+   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    Layer3 {
+     coords -752.03 1.56 3120.282
+     {
+      GenericEntity L_Mortar_W : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 4.399 0.057 3.307
+       {
+        GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{D01FB74BE7440B16}PrefabsEditable/EffectsModules/Mortar/Smoke/EffectModule_Zoned_MortarBarrage_Smoke_Line.et"
+          }
+         }
+         coords -19.006 2.778 -0.267
+         angleY -134.278
+        }
+       }
+      }
+      SCR_ScenarioFrameworkLogicCounter C_Mortar_W : "{6C1792C71DCAFD55}Prefabs/Systems/ScenarioFramework/Components/LogicCounter.et" {
+       coords 4.399 0.057 3.307
+       m_iCountTo 1000
+      }
+      $grp GenericEntity : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       T_Mortar_W {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_fUpdateRate 5
+            m_aEntityEnteredActions {
+             SCR_ScenarioFrameworkActionCompareCounterAndExecute "{652A5DF54C12389E}" {
+              m_eComparisonOperator GREATER_OR_EQUAL
+              m_iValue 50
+              m_sCounterName "C_Mortar_W"
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{652A5DF7A9B95FF9}" {
+                m_iMaxNumberOfActivations 2
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{652A5DF062965BA9}" {
+                 m_sLayerBaseName "L_Mortar_W"
+                }
+                m_bReinitAfterRestoration 1
+               }
+               SCR_ScenarioFrameworkActionResetCounter "{652A5DF47658C41F}" {
+                m_sCounterName "C_Mortar_W"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.433 1.225 29.274
+       }
+       T_Mortar_W_Count {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_bActivateOnEmpty 1
+            m_fUpdateRate 10
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionIncrementCounter "{652A5DF77F6506E1}" {
+              m_sCounterName "C_Mortar_W"
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.433 1.225 29.274
+       }
+      }
+     }
+    }
+    Layer5 {
+     coords -695.853 1.275 3104.258
+     angleY 99.512
+     {
+      GenericEntity L_Mortar_W_2 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 4.398 0.057 3.308
+       {
+        GenericEntity Slot2 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{D01FB74BE7440B16}PrefabsEditable/EffectsModules/Mortar/Smoke/EffectModule_Zoned_MortarBarrage_Smoke_Line.et"
+          }
+         }
+         coords -19.005 2.778 -0.267
+         angleY -134.278
+        }
+       }
+      }
+      $grp GenericEntity : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       SlotPlayerTrigger2 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_fUpdateRate 5
+            m_aEntityEnteredActions {
+             SCR_ScenarioFrameworkActionCompareCounterAndExecute "{652A5DF54C12389E}" {
+              m_eComparisonOperator GREATER_OR_EQUAL
+              m_iValue 50
+              m_sCounterName "C_Mortar_W"
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{652A5DF7A9B95FF9}" {
+                m_iMaxNumberOfActivations 2
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{652A5DF062965BA9}" {
+                 m_sLayerBaseName "L_Mortar_W_2"
+                }
+                m_bReinitAfterRestoration 1
+               }
+               SCR_ScenarioFrameworkActionResetCounter "{652A5DF47658C41F}" {
+                m_sCounterName "C_Mortar_W"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.435 1.225 29.274
+       }
+       SlotPlayerTrigger1 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_bActivateOnEmpty 1
+            m_fUpdateRate 10
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionIncrementCounter "{652A5DF77F6506E1}" {
+              m_sCounterName "C_Mortar_W"
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.435 1.225 29.274
+       }
+      }
+     }
+    }
+    Layer6 {
+     coords -1133.538 2.769 2832.422
+     angleY -41.259
+     {
+      GenericEntity L_Mortar_E : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 4.397 0.057 3.307
+       {
+        GenericEntity Slot3 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{D01FB74BE7440B16}PrefabsEditable/EffectsModules/Mortar/Smoke/EffectModule_Zoned_MortarBarrage_Smoke_Line.et"
+          }
+         }
+         coords -19.003 2.778 -0.267
+         angleY -134.278
+        }
+       }
+      }
+      $grp GenericEntity : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       SlotPlayerTrigger4 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_fUpdateRate 5
+            m_aEntityEnteredActions {
+             SCR_ScenarioFrameworkActionCompareCounterAndExecute "{652A5DF54C12389E}" {
+              m_eComparisonOperator GREATER_OR_EQUAL
+              m_iValue 50
+              m_sCounterName "C_Mortar_W"
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{652A5DF7A9B95FF9}" {
+                m_iMaxNumberOfActivations 2
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{652A5DF062965BA9}" {
+                 m_sLayerBaseName "L_Mortar_E"
+                }
+                m_bReinitAfterRestoration 1
+               }
+               SCR_ScenarioFrameworkActionResetCounter "{652A5DF47658C41F}" {
+                m_sCounterName "C_Mortar_W"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.436 1.225 29.272
+       }
+       SlotPlayerTrigger5 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_bActivateOnEmpty 1
+            m_fUpdateRate 10
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionIncrementCounter "{652A5DF77F6506E1}" {
+              m_sCounterName "C_Mortar_W"
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.436 1.225 29.272
+       }
+      }
+     }
+    }
+    Layer11 {
+     coords -1033.507 4.471 2915.934
+     angleY -11.755
+     {
+      GenericEntity L_Mortar_E_2 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+       coords 4.4 0.057 3.307
+       {
+        GenericEntity Slot4 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+         components {
+          SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+           m_sObjectToSpawn "{D01FB74BE7440B16}PrefabsEditable/EffectsModules/Mortar/Smoke/EffectModule_Zoned_MortarBarrage_Smoke_Line.et"
+          }
+         }
+         coords -19.003 2.778 -0.269
+         angleY -134.278
+        }
+       }
+      }
+      $grp GenericEntity : "{D183AFE8DAF9793D}Prefabs/Systems/ScenarioFramework/Components/SlotPlayerTrigger.et" {
+       SlotPlayerTrigger6 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_fUpdateRate 5
+            m_aEntityEnteredActions {
+             SCR_ScenarioFrameworkActionCompareCounterAndExecute "{652A5DF54C12389E}" {
+              m_iMaxNumberOfActivations 2
+              m_eComparisonOperator GREATER_OR_EQUAL
+              m_iValue 50
+              m_sCounterName "C_Mortar_W"
+              m_aActions {
+               SCR_ScenarioFrameworkActionRestoreLayerToDefault "{652A5DF7A9B95FF9}" {
+                m_Getter SCR_ScenarioFrameworkGetLayerBase "{652A5DF062965BA9}" {
+                 m_sLayerBaseName "L_Mortar_E_2"
+                }
+                m_bReinitAfterRestoration 1
+               }
+               SCR_ScenarioFrameworkActionResetCounter "{652A5DF47658C41F}" {
+                m_sCounterName "C_Mortar_W"
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.434 1.225 29.271
+       }
+       SlotPlayerTrigger7 {
+        components {
+         SCR_ScenarioFrameworkSlotTrigger "{5A4B5098DE424991}" {
+          m_aPlugins {
+           SCR_ScenarioFrameworkPluginTrigger "{5AC53D73FCB1F805}" {
+            m_fAreaRadius 120
+            m_eActivationPresence ANY_CHARACTER
+            m_sActivatedByThisFaction "USSR"
+            m_bActivateOnEmpty 1
+            m_fUpdateRate 10
+            m_aFinishedActions {
+             SCR_ScenarioFrameworkActionIncrementCounter "{652A5DF77F6506E1}" {
+              m_sCounterName "C_Mortar_W"
+             }
+            }
+           }
+          }
+         }
+        }
+        coords -28.434 1.225 29.271
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+ QRF_Area {
+  components {
+   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
+    m_aActivationActions {
+     SCR_ScenarioFrameworkActionQRFDispacher "{652EB55C14F2AA78}" {
+      m_sQRFLayerName "QRF_Layer"
+      m_eThresholdType REMAINING_UNITS
+      m_iThreshold 12
+      m_iNumberOfAvailableQRFWaves 10
+      m_fQRFNextWaveDelay 0
+      m_aGroupList {
+       SCR_QRFGroupConfig "{652EB55CA0EF7593}" {
+        m_sGroupPrefab "{C91ECE8557F16733}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Squad.et"
+       }
+      }
+      m_aWPConfig {
+       SCR_QRFWaypointConfig "{652EB55D2E98DD84}" {
+        m_sWPToSpawn "{B3E7B8DC2BAB8ACC}Prefabs/AI/Waypoints/AIWaypoint_SearchAndDestroy.et"
+        m_iDistanceOffsetToTargetLocation 5
+       }
+      }
+      m_sQRFRequestedSoundEventName "SOUND_REQUEST_QRF_USSR"
+      m_sQRFSentSoundEventName "SOUND_CONFIRM_QRF_USSR"
+      m_sSoundProjectFile "{A65355A96C153C12}Sounds/RadioProtocol/RadioProtocol_ScenarioFramework_QRF.acp"
+     }
+    }
+    m_bDynamicDespawn 1
+    m_iDynamicDespawnRange 900
+    m_bExcludeFromDynamicDespawn 1
+   }
+  }
+  coords 5465.534 4 3913.541
+  {
+   GenericEntity Layer7 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+    coords 0 0 0
+    {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      SlotAI2 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C91ECE8557F16733}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Squad.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -376.902 105.907 629.473
+      }
+      SlotAI201 {
+       components {
+        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+         m_sObjectToSpawn "{C91ECE8557F16733}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_Squad.et"
+         m_sWPToSpawn "{68F2AD65F83EC65F}Prefabs/AI/Waypoints/AIWaypoint_DefendVerySmall.et"
+        }
+       }
+       coords -377.407 106.556 619.471
+      }
+     }
+    }
+   }
+   GenericEntity QRF_Layer : "{63D611AA694A8AE3}Prefabs/Systems/ScenarioFramework/Compositions/QRFSpawnpointsLayer.et" {
+    components {
+     SCR_ScenarioFrameworkLayerBase "{5A2283EA2A0B4B14}" {
+      m_iDynamicDespawnRange 900
+     }
+    }
+    coords 51.445 -0.781 -1.099
+    {
+     GenericEntity {
+      ID "6054EE897FB6C21B"
+      coords 605.429 34.009 373.543
+     }
+     $grp GenericEntity : "{FCE82B7F21949782}Prefabs/Systems/ScenarioFramework/Compositions/QRFSpawnpoint.et" {
+      QRFSpawnpoint2 {
+       coords -837.414 68.021 -128.554
+      }
+      QRFSpawnpoint3 {
+       coords -645.924 69.167 131.399
+       angleY 65.312
+      }
+      QRFSpawnpoint4 {
+       coords -415.034 70.806 322.494
+      }
+      QRFSpawnpoint5 {
+       coords 42.045 48.048 436.232
+      }
+      QRFSpawnpoint6 {
+       coords 309.29 9.389 540.683
+      }
+     }
+    }
+   }
+  }
+ }
+}

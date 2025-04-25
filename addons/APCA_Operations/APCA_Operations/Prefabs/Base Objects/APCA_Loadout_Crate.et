@@ -18,7 +18,7 @@ GenericEntity {
    "faction affiliation" "APCA"
   }
   SCR_ResourceComponent "{63247BE0A79C67FD}" {
-   Enabled 0
+   Enabled 1
    m_aContainers {
     SCR_ResourceContainer "{63247BE096DABDF4}" {
     }
@@ -30,6 +30,14 @@ GenericEntity {
      m_eGeneratorIdentifier DEFAULT
      m_fResourceRange 135
      m_fSellMultiplier 0
+     m_ContainerQueue SCR_ResourceConsumerContainerQueue "{65293000371D07F7}" {
+      m_StoragePolicies {
+       SCR_ResourceConsumerStoragePolicy "{609E9BD8BFF1E9A9}" {
+       }
+       SCR_ResourceConsumerStoragePolicy "{5DB893A5BBA9CCD4}" {
+       }
+      }
+     }
     }
    }
    m_aGenerators {
@@ -38,6 +46,14 @@ GenericEntity {
      m_eResourceRights ALL
      m_fResourceMultiplier 0.333
      m_fStorageRange 135
+     m_ContainerQueue SCR_ResourceGeneratorContainerQueue "{652930000863E606}" {
+      m_StoragePolicies {
+       SCR_ResourceGeneratorStoragePolicy "{5DB893A542D1B09C}" {
+       }
+       SCR_ResourceGeneratorStoragePolicy "{5DB893A542D1B091}" {
+       }
+      }
+     }
      m_aActions {
       SCR_ResourceGeneratorActionStore "{5E5CC245EF925285}" {
       }
@@ -104,6 +120,15 @@ GenericEntity {
      UIInfo UIInfo "{6324810D7438A97A}" {
       Name "Loadout Editor"
      }
+    }
+    MFN_OpenIdentitySelector_UserAction "{652929B13A575D9E}" {
+     ParentContextList {
+      "default"
+     }
+     UIInfo UIInfo "{652929B100EB1718}" {
+      Name "Identity Editor"
+     }
+     "Sort Priority" 2
     }
    }
   }

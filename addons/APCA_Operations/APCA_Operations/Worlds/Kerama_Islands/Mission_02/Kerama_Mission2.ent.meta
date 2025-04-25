@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{6F42426B7A2B1A5C}Worlds/Kerama_Islands/Mission_02/Kerama_Mission2.ent"
+ Configurations {
+  ENTResourceClass PC {
+  }
+  ENTResourceClass XBOX_ONE : PC {
+  }
+  ENTResourceClass XBOX_SERIES : PC {
+  }
+  ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
+  }
+  ENTResourceClass HEADLESS : PC {
+  }
+ }
+}

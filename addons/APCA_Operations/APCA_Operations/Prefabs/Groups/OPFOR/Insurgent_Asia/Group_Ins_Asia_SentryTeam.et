@@ -1,5 +1,68 @@
 SCR_AIGroup : "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" {
  ID "0000000000000001"
+ components {
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "#AR-Group_SentryTeam"
+    m_Image ""
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels +{
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{6530E384BA3384E3}" {
+      m_BudgetType CAMPAIGN
+      m_Value 150
+     }
+     SCR_EntityBudgetValue "{6530E384BA02330F}" {
+      m_BudgetType AI_SERVER
+      m_Value 2
+     }
+    }
+    m_EntityChildrenBudgetCost {
+     SCR_EntityBudgetValue "{6530E384BA2E3139}" {
+      m_BudgetType AI
+      m_Value 2
+     }
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{56368A4E28566EC5}" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{6530E384BA108413}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags 259
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 -5 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384BA5AC2DC}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384BB8C3434}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 3 0 -3
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
  coords 4527.793 134.875 5797.979
  m_aUnitPrefabSlots {
   "{E8499DA4698148D7}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Randomized.et" "{E8499DA4698148D7}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Randomized.et"

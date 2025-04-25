@@ -7,6 +7,7 @@ class MFN_IdentitySelector : MenuBase
 	protected SCR_ListBoxComponent IdentityList;
     protected SCR_InputButtonComponent ExitBtn;
     protected SCR_InputButtonComponent ApplyBtn;
+    protected SCR_InputButtonComponent PersistBtn;
 	protected CheckBoxWidget PersistenceEnable;
 	protected ref array<ref VisualIdentity> VisualIdentities;
 	IEntity PreviewBody;
@@ -25,12 +26,33 @@ class MFN_IdentitySelector : MenuBase
 		CharacterIdentityComponent IDComponent = CharacterIdentityComponent.Cast(playerCharacter.FindComponent(CharacterIdentityComponent));
 		Identity ID = IDComponent.GetIdentity();
 		
+		// Set up Persistence switch
+		PersistenceEnable = CheckBoxWidget.Cast(GetRootWidget().FindAnyWidget("PersistenceEnable"));
+		
+		// Set up Persist Button
+		PersistBtn = SCR_InputButtonComponent.GetInputButtonComponent("PersistButton", GetRootWidget());
+		if (PersistBtn)
+        {          
+			if(GetGame().IsPlatformGameConsole())
+			{
+				// Consoles can't save, just disable the persist switch
+				PersistBtn.SetEnabled(false);
+				PersistenceEnable.SetEnabled(false);
+				PersistenceEnable.SetChecked(false);
+			}
+			else
+			{
+				PersistBtn.m_OnActivated.Insert(TogglePersist);
+			}		
+        } 
+		
+		
 		// Set up Apply Button
 		ApplyBtn = SCR_InputButtonComponent.GetInputButtonComponent("ApplyButton", GetRootWidget());
 		if (ApplyBtn)
-        {
-            GetGame().GetWorkspace().SetFocusedWidget(ApplyBtn.GetRootWidget());            
+        {          
             ApplyBtn.m_OnActivated.Insert(ApplySelectedIdentity);
+			
         } 
 		
 		
@@ -38,17 +60,12 @@ class MFN_IdentitySelector : MenuBase
 		ExitBtn = SCR_InputButtonComponent.GetInputButtonComponent("ExitButton", GetRootWidget());
 		if (ExitBtn)
         {
-            GetGame().GetWorkspace().SetFocusedWidget(ExitBtn.GetRootWidget());      
-			ExitBtn.m_OnActivated.Insert(ExitMenu);      
-            
+			ExitBtn.m_OnActivated.Insert(ExitMenu);        
         } 
 		
-		
-		// Set up Persistence switch
-		PersistenceEnable = CheckBoxWidget.Cast(GetRootWidget().FindAnyWidget("PersistenceEnable"));
-		
 		// Load current settings
-		LoadIdentityData();
+		if(!GetGame().IsPlatformGameConsole())
+			LoadIdentityData();
 		
 		
 		// Set up RT
@@ -92,15 +109,24 @@ class MFN_IdentitySelector : MenuBase
 			
 			IdentityList.m_OnChanged.Insert(UpdatePreview);
 		}
+		GetGame().GetWorkspace().SetFocusedWidget(IdentityListOverlay); 
 	};
+	
 	
 	void ExitMenu()
 	{
 		GetManager().CloseMenu(this);
 	}
 	
+	void TogglePersist()
+	{
+		bool checked = PersistenceEnable.IsChecked();
+			PersistenceEnable.SetChecked(!checked);
+	}
+	
 	void ApplySelectedIdentity()
 	{
+	
 		if(!IdentityList || (VisualIdentities.Count() == 0))
 			return;
 		
@@ -110,14 +136,25 @@ class MFN_IdentitySelector : MenuBase
 		Identity ID = IDComponent.GetIdentity();
 		ID.SetVisualIdentity(VisualIdentities[selectedIndex]);
 		
-		SaveIdentity(ID, PersistenceEnable.IsChecked());
-		
 		MFN_IdentitySelectorCharacterComponent IDComp = MFN_IdentitySelectorCharacterComponent.Cast(playerCharacter.FindComponent(MFN_IdentitySelectorCharacterComponent));
-		if(IDComp)
+		if(GetGame().IsPlatformGameConsole())
 		{
-			Print("Loading Identity");
-			IDComp.LoadIdentity(true);
+			// Consoles can't save so just apply the identity
+			if(IDComp)
+			{
+				IDComp.RemoteServerSetIdentity(VisualIdentities[selectedIndex].GetHead(), VisualIdentities[selectedIndex].GetBody());
+			}
 		}
+		else
+		{
+			SaveIdentity(ID, PersistenceEnable.IsChecked());
+			
+			if(IDComp)
+			{
+				IDComp.LoadIdentity(true);
+			}
+		}
+		
 		
 		ExitMenu();
 	};
@@ -171,7 +208,7 @@ class MFN_IdentitySelector : MenuBase
 	
 	void SaveIdentity(Identity data, bool persist)
 	{
-		Print("Saving Identity");
+		//Print("Saving Identity");
 		/*private string path = "$profile:/IdentitySelector/";
 		FileIO.MakeDirectory(path);
 		FileHandle handle = FileIO.OpenFile(path + "Identity", FileMode.WRITE);

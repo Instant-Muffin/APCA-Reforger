@@ -1,6 +1,9 @@
 SCR_ChimeraCharacter : "{B9F6C1D8E894FAE5}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_Medic.et" {
  ID "51FA8A5F10E81780"
  components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_sName "CFA"
+  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {
@@ -28,9 +31,6 @@ SCR_ChimeraCharacter : "{B9F6C1D8E894FAE5}Prefabs/Characters/Factions/BLUFOR/APC
     ItemsInitConfigurationItem "{5D7CAAFB9235E903}" {
      TargetStorage "Prefabs/Characters/Uniforms/Crye_Shirt/Jacket_Crye_Combat_Shirt_DPCU.et"
     }
-    ItemsInitConfigurationItem "{5A24B6035F7619E7}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_dpcu.et"
-    }
     ItemsInitConfigurationItem "{54A49B42D138207E}" {
      TargetStorage "Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_dpcu.et"
     }
@@ -38,6 +38,9 @@ SCR_ChimeraCharacter : "{B9F6C1D8E894FAE5}Prefabs/Characters/Factions/BLUFOR/APC
      TargetStorage "Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_dpcu.et"
     }
     ItemsInitConfigurationItem "{5538C29CBE93E810}" {
+     TargetStorage "Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_dpcu.et"
+    }
+    ItemsInitConfigurationItem "{5A24B6035F7619E7}" {
      TargetStorage "Prefabs/Items/Equipment/Backpacks/backpack_511_rush12/Backpack_511_rush12_dpcu.et"
     }
    }

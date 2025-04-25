@@ -40,29 +40,29 @@ SCR_ChimeraCharacter : "{B6F05D4557B61C4E}Prefabs/Characters/Factions/OPFOR/USSR
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5D7CC173E6675BF7}" {
-     TargetStorage ""
+     TargetStorage "Pants/Pants_US_M65.et"
     }
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Jacket_US_BDU_rolledup_02.et"
+     TargetStorage "Jacket/Jacket_US_BDU_rolledup_02.et"
     }
     ItemsInitConfigurationItem "{60E6A9E7DD418527}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn +{
      }
     }
     ItemsInitConfigurationItem "{60E6A9E7DEF195CA}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
      }
     }
     ItemsInitConfigurationItem "{64DA628A79CBF374}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
       "{527D7C5D2E476BDC}Prefabs/Items/Medicine/SalineBag_01/SalineBag_USSR_01.et" "{527D7C5D2E476BDC}Prefabs/Items/Medicine/SalineBag_01/SalineBag_USSR_01.et" "{527D7C5D2E476BDC}Prefabs/Items/Medicine/SalineBag_01/SalineBag_USSR_01.et" "{527D7C5D2E476BDC}Prefabs/Items/Medicine/SalineBag_01/SalineBag_USSR_01.et" "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{C3F1FA1E2EC2B345}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{80E75A71C29190DB}Prefabs/Items/Medicine/Tourniquet_01/Tourniquet_USSR_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et" "{0D9A5DCF89AE7AA9}Prefabs/Items/Medicine/MorphineInjection_01/MorphineInjection_01.et"
      }
     }
     ItemsInitConfigurationItem "{64DA628A79CBF372}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
       "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
      }

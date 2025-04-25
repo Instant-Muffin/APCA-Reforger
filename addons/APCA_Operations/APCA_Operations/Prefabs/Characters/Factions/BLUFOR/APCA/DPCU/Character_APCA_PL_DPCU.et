@@ -1,6 +1,9 @@
 SCR_ChimeraCharacter : "{94BAA74D8A18D272}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_PL.et" {
  ID "520EC961A090B1EE"
  components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_sName "Commander"
+  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {

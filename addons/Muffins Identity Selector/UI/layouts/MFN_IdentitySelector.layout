@@ -101,7 +101,7 @@ FrameWidgetClass {
                 ButtonWidgetClass "{64F87CACF36CC864}" : "{0EC7676429DDCBC6}UI/layouts/WidgetLibrary/Buttons/WLib_InputNavigationButton.layout" {
                  Name "ExitButton"
                  Slot LayoutSlot "{64F89C71410BFF29}" {
-                  HorizontalAlign 1
+                  HorizontalAlign 0
                   VerticalAlign 1
                   Padding 20 0 0 0
                  }
@@ -168,32 +168,94 @@ FrameWidgetClass {
                 FillWeight 0.165
                }
                {
-                CheckBoxWidgetClass "{64F86CFAEB500628}" {
-                 Name "PersistenceEnable"
-                 Slot LayoutSlot "{64F86CFE1D027AC2}" {
+                OverlayWidgetClass "{651826FD89FB2EFE}" {
+                 Name "Overlay0"
+                 Slot LayoutSlot "{651826FD89FB2E94}" {
                   HorizontalAlign 2
-                  VerticalAlign 1
-                  Padding 40 0 10 0
                   SizeMode Fill
                  }
-                 text "Persistent"
-                 FontProperties FontProperties "{64F86CFBA90FF043}" {
-                  Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
-                  ShadowOffset 0 0
+                 {
+                  HorizontalLayoutWidgetClass "{651826FDEB74E21C}" {
+                   Name "HorizontalLayout0"
+                   Slot OverlayWidgetSlot "{651826FDEB74E20D}" {
+                   }
+                   {
+                    ButtonWidgetClass "{651826F8DCA66F75}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
+                     Name "PersistButton"
+                     Slot LayoutSlot {
+                     }
+                     components {
+                      SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
+                       m_sActionName "MenuEnable"
+                       m_sLabel ""
+                      }
+                     }
+                     {
+                      HorizontalLayoutWidgetClass "{5DB89B776AA9CEFF}" {
+                       Prefab "{5DB89B776AA9CEFF}"
+                       {
+                        HorizontalLayoutWidgetClass "{5D8A71797D491473}" {
+                         Prefab "{5D8A71797D491473}"
+                         {
+                          SizeLayoutWidgetClass "{5D8ACEF129D3EC88}" {
+                           Prefab "{5D8ACEF129D3EC88}"
+                           {
+                            OverlayWidgetClass "{5D8ACEF04D578362}" {
+                             Prefab "{5D8ACEF04D578362}"
+                             {
+                              SizeLayoutWidgetClass "{5D8A717A30F080DF}" {
+                               Prefab "{5D8A717A30F080DF}"
+                               {
+                                VerticalLayoutWidgetClass "{5D8A717A30F080E1}" {
+                                 Prefab "{5D8A717A30F080E1}"
+                                 {
+                                  FrameWidgetClass "{5D8A717A30F080E2}" {
+                                   Prefab "{5D8A717A30F080E2}"
+                                   Slot LayoutSlot "{5D26DCC97E65D901}" {
+                                    HorizontalAlign 0
+                                   }
+                                  }
+                                 }
+                                }
+                               }
+                              }
+                             }
+                            }
+                           }
+                          }
+                         }
+                        }
+                       }
+                      }
+                     }
+                    }
+                    CheckBoxWidgetClass "{64F86CFAEB500628}" {
+                     Name "PersistenceEnable"
+                     Slot LayoutSlot {
+                      VerticalAlign 1
+                      Padding 5 0 0 0
+                     }
+                     text "Persistent"
+                     FontProperties FontProperties "{64F86CFBA90FF043}" {
+                      Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt"
+                      ShadowOffset 0 0
+                     }
+                     checked 1
+                    }
+                   }
+                  }
                  }
-                 checked 1
                 }
                 ButtonWidgetClass "{64F87CA2E3DDC798}" : "{08CF3B69CB1ACBC4}UI/layouts/WidgetLibrary/Buttons/WLib_NavigationButton.layout" {
                  Name "ApplyButton"
                  Slot LayoutSlot "{64F87CA2E3DDC7B1}" {
-                  HorizontalAlign 3
-                  VerticalAlign 3
-                  Padding 0 0 20 0
+                  HorizontalAlign 2
+                  SizeMode Fill
                  }
                  components {
                   SCR_InputButtonComponent "{5D346C3DD81D95CD}" {
-                   m_sActionName "MenuSelect"
-                   m_sLabel "Apply Identity"
+                   m_sActionName "MenuSelectHold"
+                   m_sLabel "Apply"
                   }
                  }
                 }

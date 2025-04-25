@@ -1,5 +1,88 @@
 SCR_AIGroup : "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et" {
  ID "0000000000000001"
+ components {
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "#AR-Group_FireTeamLight"
+    m_Image ""
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels +{
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{6530E384B87F7FB1}" {
+      m_BudgetType CAMPAIGN
+      m_Value 300
+     }
+     SCR_EntityBudgetValue "{6530E384B84CD460}" {
+      m_BudgetType AI_SERVER
+      m_Value 4
+     }
+    }
+    m_EntityChildrenBudgetCost {
+     SCR_EntityBudgetValue "{6530E384B86A1EC5}" {
+      m_BudgetType AI
+      m_Value 4
+     }
+    }
+   }
+  }
+  SCR_PreviewEntityComponent "{56368A4E303DBA0F}" {
+   m_bRuntime 0
+   m_aEntries {
+    SCR_BasePreviewEntry "{6530E384B851A492}" {
+     m_iParentID -1
+     m_Mesh ""
+     m_Flags 259
+     m_Shape MESH
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 -5 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384B9984456}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 0 0 0
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384B9C56DEE}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 3 0 -3
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384B9039104}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition -3 0 -3
+     m_vAngles 0 0 0
+    }
+    SCR_BasePreviewEntry "{6530E384B9481E2A}" {
+     m_iParentID 0
+     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
+     m_Flags 0
+     m_Shape PREFAB
+     m_iPivotID ""
+     m_vScale 1 1 1
+     m_vPosition 6 0 -6
+     m_vAngles 0 0 0
+    }
+   }
+  }
+ }
  coords 4526.564 134.875 5796.255
  m_aUnitPrefabSlots {
   "{225331530492AB12}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman.et" "{91B53286E66BA3EF}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Rifleman_Light.et" "{E8499DA4698148D7}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_Randomized.et" "{4399D31067BAB641}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Character_Ins_Asia_LMG.et"

@@ -1,0 +1,7 @@
+SCR_BaseGameMode {
+ ID "56B2B479C6B96951"
+ components {
+  APCA_GamemodeComponent "{652CE75514DE82EA}" {
+  }
+ }
+}

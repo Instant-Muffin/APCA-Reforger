@@ -163,4 +163,17 @@ class APCA_IEDInteractUserAction : ScriptedUserAction
 		
 		return gadgetManager.GetHeldGadget();
 	}
+	
+
+	//------------------------------------------------------------------------------------------------
+	override bool CanBePerformedScript(IEntity user)
+	{
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override bool HasLocalEffectOnlyScript()
+	{
+		return true;
+	}
 };

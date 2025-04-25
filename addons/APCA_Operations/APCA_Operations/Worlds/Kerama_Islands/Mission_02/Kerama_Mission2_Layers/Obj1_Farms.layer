@@ -1,0 +1,26 @@
+$grp GenericEntity : "{2945E6BE78F6F5B5}Prefabs/Intel_Props/APCA_Intel_Notebook_1.et" {
+ {
+  components {
+   APCA_IntelComponent "{6468AE878B7F6DDB}" {
+    IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+     Description "The notebook contains references to several emergency weapons caches that have been stashed in the jungle. The exact positions aren't clear but there are three grid references: 021059, 081048, 047080"
+    }
+   }
+  }
+  coords 8024.819 5.781 8375.2
+  angleY 107.435
+ }
+ {
+  components {
+   APCA_IntelComponent "{6468AE878B7F6DDB}" {
+    IntelHint SCR_HintUIInfo "{6468AE8789C3FE2D}" {
+     Description "The notebook mentions armoured vehicles that were recently delivered and moved to the town of Zamami. No indication of what they are or who they are from is given."
+    }
+   }
+  }
+  coords 8110.681 81.675 4862.623
+  angleX -5.614
+  angleY -102.556
+  angleZ -0.577
+ }
+}

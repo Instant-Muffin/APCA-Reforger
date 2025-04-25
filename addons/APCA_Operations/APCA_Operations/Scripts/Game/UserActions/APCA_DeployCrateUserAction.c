@@ -45,4 +45,10 @@ class APCA_DeployCrateUserAction : ScriptedUserAction
 		AudioSystem.PlaySound("{939D0013DBA65B1F}Sounds/Vehicles/_SharedData/Crashes/Truck/Samples/Crash_Truck_Body_6.wav");
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	override bool HasLocalEffectOnlyScript()
+	{
+		return true;
+	}
+	
 }

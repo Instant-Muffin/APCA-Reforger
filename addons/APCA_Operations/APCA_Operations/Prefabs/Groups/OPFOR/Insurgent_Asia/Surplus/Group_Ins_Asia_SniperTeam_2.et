@@ -1,5 +1,12 @@
 SCR_AIGroup : "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et" {
  ID "0000000000000001"
+ components {
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "#AR-Group_SniperTeam"
+   }
+  }
+ }
  coords 4527.793 134.875 5797.979
  m_aUnitPrefabSlots {
   "{7CAF3FD4C5957141}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_Sharpshooter_2.et" "{A8383B13F7D0836A}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_Rifleman_Light_2.et"

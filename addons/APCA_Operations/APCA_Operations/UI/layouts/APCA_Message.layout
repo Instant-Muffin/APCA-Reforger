@@ -1,0 +1,52 @@
+FrameWidgetClass {
+ Name "APCA_Message"
+ components {
+  MFN_IdentitySelectorComponent "{64F86CFE60FF44E7}" {
+  }
+ }
+ {
+  SizeLayoutWidgetClass "{652CE75741178427}" {
+   Name "SizeLayout0"
+   Slot FrameWidgetSlot "{64F87B1B8B7BEA38}" {
+    Anchor 0 0 1 1
+    PositionX 0
+    PositionY 0
+    SizeX 0
+    OffsetRight 0
+    SizeY 0
+    OffsetBottom 0
+   }
+   WidthOverride 500
+   MaxDesiredWidth 800
+   MaxDesiredHeight 800
+   {
+    OverlayWidgetClass "{652CE75741178426}" {
+     Name "Overlay0"
+     Slot AlignableSlot "{64F87CA73CFDA27C}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     {
+      RichTextWidgetClass "{652CE757861E6FC4}" {
+       Name "Text"
+       Slot OverlayWidgetSlot "{652CE757861E6F31}" {
+        Padding 0 0 0 100
+       }
+       Text "Text widget"\
+       "Text"
+       "Font Size" 40
+       "Min Font Size" 30
+       "Horizontal Alignment" Center
+       "Vertical Alignment" Center
+       FontProperties FontProperties "{652CE757990ABD29}" {
+        Font "{CD2634D279AB011A}UI/Fonts/Roboto/Roboto_Bold.fnt"
+        OutlineSize 2
+       }
+       "Line Spacing" 5
+      }
+     }
+    }
+   }
+  }
+ }
+}

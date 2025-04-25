@@ -40,20 +40,21 @@ SCR_ChimeraCharacter : "{B6F05D4557B61C4E}Prefabs/Characters/Factions/OPFOR/USSR
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5D7CC173E6675BF7}" {
+     TargetStorage "Pants/Pants_US_M65.et"
      PrefabsToSpawn +{
      }
     }
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Jacket_US_BDU_02.et"
+     TargetStorage "Jacket/Jacket_Raincoat_01_green.et"
     }
     ItemsInitConfigurationItem "{60E6A9E7DD418527}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
       "{1C6912B8193EEB8A}Prefabs/Weapons/Magazines/Box_762x51_GPMG_100rnd_1Ball_1Tracer.et" "{1C6912B8193EEB8A}Prefabs/Weapons/Magazines/Box_762x51_GPMG_100rnd_1Ball_1Tracer.et" "{1C6912B8193EEB8A}Prefabs/Weapons/Magazines/Box_762x51_GPMG_100rnd_1Ball_1Tracer.et" "{1C6912B8193EEB8A}Prefabs/Weapons/Magazines/Box_762x51_GPMG_100rnd_1Ball_1Tracer.et"
      }
     }
     ItemsInitConfigurationItem "{60E6A9E7DEF195CA}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn + {
       "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
      }

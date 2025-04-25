@@ -42,27 +42,27 @@ SCR_ChimeraCharacter : "{B6F05D4557B61C4E}Prefabs/Characters/Factions/OPFOR/USSR
   SCR_InventoryStorageManagerComponent "{520EA1D2DB118DE5}" {
    InitialInventoryItems {
     ItemsInitConfigurationItem "{5D7CC173E6675BF7}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Pants_US_M65.et"
+     TargetStorage "Pants/Pants_US_M65.et"
     }
     ItemsInitConfigurationItem "{5D7CC173E6675BF5}" {
-     TargetStorage "Prefabs/Characters/Uniforms/Jacket_US_BDU_02.et"
+     TargetStorage "Jacket/Jacket_US_BDU_02.et"
     }
     ItemsInitConfigurationItem "{60E6A9E7DD418527}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
-      "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
+      "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et" "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
      }
     }
     ItemsInitConfigurationItem "{60E6A9E7DEF195CA}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Rucksack_GS_assembled.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
       "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
      }
     }
     ItemsInitConfigurationItem "{64DA628A79F61F40}" {
-     TargetStorage "Prefabs/Items/Equipment/Backpacks/Backpack_Kolobok.et"
+     TargetStorage "Back/Backpack_Kolobok.et"
      PrefabsToSpawn {
-      "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
+      "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{892F30500E6E7E04}Prefabs/Weapons/Magazines/Vz58/Magazine_762x39_Vz58_30rnd_Base.et" "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
      }
     }
     ItemsInitConfigurationItem "{64DA628A79F61F4E}" {

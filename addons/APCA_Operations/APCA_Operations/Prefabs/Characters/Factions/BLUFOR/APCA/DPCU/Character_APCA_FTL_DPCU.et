@@ -1,6 +1,9 @@
 SCR_ChimeraCharacter : "{0A63E485F1795921}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_FTL.et" {
  ID "520EC961A090B1EE"
  components {
+  PS_PlayableComponent "{5EFCC1946F475F15}" {
+   m_sName "Fireteam Leader"
+  }
   BaseLoadoutManagerComponent "{520EA1D2DB11821E}" {
    Slots {
     LoadoutSlotInfo Hat {

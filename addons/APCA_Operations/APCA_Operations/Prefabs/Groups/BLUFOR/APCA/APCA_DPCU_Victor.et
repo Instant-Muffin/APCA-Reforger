@@ -1,0 +1,21 @@
+SCR_AIGroup : "{AA90D8A7EC3E57FF}Prefabs/Groups/BLUFOR/Group_US_ReconTeam_P.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+ }
+ coords 6407.511 44.281 2027.469
+ angleY 109.265
+ m_faction "APCA"
+ m_aUnitPrefabSlots {
+  "{43DB6DA8EF76E127}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_Crewman.et" "{43DB6DA8EF76E127}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_Crewman.et" "{43DB6DA8EF76E127}Prefabs/Characters/Factions/BLUFOR/APCA/Character_APCA_Crewman.et"
+ }
+ m_bPlayable 1
+ m_bDeleteIfNoPlayer 0
+ m_sCustomNameSet "Command"
+ m_bSetPlayable 1
+ m_aUnitPrefabColorTeams {
+  "None" "Blue" "Red"
+ }
+}

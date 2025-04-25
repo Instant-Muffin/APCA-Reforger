@@ -1,5 +1,12 @@
 SCR_AIGroup : "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et" {
  ID "0000000000000001"
+ components {
+  SCR_EditableGroupComponent "{50D291F6C83FA532}" {
+   m_UIInfo SCR_EditableGroupUIInfo "{5298E609432D192D}" {
+    Name "#AR-Group_FireTeam"
+   }
+  }
+ }
  coords 4526.564 134.875 5796.255
  m_aUnitPrefabSlots {
   "{DD4411B06BCB143B}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_GL_2.et" "{8D70A307F8DECC19}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_Rifleman_2.et" "{BAAE38E1A852EE6B}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_AT_2.et" "{86AADD49A32B8515}Prefabs/Characters/Factions/OPFOR/Insurgent_Asia/Surplus/Character_Ins_Asia_LMG_2.et"

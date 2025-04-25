@@ -1,0 +1,5 @@
+SCR_TreeDebrisSmallEntity {
+ ID "6308EB15DCEA74C8"
+ m_fTimeToDespawn 600
+ m_iDespawnRandomizationTime 30
+}

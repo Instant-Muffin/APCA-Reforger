@@ -1,0 +1,17 @@
+MetaFileClass {
+ Name "{EB96B22889B54E63}Configs/EntityCatalog/Asia/Groups_AsiaInsurgent.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -10,6 +10,8 @@ modded class SCR_PressureTriggerComponent : SCR_BaseTriggerComponentClass
 	//------------------------------------------------------------------------------------------------
 	override void EOnContact(IEntity owner, IEntity other, Contact contact)
 	{
+		super.EOnContact(owner, other, contact);
+	/*
 		Print("APCA - Contact");
 		if (GetGame().GetWorld().GetWorldTime() - m_fLastTryTime < MIN_DELAY)
 			return;
@@ -51,7 +53,9 @@ modded class SCR_PressureTriggerComponent : SCR_BaseTriggerComponentClass
 		if(soundComponent)
 			soundComponent.SoundEvent("SOUND_DRY");
 		
-		GetGame().GetCallqueue().CallLater(Detonate, m_DetonationDelay);
+		//GetGame().GetCallqueue().CallLater(Detonate, m_DetonationDelay);
+		GetGame().GetCallqueue().CallLater(RPC_DoTrigger);
+		Rpc(RPC_DoTrigger);*/
 	}
 	
 	void Detonate()

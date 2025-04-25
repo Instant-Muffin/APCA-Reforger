@@ -5,7 +5,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
    "faction affiliation" "APCA"
   }
   PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Pilot"
+   m_sName "Pilot"
    m_bIsPlayable 1
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {

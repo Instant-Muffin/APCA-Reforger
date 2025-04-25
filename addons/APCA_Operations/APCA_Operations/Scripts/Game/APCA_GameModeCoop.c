@@ -20,28 +20,30 @@ class APCA_GameModeCoop : PS_GameModeCoop
 		return super.HandlePlayerKilled(playerId, playerEntity, killerEntity, killer);
 	}
 	
+	override void SwitchToSpawnedEntity(int playerId, PS_RespawnData respawnData, IEntity entity, int frameCounter)
+	{
+		super.SwitchToSpawnedEntity(playerId, respawnData, entity, frameCounter);
+		TeleportToSpawn(entity);
+	}
 	
 	override void TryRespawn(RplId playableId, int playerId)
 	{
-		
-		
-		// Go to spectator
+		// Go to spectator always
 		SwitchToInitialEntity(playerId);
 		
-		// Wait for respawn time and respawn
-		int respawnTime = 0;
-		if (playableId != RplId.Invalid())
+		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+		if (playableManager && playableId != RplId.Invalid() && playableManager.GetPlayableById(playableId))
 		{
-			PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-			PS_PlayableContainer playableContainer = playableManager.GetPlayableById(playableId);
-			PS_PlayableComponent playableComponent = playableContainer.GetPlayableComponent();
+			PS_PlayableComponent playableComponent = playableManager.GetPlayableById(playableId).GetPlayableComponent();
 			if (!playableComponent)
 				return;
+
 			FactionAffiliationComponent factionAffiliationComponent = playableComponent.GetFactionAffiliationComponent();
 			Faction faction = factionAffiliationComponent.GetDefaultAffiliatedFaction();
 			FactionKey factionKey = faction.GetFactionKey();
 			PS_FactionRespawnCount factionRespawns = GetFactionRespawnCount(factionKey);
-			respawnTime = factionRespawns.m_iTime;
+			
+			// Set the APCA Data
 			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
 			if (character)
 			{	
@@ -49,19 +51,68 @@ class APCA_GameModeCoop : PS_GameModeCoop
 				APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
 				APCA_Data.SetRespawning(true);
 			}
-	
-			// Get the players current inventory
-			array<IEntity> playerItems = GetInventory(playableId);
-			
-			// Respawn = respawn time - 60 second waves
-			if (factionRespawns.m_bWaveMode)
+
+			ResourceName prefabToSpawn = playableComponent.GetNextRespawn(factionRespawns.m_iCount == -1);
+			if (factionRespawns.m_iCount > 0)
+				factionRespawns.m_iCount--;
+			if (prefabToSpawn != "")
 			{
-				respawnTime = respawnTime - Math.Mod(GetGame().GetWorld().GetWorldTime(), 60000);
+				int time = factionRespawns.m_iTime;
+				if (factionRespawns.m_bWaveMode)
+					time = factionRespawns.m_iTime - Math.Mod(GetGame().GetWorld().GetWorldTime(), time);
+				//if (playerId > 0)
+					//playableComponent.OpenRespawnMenu(time);
+
+				array<IEntity> playerItems = GetInventory(playableId);
+				
+				PS_RespawnData respawnData = new PS_RespawnData(playableComponent, prefabToSpawn);
+				GetGame().GetCallqueue().CallLater(RespawnWithItems, time, false, playerId, respawnData, playerItems);
+				return;
 			}
-			
-			GetGame().GetCallqueue().CallLater(TryRespawnAfterSpectator, respawnTime, false, playableId, playerId, playerItems);
 		}
+	}
+
+	// Replacement for void Respawn that sets APCA data and passes inventory through
+	void RespawnWithItems(int playerId, PS_RespawnData respawnData, array<IEntity> playerItems)
+	{		
+		Resource resource = Resource.Load(respawnData.m_sPrefabName);
+		EntitySpawnParams params = new EntitySpawnParams();
+		Math3D.MatrixCopy(respawnData.m_aSpawnTransform, params.Transform);
+		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
+		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_Id);
+		SCR_AIGroup playabelGroup = aiGroup.GetSlave();
+		playabelGroup.AddAIEntityToGroup(entity);
+
+		PS_PlayableComponent playableComponentNew = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+		playableComponentNew.SetPlayable(true);
+
+		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, 4);
 		
+		// Set APCA data
+		APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
+		if(!APCA_Data.GetRespawning())
+			return;
+		
+		// Delay the equipment swap to fix the belt getting stuck for some reason
+		APCA_Data.SetRespawning(false);
+		GetGame().GetCallqueue().CallLater(SwapInventory, 2000, false, entity, playerItems);
+	}
+	
+	protected void DeleteChildrens(IEntity entity, bool deleteRoot)
+	{
+		if (!entity || !entity.FindComponent(InventoryItemComponent))
+			return;
+
+		IEntity child = entity.GetChildren();
+		while (child)
+		{
+			IEntity sibling = child.GetSibling();
+			DeleteChildrens(child, true);
+			child = sibling;
+		}
+
+		if (!entity.IsDeleted() && deleteRoot)
+			delete entity;
 	}
 	
 	array<IEntity> GetInventory(RplId playableId)
@@ -174,107 +225,6 @@ class APCA_GameModeCoop : PS_GameModeCoop
 			}
 		}
 		return playerItems;
-	}
-	
-	void TryRespawnAfterSpectator(RplId playableId, int playerId, array<IEntity> playerItems)
-	{
-		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-		if (playableId != RplId.Invalid())
-		{
-			PS_PlayableContainer playableContainer = playableManager.GetPlayableById(playableId);
-			PS_PlayableComponent playableComponent = playableContainer.GetPlayableComponent();
-			if (!playableComponent)
-				return;
-			
-			ChimeraCharacter character = playableComponent.GetOwnerCharacter();
-			IEntity entity = IEntity.Cast(character);
-			APCA_BaseComponent APCA_Data = APCA_BaseComponent.Cast(entity.FindComponent(APCA_BaseComponent));
-			if(!APCA_Data.GetRespawning())
-				return;
-			
-			FactionAffiliationComponent factionAffiliationComponent = playableComponent.GetFactionAffiliationComponent();
-			Faction faction = factionAffiliationComponent.GetDefaultAffiliatedFaction();
-			FactionKey factionKey = faction.GetFactionKey();
-			PS_FactionRespawnCount factionRespawns = GetFactionRespawnCount(factionKey);
-			if (!factionRespawns || factionRespawns.m_iCount == 0)
-			{
-				return;
-			}
-			ResourceName prefabToSpawn = playableComponent.GetNextRespawn(factionRespawns.m_iCount == -1);
-			if (factionRespawns.m_iCount > 0)
-				factionRespawns.m_iCount--;
-			if (prefabToSpawn != "")
-			{
-				int time = 3000;
-				if (playerId > 0)
-					playableComponent.OpenRespawnMenu(time);
-				
-				PS_RespawnData respawnData = new PS_RespawnData(playableComponent, prefabToSpawn);
-				APCA_Data.SetRespawning(false);
-				GetGame().GetCallqueue().CallLater(RespawnWithItems, time, false, playerId, respawnData, playerItems);
-				return;
-			}
-		}
-		return;
-	}
-	
-	void RespawnWithItems(int playerId, PS_RespawnData respawnData, array<IEntity> playerItems)
-	{
-		Resource resource = Resource.Load(respawnData.m_sPrefabName);
-		EntitySpawnParams params = new EntitySpawnParams();
-		Math3D.MatrixCopy(respawnData.m_aSpawnTransform, params.Transform);
-		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), params);
-		SCR_AIGroup aiGroup = m_playableManager.GetPlayerGroupByPlayable(respawnData.m_Id);
-		SCR_AIGroup playabelGroup = aiGroup.GetSlave();
-		playabelGroup.AddAIEntityToGroup(entity);
-		
-		PS_PlayableComponent playableComponentNew = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		playableComponentNew.SetPlayable(true);
-		ChimeraCharacter character = playableComponentNew.GetOwnerCharacter();
-		
-		// Delay the equipment swap to fix the belt getting stuck for some reason
-		GetGame().GetCallqueue().CallLater(SwapInventory, 2000, false, entity, playerItems);
-		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, 4);
-	}
-	
-	override void SwitchToSpawnedEntity(int playerId, PS_RespawnData respawnData, IEntity entity, int frameCounter)
-	{
-		if (frameCounter > 0) // Await four frames
-		{		
-			GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, respawnData, entity, frameCounter - 1);
-			return;
-		}
-		
-		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-		
-		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		RplId playableId = playableComponent.GetId();
-		
-		playableComponent.CopyState(respawnData);
-		if (playerId > 0)
-		{
-			playableManager.SetPlayerPlayable(playerId, playableId);
-			playableManager.ForceSwitch(playerId);
-		}
-		
-		TeleportToSpawn(entity);
-	}
-	
-	protected void DeleteChildrens(IEntity entity, bool deleteRoot)
-	{
-		if (!entity || !entity.FindComponent(InventoryItemComponent))
-			return;
-
-		IEntity child = entity.GetChildren();
-		while (child)
-		{
-			IEntity sibling = child.GetSibling();
-			DeleteChildrens(child, true);
-			child = sibling;
-		}
-
-		if (!entity.IsDeleted() && deleteRoot)
-			delete entity;
 	}
 	
 	void SwapInventory(IEntity entity, array<IEntity> playerItems)

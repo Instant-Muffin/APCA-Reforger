@@ -1,15 +1,5 @@
 modded class SCR_PlayerController : PlayerController
 {
-	override void UpdateLocalPlayerController()
-	{
-		super.UpdateLocalPlayerController();
-		
-	}
-	
-	void OpenIdentityMenu()
-	{
-		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.MFN_IdentitySelector); 
-	}
 	
 	//------------------------------------------------------------------------------------------------
 	override void SetPossessedEntity(IEntity entity)
@@ -18,8 +8,7 @@ modded class SCR_PlayerController : PlayerController
 		if(!entity)
 			return;
 		
-		
-		Print("Possessing Entity");
+		//Print("Possessing Entity");
 		
 		MFN_IdentitySelectorCharacterComponent IDComp = MFN_IdentitySelectorCharacterComponent.Cast(entity.FindComponent(MFN_IdentitySelectorCharacterComponent));
 		if(IDComp)

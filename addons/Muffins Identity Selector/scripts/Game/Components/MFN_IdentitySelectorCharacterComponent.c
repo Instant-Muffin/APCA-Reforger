@@ -8,12 +8,16 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	void LoadIdentity(bool forceLoad)
 	{
+		// Consoles can't load from file
+		if(GetGame().IsPlatformGameConsole())
+			return;
+		
 		IEntity owner = IEntity.Cast(GetOwner());
 		IEntity playerEntity = GetGame().GetPlayerController().GetControlledEntity();
 		if(playerEntity != owner)
 			return;
 		
-		Print("Loading Entity from: $profile:/IdentitySelector/Identity");
+		//Print("Loading Entity from: $profile:/IdentitySelector/Identity");
 		MFN_IDentityStruct identityData = new MFN_IDentityStruct();
 		identityData.LoadFromFile("$profile:/IdentitySelector/Identity.json");
 		if (!identityData)
@@ -21,12 +25,12 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 			Print("Failed to load identity file", LogLevel.WARNING);
 			return;
 		};
-		PrintFormat("Got ID Data: %1 %2", identityData.head, identityData.body);
+		//PrintFormat("Got ID Data: %1 %2", identityData.head, identityData.body);
 		
 		
 		if(identityData.persist == "true" || forceLoad == true)
 		{
-			Print("Looking for ID");
+			//Print("Looking for ID");
 			SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(playerEntity);
 			
 			if(!playerCharacter)
@@ -44,7 +48,7 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 			{
 				if((identityData.head == ID.GetHead().GetPath()) && (identityData.body == ID.GetBody().GetPath()))
 				{
-					PrintFormat("Telling server to set ID: %1 %2", ID.GetHead(), ID.GetBody());
+					//PrintFormat("Telling server to set ID: %1 %2", ID.GetHead(), ID.GetBody());
 					Rpc(ServerSetIdentity, ID.GetHead(), ID.GetBody());
 					return;
 				}
@@ -54,9 +58,7 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 	
 	void RemoteLoadIdentity(bool forceLoad)
 	{
-		IEntity owner = IEntity.Cast(GetOwner());
-		IEntity playerEntity = GetGame().GetPlayerController().GetControlledEntity();
-		if(playerEntity != owner)
+		if(Replication.IsRunning() && Replication.IsServer())
 			Rpc(LoadIdentity, forceLoad);
 		else
 			LoadIdentity(forceLoad);
@@ -65,7 +67,7 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void ServerSetIdentity(string head, string body)
 	{
-		PrintFormat("Server is Setting: %1 %2", head, body);
+		//PrintFormat("Server is Setting: %1 %2", head, body);
 	
 		SCR_ChimeraCharacter playerCharacter = SCR_ChimeraCharacter.Cast(GetOwner());
 		CharacterIdentityComponent IDComponent = CharacterIdentityComponent.Cast(playerCharacter.FindComponent(CharacterIdentityComponent));
@@ -75,5 +77,13 @@ class MFN_IdentitySelectorCharacterComponent : ScriptComponent
 		newVisID.SetBody(body);
 		playerID.SetVisualIdentity(newVisID);
 		IDComponent.SetIdentity(playerID);
+	}
+	
+	void RemoteServerSetIdentity(string head, string body)
+	{
+		if (Replication.IsRunning() && !Replication.IsServer())
+			Rpc(ServerSetIdentity, head, body);
+		else
+			ServerSetIdentity(head, body);
 	}
 }

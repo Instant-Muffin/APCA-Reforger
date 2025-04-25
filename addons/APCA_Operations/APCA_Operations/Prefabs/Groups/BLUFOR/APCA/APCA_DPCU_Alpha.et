@@ -1,0 +1,21 @@
+SCR_AIGroup : "{AA90D8A7EC3E57FF}Prefabs/Groups/BLUFOR/Group_US_ReconTeam_P.et" {
+ ID "0000000000000001"
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+ }
+ coords 6407.511 44.281 2027.469
+ angleY 109.265
+ m_faction "APCA"
+ m_aUnitPrefabSlots {
+  "{89E7C6082183BBA9}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_SL_DPCU.et" "{2A51F346D862D955}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_Medic_DPCU.et" "{349701E1CBF50469}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_FTL_DPCU.et" "{F38DD3A232A04AAF}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_EOD_DPCU.et" "{BBA5098530AA8166}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_AT_DPCU.et" "{ABD714CEC9EA1A53}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_MG_DPCU.et" "{349701E1CBF50469}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_FTL_DPCU.et" "{F38DD3A232A04AAF}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_EOD_DPCU.et" "{BBA5098530AA8166}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_AT_DPCU.et" "{ABD714CEC9EA1A53}Prefabs/Characters/Factions/BLUFOR/APCA/DPCU/Character_APCA_MG_DPCU.et"
+ }
+ m_bPlayable 1
+ m_bDeleteIfNoPlayer 0
+ m_sCustomNameSet "Alpha"
+ m_bSetPlayable 1
+ m_aUnitPrefabColorTeams {
+  "None" "Green" "Blue" "Blue" "Blue" "Blue" "Red" "Red" "Red" "Red"
+ }
+}

@@ -9,4 +9,22 @@ class APCA_CheckIntelUserAction : ScriptedUserAction
 			IntelComp.ViewIntelHint();
 		}
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	override bool CanBeShownScript(IEntity user)
+	{
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override bool CanBePerformedScript(IEntity user)
+	{
+		return true;
+	}
+
+	//------------------------------------------------------------------------------------------------
+	override bool HasLocalEffectOnlyScript()
+	{
+		return true;
+	}
 };

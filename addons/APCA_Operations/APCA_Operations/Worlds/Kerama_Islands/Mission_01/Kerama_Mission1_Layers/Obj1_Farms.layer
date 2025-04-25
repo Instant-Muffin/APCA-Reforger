@@ -18,10 +18,6 @@ Vehicle Ural4320_transport_CIV_forest1 : "{1449105FD658EDFB}Prefabs/Vehicles/Whe
  angleY -145.28
  angleZ -0.284
 }
-Vehicle K4386_Armed_Camo1 : "{1DF4C30C130D8FAD}Prefabs/Vehicles/Wheeled/K4386/K4386_Armed_Camo.et" {
- coords 7325.072 4.976 7412.22
- angleY -164.706
-}
 $grp GenericEntity : "{2945E6BE78F6F5B5}Prefabs/Intel_Props/APCA_Intel_Notebook_1.et" {
  {
   components {
@@ -475,22 +471,22 @@ GenericEntity : "{7030822F7A54F479}Prefabs/Props/Crates/CrateWooden_01_base.et" 
  angleY -0.166
  angleZ -5.358
 }
-$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+$grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  Area1 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 350
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 8004.063 5.789 8483.757
   {
-   GenericEntity Layer3 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer3 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI1 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -665,18 +661,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area3 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 400
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7861.458 7.73 8049.989
   {
-   GenericEntity Layer4 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer4 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI15 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -729,19 +725,19 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area4 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-    m_bExcludeFromDynamicDespawn 1
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 500
-    m_bShowDebugShapesInWorkbench 1
+    m_bExcludeFromDynamicDespawn 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7981.527 32.273 7593.975
   {
-   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer6 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 27.325 0 794.604
     {
-     GenericEntity SlotAI2 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity SlotAI2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sObjectToSpawn "{A37A8ABFEBFA432C}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_SentryTeam.et"
@@ -756,7 +752,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       coords 42.103 -5.513 -859.921
       angleY -62.666
      }
-     GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+     GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
       coords 38.777 -5.486 -857.18
       {
        Vehicle BTR1 : "{5277EEE45FB383F5}Prefabs/Vehicles/Wheeled/BTR90/BTR90.et" {
@@ -764,7 +760,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        }
       }
      }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       WP_Target2 {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
@@ -792,18 +788,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area2 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 400
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 8624.316 5.445 8520.51
   {
-   GenericEntity Layer5 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer5 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI20 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -1060,18 +1056,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area9 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 300
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7497.559 134.063 8060.928
   {
-   GenericEntity Layer11 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer11 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI58 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -1201,18 +1197,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area11 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 350
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7952.889 2.562 7133.845
   {
-   GenericEntity Layer13 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer13 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI72 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -1389,18 +1385,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area12 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 300
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7821.273 109.058 7493.008
   {
-   GenericEntity Layer14 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer14 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI92 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -1442,18 +1438,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area13 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 30
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 7941.585 2.51 7157.336
   {
-   GenericEntity Layer15 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer15 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     $grp GenericEntity : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       SlotAI19 {
        components {
         SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
@@ -1481,7 +1477,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
        coords -619.915 3.021 212.349
       }
      }
-     GenericEntity SlotWaypoint3 : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     GenericEntity SlotWaypoint3 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       components {
        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
         m_Waypoint SCR_ScenarioFrameworkWaypointMove "{64EC3A29E418D95F}" {
@@ -1498,18 +1494,18 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
  Area6 {
   components {
    SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawn 1
     m_iDynamicDespawnRange 400
-    m_bShowDebugShapesInWorkbench 1
     m_bDynamicDespawnExcludeAir 1
    }
   }
   coords 5864.607 42.534 2863.058
   {
-   GenericEntity Layer8 : "{5F9FFF4BF027B3A3}Prefabs/ScenarioFramework/Components/Layer.et" {
+   GenericEntity Layer8 : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
     coords 0 0 0
     {
-     GenericEntity SlotAI107 : "{8D43830F02C3F114}Prefabs/ScenarioFramework/Components/SlotAI.et" {
+     GenericEntity SlotAI107 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
       components {
        SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
         m_sObjectToSpawn "{A37A8ABFEBFA432C}Prefabs/Groups/OPFOR/Insurgent_Asia/Group_Ins_Asia_SentryTeam.et"
@@ -1524,7 +1520,7 @@ $grp GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Are
       coords 0.661 0.238 4.532
       angleY -62.666
      }
-     $grp GenericEntity : "{EBD91177954E8236}Prefabs/ScenarioFramework/Components/SlotWaypoint.et" {
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
       SlotWaypoint2 {
        components {
         SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
